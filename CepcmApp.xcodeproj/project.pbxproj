@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C5AEF8C21054C3F00D821D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */; };
 		9C71D4C42102D51800CF131A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D4C32102D51800CF131A /* AppDelegate.swift */; };
 		9C71D4C62102D51800CF131A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D4C52102D51800CF131A /* ViewController.swift */; };
 		9C71D4C92102D51800CF131A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C71D4C72102D51800CF131A /* Main.storyboard */; };
 		9C71D4CB2102D51800CF131A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C71D4CA2102D51800CF131A /* Assets.xcassets */; };
 		9C71D4CE2102D51800CF131A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C71D4CC2102D51800CF131A /* LaunchScreen.storyboard */; };
+		9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */; };
+		BCAD3B13C1EF8DA68F4D1736 /* Pods_CepcmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BA9995596CE3D2AA58A3F1D /* Pods-CepcmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CepcmApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp.release.xcconfig"; sourceTree = "<group>"; };
+		3CD1DBA012A668125916E99E /* Pods-CepcmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CepcmApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C71D4C02102D51800CF131A /* CepcmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CepcmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C71D4C32102D51800CF131A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C71D4C52102D51800CF131A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,8 @@
 		9C71D4CA2102D51800CF131A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C71D4CD2102D51800CF131A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C71D4CF2102D51800CF131A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
+		C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CepcmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAD3B13C1EF8DA68F4D1736 /* Pods_CepcmApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3806BCDFC8CA15F09BEBA1D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C71D4B72102D51800CF131A = {
 			isa = PBXGroup;
 			children = (
 				9C71D4C22102D51800CF131A /* CepcmApp */,
 				9C71D4C12102D51800CF131A /* Products */,
+				E58D0909938163F71B7C5F5F /* Pods */,
+				3806BCDFC8CA15F09BEBA1D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +76,22 @@
 				9C71D4C32102D51800CF131A /* AppDelegate.swift */,
 				9C71D4C52102D51800CF131A /* ViewController.swift */,
 				9C71D4C72102D51800CF131A /* Main.storyboard */,
+				9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */,
 				9C71D4CA2102D51800CF131A /* Assets.xcassets */,
+				9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */,
 				9C71D4CC2102D51800CF131A /* LaunchScreen.storyboard */,
 				9C71D4CF2102D51800CF131A /* Info.plist */,
 			);
 			path = CepcmApp;
+			sourceTree = "<group>";
+		};
+		E58D0909938163F71B7C5F5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CD1DBA012A668125916E99E /* Pods-CepcmApp.debug.xcconfig */,
+				1BA9995596CE3D2AA58A3F1D /* Pods-CepcmApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C71D4D22102D51800CF131A /* Build configuration list for PBXNativeTarget "CepcmApp" */;
 			buildPhases = (
+				989A87F5A6D783E55970AA3E /* [CP] Check Pods Manifest.lock */,
 				9C71D4BC2102D51800CF131A /* Sources */,
 				9C71D4BD2102D51800CF131A /* Frameworks */,
 				9C71D4BE2102D51800CF131A /* Resources */,
+				E010EB99536E8E8C09B85538 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C71D4CE2102D51800CF131A /* LaunchScreen.storyboard in Resources */,
+				9C5AEF8C21054C3F00D821D1 /* GoogleService-Info.plist in Resources */,
 				9C71D4CB2102D51800CF131A /* Assets.xcassets in Resources */,
 				9C71D4C92102D51800CF131A /* Main.storyboard in Resources */,
 			);
@@ -131,12 +164,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		989A87F5A6D783E55970AA3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CepcmApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E010EB99536E8E8C09B85538 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C71D4BC2102D51800CF131A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9C71D4C62102D51800CF131A /* ViewController.swift in Sources */,
+				9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */,
 				9C71D4C42102D51800CF131A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,11 +351,13 @@
 		};
 		9C71D4D32102D51800CF131A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CD1DBA012A668125916E99E /* Pods-CepcmApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHR87T77X7;
 				INFOPLIST_FILE = CepcmApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.jtec.colpos.CepcmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +368,13 @@
 		};
 		9C71D4D42102D51800CF131A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BA9995596CE3D2AA58A3F1D /* Pods-CepcmApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHR87T77X7;
 				INFOPLIST_FILE = CepcmApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.jtec.colpos.CepcmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
