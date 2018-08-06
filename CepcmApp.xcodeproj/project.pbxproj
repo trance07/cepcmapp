@@ -13,6 +13,62 @@
 		9C71D4C92102D51800CF131A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C71D4C72102D51800CF131A /* Main.storyboard */; };
 		9C71D4CB2102D51800CF131A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C71D4CA2102D51800CF131A /* Assets.xcassets */; };
 		9C71D4CE2102D51800CF131A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C71D4CC2102D51800CF131A /* LaunchScreen.storyboard */; };
+		9C81DE592116794E00203F89 /* AlumnoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE582116794E00203F89 /* AlumnoBean.swift */; };
+		9C81DE5B211679F200203F89 /* CalendarioMateriaBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE5A211679F200203F89 /* CalendarioMateriaBean.swift */; };
+		9C81DE5D21167D9800203F89 /* CalificacionDetalleBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE5C21167D9800203F89 /* CalificacionDetalleBean.swift */; };
+		9C81DE5F21167E8500203F89 /* CalificacionesBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE5E21167E8500203F89 /* CalificacionesBean.swift */; };
+		9C81DE6121167FB000203F89 /* CalificacionMateriaBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE6021167FB000203F89 /* CalificacionMateriaBean.swift */; };
+		9C81DE63211680D700203F89 /* CarreraBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE62211680D700203F89 /* CarreraBean.swift */; };
+		9C81DE652116816700203F89 /* ConceptoAsistenciaBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE642116816700203F89 /* ConceptoAsistenciaBean.swift */; };
+		9C81DE67211681D100203F89 /* ConceptoPagoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE66211681D100203F89 /* ConceptoPagoBean.swift */; };
+		9C81DE692116824100203F89 /* ConfiguracionBackEndBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE682116824100203F89 /* ConfiguracionBackEndBean.swift */; };
+		9C81DE6B211682BF00203F89 /* ConfiguracionBannerBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE6A211682BF00203F89 /* ConfiguracionBannerBean.swift */; };
+		9C81DE6D2116834E00203F89 /* ConfiguracionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE6C2116834E00203F89 /* ConfiguracionFirebase.swift */; };
+		9C81DE6F211683D000203F89 /* ConfiguracionModuloFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE6E211683D000203F89 /* ConfiguracionModuloFirebase.swift */; };
+		9C81DE712116846300203F89 /* ConfiguracionVersionBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE702116846300203F89 /* ConfiguracionVersionBean.swift */; };
+		9C81DE73211684C700203F89 /* DeviceTokenBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE72211684C700203F89 /* DeviceTokenBean.swift */; };
+		9C81DE75211684F200203F89 /* DocenteBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE74211684F200203F89 /* DocenteBean.swift */; };
+		9C81DE77211685A800203F89 /* GrupoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE76211685A800203F89 /* GrupoBean.swift */; };
+		9C81DE792116863F00203F89 /* ImagenBannerBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE782116863F00203F89 /* ImagenBannerBean.swift */; };
+		9C81DE7B2116868A00203F89 /* ItemBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE7A2116868A00203F89 /* ItemBean.swift */; };
+		9C81DE7D2116889A00203F89 /* MateriaBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE7C2116889A00203F89 /* MateriaBean.swift */; };
+		9C81DE7F2116896A00203F89 /* MateriaCarreraBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE7E2116896A00203F89 /* MateriaCarreraBean.swift */; };
+		9C81DE812116904C00203F89 /* NotificacionBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE802116904C00203F89 /* NotificacionBean.swift */; };
+		9C81DE832116938C00203F89 /* PagoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE822116938C00203F89 /* PagoBean.swift */; };
+		9C81DE852116945300203F89 /* PagosBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE842116945300203F89 /* PagosBean.swift */; };
+		9C81DE872116974400203F89 /* PagosPorAlumnoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE862116974400203F89 /* PagosPorAlumnoBean.swift */; };
+		9C81DE8921169D8E00203F89 /* PromedioBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE8821169D8E00203F89 /* PromedioBean.swift */; };
+		9C81DE8B21169DF700203F89 /* RequestPersistirIdFirebaseBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE8A21169DF700203F89 /* RequestPersistirIdFirebaseBean.swift */; };
+		9C81DE8D21169E7E00203F89 /* RequestRegisterBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE8C21169E7E00203F89 /* RequestRegisterBean.swift */; };
+		9C81DE8F21169EDA00203F89 /* RequestUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE8E21169EDA00203F89 /* RequestUsuario.swift */; };
+		9C81DE9121169F1D00203F89 /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE9021169F1D00203F89 /* ResponseBase.swift */; };
+		9C81DE952116A28000203F89 /* ResponseCalendarioEscolarBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE942116A28000203F89 /* ResponseCalendarioEscolarBean.swift */; };
+		9C81DE972116A42700203F89 /* ResponseCalificacionesPorAlumnoGrupoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE962116A42700203F89 /* ResponseCalificacionesPorAlumnoGrupoBean.swift */; };
+		9C81DE992116A4E000203F89 /* ResponseChildRespuestaBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE982116A4E000203F89 /* ResponseChildRespuestaBean.swift */; };
+		9C81DE9B2116A57700203F89 /* ResponseCommonItemBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE9A2116A57700203F89 /* ResponseCommonItemBean.swift */; };
+		9C81DE9D2116A5CA00203F89 /* ResponseConfiguracionAppBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE9C2116A5CA00203F89 /* ResponseConfiguracionAppBean.swift */; };
+		9C81DE9F2116A65000203F89 /* ResponseErrorBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE9E2116A65000203F89 /* ResponseErrorBean.swift */; };
+		9C81DEA12116A75F00203F89 /* ResponseMateriasPorCarreraBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEA02116A75F00203F89 /* ResponseMateriasPorCarreraBean.swift */; };
+		9C81DEA32116A8D700203F89 /* ResponseObtenerDetalleMateriaBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEA22116A8D700203F89 /* ResponseObtenerDetalleMateriaBean.swift */; };
+		9C81DEA52116A94000203F89 /* ResponsePagosPorAlumnoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEA42116A94000203F89 /* ResponsePagosPorAlumnoBean.swift */; };
+		9C81DEA721174F4B00203F89 /* ResponsePersisteRegistroDispositivoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEA621174F4B00203F89 /* ResponsePersisteRegistroDispositivoBean.swift */; };
+		9C81DEA921174FDC00203F89 /* ResponsePersistirIdFirebaseBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEA821174FDC00203F89 /* ResponsePersistirIdFirebaseBean.swift */; };
+		9C81DEAB2117504000203F89 /* ResponseSubChildRespuestaBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEAA2117504000203F89 /* ResponseSubChildRespuestaBean.swift */; };
+		9C81DEAD2117565600203F89 /* ResponseTokenBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEAC2117565600203F89 /* ResponseTokenBean.swift */; };
+		9C81DEAF2117573400203F89 /* ResponseUsuarioBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEAE2117573400203F89 /* ResponseUsuarioBean.swift */; };
+		9C81DEB1211757C100203F89 /* RespuestaValidaCuentaAlumnoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEB0211757C100203F89 /* RespuestaValidaCuentaAlumnoBean.swift */; };
+		9C81DEB32117584D00203F89 /* ResponseValidaCuentaAlumnoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEB22117584D00203F89 /* ResponseValidaCuentaAlumnoBean.swift */; };
+		9C81DEB5211765F000203F89 /* SessionBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEB4211765F000203F89 /* SessionBean.swift */; };
+		9C81DEB7211768C300203F89 /* TabPagoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEB6211768C300203F89 /* TabPagoBean.swift */; };
+		9C81DEB92117694000203F89 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEB82117694000203F89 /* Task.swift */; };
+		9C81DEBB211769D800203F89 /* Task2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEBA211769D800203F89 /* Task2.swift */; };
+		9C81DEBD21176A5F00203F89 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEBC21176A5F00203F89 /* Token.swift */; };
+		9C81DEBF21176AAC00203F89 /* TokenOautBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEBE21176AAC00203F89 /* TokenOautBean.swift */; };
+		9C81DEC121176B2700203F89 /* UsuarioBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC021176B2700203F89 /* UsuarioBean.swift */; };
+		9C81DEC321176B7000203F89 /* VersionAppBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC221176B7000203F89 /* VersionAppBean.swift */; };
+		9C81DEC52117917A00203F89 /* ResponseBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC42117917A00203F89 /* ResponseBean.swift */; };
+		9C81DEC72117B3F700203F89 /* ValidarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC62117B3F700203F89 /* ValidarController.swift */; };
+		9C81DECA2117CAA800203F89 /* Utilerias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC92117CAA800203F89 /* Utilerias.swift */; };
 		9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */; };
 		BCAD3B13C1EF8DA68F4D1736 /* Pods_CepcmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +84,62 @@
 		9C71D4CA2102D51800CF131A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C71D4CD2102D51800CF131A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C71D4CF2102D51800CF131A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C81DE582116794E00203F89 /* AlumnoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumnoBean.swift; sourceTree = "<group>"; };
+		9C81DE5A211679F200203F89 /* CalendarioMateriaBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioMateriaBean.swift; sourceTree = "<group>"; };
+		9C81DE5C21167D9800203F89 /* CalificacionDetalleBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalificacionDetalleBean.swift; sourceTree = "<group>"; };
+		9C81DE5E21167E8500203F89 /* CalificacionesBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalificacionesBean.swift; sourceTree = "<group>"; };
+		9C81DE6021167FB000203F89 /* CalificacionMateriaBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalificacionMateriaBean.swift; sourceTree = "<group>"; };
+		9C81DE62211680D700203F89 /* CarreraBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarreraBean.swift; sourceTree = "<group>"; };
+		9C81DE642116816700203F89 /* ConceptoAsistenciaBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConceptoAsistenciaBean.swift; sourceTree = "<group>"; };
+		9C81DE66211681D100203F89 /* ConceptoPagoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConceptoPagoBean.swift; sourceTree = "<group>"; };
+		9C81DE682116824100203F89 /* ConfiguracionBackEndBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionBackEndBean.swift; sourceTree = "<group>"; };
+		9C81DE6A211682BF00203F89 /* ConfiguracionBannerBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionBannerBean.swift; sourceTree = "<group>"; };
+		9C81DE6C2116834E00203F89 /* ConfiguracionFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionFirebase.swift; sourceTree = "<group>"; };
+		9C81DE6E211683D000203F89 /* ConfiguracionModuloFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionModuloFirebase.swift; sourceTree = "<group>"; };
+		9C81DE702116846300203F89 /* ConfiguracionVersionBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracionVersionBean.swift; sourceTree = "<group>"; };
+		9C81DE72211684C700203F89 /* DeviceTokenBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTokenBean.swift; sourceTree = "<group>"; };
+		9C81DE74211684F200203F89 /* DocenteBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocenteBean.swift; sourceTree = "<group>"; };
+		9C81DE76211685A800203F89 /* GrupoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrupoBean.swift; sourceTree = "<group>"; };
+		9C81DE782116863F00203F89 /* ImagenBannerBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenBannerBean.swift; sourceTree = "<group>"; };
+		9C81DE7A2116868A00203F89 /* ItemBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBean.swift; sourceTree = "<group>"; };
+		9C81DE7C2116889A00203F89 /* MateriaBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriaBean.swift; sourceTree = "<group>"; };
+		9C81DE7E2116896A00203F89 /* MateriaCarreraBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriaCarreraBean.swift; sourceTree = "<group>"; };
+		9C81DE802116904C00203F89 /* NotificacionBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacionBean.swift; sourceTree = "<group>"; };
+		9C81DE822116938C00203F89 /* PagoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoBean.swift; sourceTree = "<group>"; };
+		9C81DE842116945300203F89 /* PagosBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagosBean.swift; sourceTree = "<group>"; };
+		9C81DE862116974400203F89 /* PagosPorAlumnoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagosPorAlumnoBean.swift; sourceTree = "<group>"; };
+		9C81DE8821169D8E00203F89 /* PromedioBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromedioBean.swift; sourceTree = "<group>"; };
+		9C81DE8A21169DF700203F89 /* RequestPersistirIdFirebaseBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPersistirIdFirebaseBean.swift; sourceTree = "<group>"; };
+		9C81DE8C21169E7E00203F89 /* RequestRegisterBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRegisterBean.swift; sourceTree = "<group>"; };
+		9C81DE8E21169EDA00203F89 /* RequestUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUsuario.swift; sourceTree = "<group>"; };
+		9C81DE9021169F1D00203F89 /* ResponseBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
+		9C81DE942116A28000203F89 /* ResponseCalendarioEscolarBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCalendarioEscolarBean.swift; sourceTree = "<group>"; };
+		9C81DE962116A42700203F89 /* ResponseCalificacionesPorAlumnoGrupoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCalificacionesPorAlumnoGrupoBean.swift; sourceTree = "<group>"; };
+		9C81DE982116A4E000203F89 /* ResponseChildRespuestaBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseChildRespuestaBean.swift; sourceTree = "<group>"; };
+		9C81DE9A2116A57700203F89 /* ResponseCommonItemBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCommonItemBean.swift; sourceTree = "<group>"; };
+		9C81DE9C2116A5CA00203F89 /* ResponseConfiguracionAppBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseConfiguracionAppBean.swift; sourceTree = "<group>"; };
+		9C81DE9E2116A65000203F89 /* ResponseErrorBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseErrorBean.swift; sourceTree = "<group>"; };
+		9C81DEA02116A75F00203F89 /* ResponseMateriasPorCarreraBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMateriasPorCarreraBean.swift; sourceTree = "<group>"; };
+		9C81DEA22116A8D700203F89 /* ResponseObtenerDetalleMateriaBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObtenerDetalleMateriaBean.swift; sourceTree = "<group>"; };
+		9C81DEA42116A94000203F89 /* ResponsePagosPorAlumnoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePagosPorAlumnoBean.swift; sourceTree = "<group>"; };
+		9C81DEA621174F4B00203F89 /* ResponsePersisteRegistroDispositivoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePersisteRegistroDispositivoBean.swift; sourceTree = "<group>"; };
+		9C81DEA821174FDC00203F89 /* ResponsePersistirIdFirebaseBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePersistirIdFirebaseBean.swift; sourceTree = "<group>"; };
+		9C81DEAA2117504000203F89 /* ResponseSubChildRespuestaBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSubChildRespuestaBean.swift; sourceTree = "<group>"; };
+		9C81DEAC2117565600203F89 /* ResponseTokenBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTokenBean.swift; sourceTree = "<group>"; };
+		9C81DEAE2117573400203F89 /* ResponseUsuarioBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUsuarioBean.swift; sourceTree = "<group>"; };
+		9C81DEB0211757C100203F89 /* RespuestaValidaCuentaAlumnoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespuestaValidaCuentaAlumnoBean.swift; sourceTree = "<group>"; };
+		9C81DEB22117584D00203F89 /* ResponseValidaCuentaAlumnoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidaCuentaAlumnoBean.swift; sourceTree = "<group>"; };
+		9C81DEB4211765F000203F89 /* SessionBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionBean.swift; sourceTree = "<group>"; };
+		9C81DEB6211768C300203F89 /* TabPagoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPagoBean.swift; sourceTree = "<group>"; };
+		9C81DEB82117694000203F89 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		9C81DEBA211769D800203F89 /* Task2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task2.swift; sourceTree = "<group>"; };
+		9C81DEBC21176A5F00203F89 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		9C81DEBE21176AAC00203F89 /* TokenOautBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenOautBean.swift; sourceTree = "<group>"; };
+		9C81DEC021176B2700203F89 /* UsuarioBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioBean.swift; sourceTree = "<group>"; };
+		9C81DEC221176B7000203F89 /* VersionAppBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionAppBean.swift; sourceTree = "<group>"; };
+		9C81DEC42117917A00203F89 /* ResponseBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBean.swift; sourceTree = "<group>"; };
+		9C81DEC62117B3F700203F89 /* ValidarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidarController.swift; sourceTree = "<group>"; };
+		9C81DEC92117CAA800203F89 /* Utilerias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilerias.swift; sourceTree = "<group>"; };
 		9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
 		C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CepcmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,9 +185,13 @@
 		9C71D4C22102D51800CF131A /* CepcmApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C81DECB2117CF0700203F89 /* Services */,
+				9C81DEC82117CA7600203F89 /* Utils */,
+				9C81DE572116761C00203F89 /* Jsons */,
 				9C71D4C32102D51800CF131A /* AppDelegate.swift */,
 				9C71D4C52102D51800CF131A /* ViewController.swift */,
 				9C71D4C72102D51800CF131A /* Main.storyboard */,
+				9C81DEC62117B3F700203F89 /* ValidarController.swift */,
 				9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */,
 				9C71D4CA2102D51800CF131A /* Assets.xcassets */,
 				9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */,
@@ -84,6 +200,82 @@
 			);
 			path = CepcmApp;
 			sourceTree = "<group>";
+		};
+		9C81DE572116761C00203F89 /* Jsons */ = {
+			isa = PBXGroup;
+			children = (
+				9C81DE582116794E00203F89 /* AlumnoBean.swift */,
+				9C81DE5A211679F200203F89 /* CalendarioMateriaBean.swift */,
+				9C81DE5C21167D9800203F89 /* CalificacionDetalleBean.swift */,
+				9C81DE5E21167E8500203F89 /* CalificacionesBean.swift */,
+				9C81DE6021167FB000203F89 /* CalificacionMateriaBean.swift */,
+				9C81DE62211680D700203F89 /* CarreraBean.swift */,
+				9C81DE642116816700203F89 /* ConceptoAsistenciaBean.swift */,
+				9C81DE66211681D100203F89 /* ConceptoPagoBean.swift */,
+				9C81DE682116824100203F89 /* ConfiguracionBackEndBean.swift */,
+				9C81DE6A211682BF00203F89 /* ConfiguracionBannerBean.swift */,
+				9C81DE6C2116834E00203F89 /* ConfiguracionFirebase.swift */,
+				9C81DE6E211683D000203F89 /* ConfiguracionModuloFirebase.swift */,
+				9C81DE702116846300203F89 /* ConfiguracionVersionBean.swift */,
+				9C81DE72211684C700203F89 /* DeviceTokenBean.swift */,
+				9C81DE74211684F200203F89 /* DocenteBean.swift */,
+				9C81DE76211685A800203F89 /* GrupoBean.swift */,
+				9C81DE782116863F00203F89 /* ImagenBannerBean.swift */,
+				9C81DE7A2116868A00203F89 /* ItemBean.swift */,
+				9C81DE7C2116889A00203F89 /* MateriaBean.swift */,
+				9C81DE7E2116896A00203F89 /* MateriaCarreraBean.swift */,
+				9C81DE802116904C00203F89 /* NotificacionBean.swift */,
+				9C81DE822116938C00203F89 /* PagoBean.swift */,
+				9C81DE842116945300203F89 /* PagosBean.swift */,
+				9C81DE862116974400203F89 /* PagosPorAlumnoBean.swift */,
+				9C81DE8821169D8E00203F89 /* PromedioBean.swift */,
+				9C81DE8A21169DF700203F89 /* RequestPersistirIdFirebaseBean.swift */,
+				9C81DE8C21169E7E00203F89 /* RequestRegisterBean.swift */,
+				9C81DE8E21169EDA00203F89 /* RequestUsuario.swift */,
+				9C81DE9021169F1D00203F89 /* ResponseBase.swift */,
+				9C81DE942116A28000203F89 /* ResponseCalendarioEscolarBean.swift */,
+				9C81DE962116A42700203F89 /* ResponseCalificacionesPorAlumnoGrupoBean.swift */,
+				9C81DE982116A4E000203F89 /* ResponseChildRespuestaBean.swift */,
+				9C81DE9A2116A57700203F89 /* ResponseCommonItemBean.swift */,
+				9C81DE9C2116A5CA00203F89 /* ResponseConfiguracionAppBean.swift */,
+				9C81DE9E2116A65000203F89 /* ResponseErrorBean.swift */,
+				9C81DEA02116A75F00203F89 /* ResponseMateriasPorCarreraBean.swift */,
+				9C81DEA22116A8D700203F89 /* ResponseObtenerDetalleMateriaBean.swift */,
+				9C81DEA42116A94000203F89 /* ResponsePagosPorAlumnoBean.swift */,
+				9C81DEA621174F4B00203F89 /* ResponsePersisteRegistroDispositivoBean.swift */,
+				9C81DEA821174FDC00203F89 /* ResponsePersistirIdFirebaseBean.swift */,
+				9C81DEAA2117504000203F89 /* ResponseSubChildRespuestaBean.swift */,
+				9C81DEAC2117565600203F89 /* ResponseTokenBean.swift */,
+				9C81DEAE2117573400203F89 /* ResponseUsuarioBean.swift */,
+				9C81DEB0211757C100203F89 /* RespuestaValidaCuentaAlumnoBean.swift */,
+				9C81DEB22117584D00203F89 /* ResponseValidaCuentaAlumnoBean.swift */,
+				9C81DEB4211765F000203F89 /* SessionBean.swift */,
+				9C81DEB6211768C300203F89 /* TabPagoBean.swift */,
+				9C81DEB82117694000203F89 /* Task.swift */,
+				9C81DEBA211769D800203F89 /* Task2.swift */,
+				9C81DEBC21176A5F00203F89 /* Token.swift */,
+				9C81DEBE21176AAC00203F89 /* TokenOautBean.swift */,
+				9C81DEC021176B2700203F89 /* UsuarioBean.swift */,
+				9C81DEC221176B7000203F89 /* VersionAppBean.swift */,
+				9C81DEC42117917A00203F89 /* ResponseBean.swift */,
+			);
+			path = Jsons;
+			sourceTree = SOURCE_ROOT;
+		};
+		9C81DEC82117CA7600203F89 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9C81DEC92117CAA800203F89 /* Utilerias.swift */,
+			);
+			path = Utils;
+			sourceTree = SOURCE_ROOT;
+		};
+		9C81DECB2117CF0700203F89 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = SOURCE_ROOT;
 		};
 		E58D0909938163F71B7C5F5F /* Pods */ = {
 			isa = PBXGroup;
@@ -215,8 +407,64 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C71D4C62102D51800CF131A /* ViewController.swift in Sources */,
+				9C81DE77211685A800203F89 /* GrupoBean.swift in Sources */,
+				9C81DE5F21167E8500203F89 /* CalificacionesBean.swift in Sources */,
+				9C81DE7B2116868A00203F89 /* ItemBean.swift in Sources */,
+				9C81DE832116938C00203F89 /* PagoBean.swift in Sources */,
+				9C81DE73211684C700203F89 /* DeviceTokenBean.swift in Sources */,
+				9C81DE8921169D8E00203F89 /* PromedioBean.swift in Sources */,
+				9C81DEBB211769D800203F89 /* Task2.swift in Sources */,
+				9C81DE812116904C00203F89 /* NotificacionBean.swift in Sources */,
+				9C81DEBD21176A5F00203F89 /* Token.swift in Sources */,
+				9C81DEB92117694000203F89 /* Task.swift in Sources */,
+				9C81DE692116824100203F89 /* ConfiguracionBackEndBean.swift in Sources */,
+				9C81DEB7211768C300203F89 /* TabPagoBean.swift in Sources */,
+				9C81DE75211684F200203F89 /* DocenteBean.swift in Sources */,
+				9C81DEA52116A94000203F89 /* ResponsePagosPorAlumnoBean.swift in Sources */,
+				9C81DE652116816700203F89 /* ConceptoAsistenciaBean.swift in Sources */,
+				9C81DEA32116A8D700203F89 /* ResponseObtenerDetalleMateriaBean.swift in Sources */,
+				9C81DEB32117584D00203F89 /* ResponseValidaCuentaAlumnoBean.swift in Sources */,
+				9C81DE592116794E00203F89 /* AlumnoBean.swift in Sources */,
+				9C81DE7F2116896A00203F89 /* MateriaCarreraBean.swift in Sources */,
+				9C81DEB1211757C100203F89 /* RespuestaValidaCuentaAlumnoBean.swift in Sources */,
+				9C81DE7D2116889A00203F89 /* MateriaBean.swift in Sources */,
+				9C81DEB5211765F000203F89 /* SessionBean.swift in Sources */,
+				9C81DE5D21167D9800203F89 /* CalificacionDetalleBean.swift in Sources */,
+				9C81DE6D2116834E00203F89 /* ConfiguracionFirebase.swift in Sources */,
+				9C81DE67211681D100203F89 /* ConceptoPagoBean.swift in Sources */,
+				9C81DEA721174F4B00203F89 /* ResponsePersisteRegistroDispositivoBean.swift in Sources */,
+				9C81DEAD2117565600203F89 /* ResponseTokenBean.swift in Sources */,
+				9C81DEC321176B7000203F89 /* VersionAppBean.swift in Sources */,
+				9C81DEA921174FDC00203F89 /* ResponsePersistirIdFirebaseBean.swift in Sources */,
+				9C81DE6F211683D000203F89 /* ConfiguracionModuloFirebase.swift in Sources */,
+				9C81DE5B211679F200203F89 /* CalendarioMateriaBean.swift in Sources */,
+				9C81DEC52117917A00203F89 /* ResponseBean.swift in Sources */,
+				9C81DEA12116A75F00203F89 /* ResponseMateriasPorCarreraBean.swift in Sources */,
+				9C81DE63211680D700203F89 /* CarreraBean.swift in Sources */,
 				9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */,
+				9C81DEC121176B2700203F89 /* UsuarioBean.swift in Sources */,
+				9C81DE872116974400203F89 /* PagosPorAlumnoBean.swift in Sources */,
+				9C81DEBF21176AAC00203F89 /* TokenOautBean.swift in Sources */,
+				9C81DE8F21169EDA00203F89 /* RequestUsuario.swift in Sources */,
+				9C81DE9F2116A65000203F89 /* ResponseErrorBean.swift in Sources */,
+				9C81DE9121169F1D00203F89 /* ResponseBase.swift in Sources */,
+				9C81DEAF2117573400203F89 /* ResponseUsuarioBean.swift in Sources */,
+				9C81DE992116A4E000203F89 /* ResponseChildRespuestaBean.swift in Sources */,
+				9C81DE712116846300203F89 /* ConfiguracionVersionBean.swift in Sources */,
+				9C81DE6121167FB000203F89 /* CalificacionMateriaBean.swift in Sources */,
+				9C81DE852116945300203F89 /* PagosBean.swift in Sources */,
+				9C81DE952116A28000203F89 /* ResponseCalendarioEscolarBean.swift in Sources */,
+				9C81DE972116A42700203F89 /* ResponseCalificacionesPorAlumnoGrupoBean.swift in Sources */,
+				9C81DE6B211682BF00203F89 /* ConfiguracionBannerBean.swift in Sources */,
+				9C81DE8B21169DF700203F89 /* RequestPersistirIdFirebaseBean.swift in Sources */,
+				9C81DE792116863F00203F89 /* ImagenBannerBean.swift in Sources */,
+				9C81DE9D2116A5CA00203F89 /* ResponseConfiguracionAppBean.swift in Sources */,
+				9C81DE8D21169E7E00203F89 /* RequestRegisterBean.swift in Sources */,
 				9C71D4C42102D51800CF131A /* AppDelegate.swift in Sources */,
+				9C81DE9B2116A57700203F89 /* ResponseCommonItemBean.swift in Sources */,
+				9C81DECA2117CAA800203F89 /* Utilerias.swift in Sources */,
+				9C81DEAB2117504000203F89 /* ResponseSubChildRespuestaBean.swift in Sources */,
+				9C81DEC72117B3F700203F89 /* ValidarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
