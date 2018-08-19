@@ -10,9 +10,14 @@ import UIKit
 
 class ValidarController: UIViewController {
 
+   
     let titulo : String = "CEPCM"
     
     let mensajeVacio : String = "Los campos no pueden ir vacíos."
+    
+    let mensajeConexion : String = "Verifica tu conexión a internet"
+    
+    let validarService : ValidarService = ValidarService()
     
     @IBOutlet weak var matricula: UITextField!
     
@@ -29,6 +34,8 @@ class ValidarController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    
     @IBAction func validarDatos() {
         print("validando datos...")
         
@@ -38,7 +45,35 @@ class ValidarController: UIViewController {
             
         } else {
             
+            print("Entrando en el else")
+            var request = RequestUsuario()
+            request.matricula = self.matricula.text
+            request.curp = self.curp.text?.uppercased()
             
+            if ConnectionService.isConnectedToNetwork() {
+            
+                let respuesta = self.validarService.validarDatos(request: request)
+                if respuesta == true {
+                    
+                    
+                    if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistroController") as? RegistroController {
+                        
+                        viewController.matriculaText = self.matricula?.text
+                        viewController.curpText = self.curp?.text
+                        
+                        self.navigationController?.pushViewController(viewController, animated: true)
+                        
+                        
+                    }
+                    
+                    
+                }
+                
+            } else {
+                
+                self.presentarAlerta(mensaje: mensajeConexion)
+                
+            }
             
         }
         

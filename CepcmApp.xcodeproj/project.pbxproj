@@ -69,6 +69,13 @@
 		9C81DEC52117917A00203F89 /* ResponseBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC42117917A00203F89 /* ResponseBean.swift */; };
 		9C81DEC72117B3F700203F89 /* ValidarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC62117B3F700203F89 /* ValidarController.swift */; };
 		9C81DECA2117CAA800203F89 /* Utilerias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC92117CAA800203F89 /* Utilerias.swift */; };
+		9C81DECD2117D00B00203F89 /* ValidarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DECC2117D00B00203F89 /* ValidarService.swift */; };
+		9C81DECF2128C6CF00203F89 /* ConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DECE2128C6CF00203F89 /* ConnectionService.swift */; };
+		9C81DED121290C8A00203F89 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DED021290C8A00203F89 /* FirebaseService.swift */; };
+		9C81DED3212921BF00203F89 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DED2212921BF00203F89 /* RestService.swift */; };
+		9C81DEE2212A06BB00203F89 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEE0212A06BB00203F89 /* SWRevealViewController.m */; };
+		9C81DEE8212A0EA200203F89 /* PrincipalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEE7212A0EA200203F89 /* PrincipalController.swift */; };
+		9C81DEEA212A15AE00203F89 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEE9212A15AE00203F89 /* SideMenuController.swift */; };
 		9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */; };
 		BCAD3B13C1EF8DA68F4D1736 /* Pods_CepcmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */; };
 /* End PBXBuildFile section */
@@ -140,6 +147,15 @@
 		9C81DEC42117917A00203F89 /* ResponseBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBean.swift; sourceTree = "<group>"; };
 		9C81DEC62117B3F700203F89 /* ValidarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidarController.swift; sourceTree = "<group>"; };
 		9C81DEC92117CAA800203F89 /* Utilerias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilerias.swift; sourceTree = "<group>"; };
+		9C81DECC2117D00B00203F89 /* ValidarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidarService.swift; sourceTree = "<group>"; };
+		9C81DECE2128C6CF00203F89 /* ConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionService.swift; sourceTree = "<group>"; };
+		9C81DED021290C8A00203F89 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		9C81DED2212921BF00203F89 /* RestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
+		9C81DEE0212A06BB00203F89 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		9C81DEE1212A06BB00203F89 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		9C81DEE6212A0BB300203F89 /* CepcmApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CepcmApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		9C81DEE7212A0EA200203F89 /* PrincipalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalController.swift; sourceTree = "<group>"; };
+		9C81DEE9212A15AE00203F89 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
 		C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CepcmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -185,11 +201,15 @@
 		9C71D4C22102D51800CF131A /* CepcmApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C81DEE6212A0BB300203F89 /* CepcmApp-Bridging-Header.h */,
+				9C81DED42129259500203F89 /* Controllers */,
 				9C81DECB2117CF0700203F89 /* Services */,
 				9C81DEC82117CA7600203F89 /* Utils */,
 				9C81DE572116761C00203F89 /* Jsons */,
 				9C71D4C32102D51800CF131A /* AppDelegate.swift */,
 				9C71D4C52102D51800CF131A /* ViewController.swift */,
+				9C81DEE1212A06BB00203F89 /* SWRevealViewController.h */,
+				9C81DEE0212A06BB00203F89 /* SWRevealViewController.m */,
 				9C71D4C72102D51800CF131A /* Main.storyboard */,
 				9C81DEC62117B3F700203F89 /* ValidarController.swift */,
 				9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */,
@@ -273,8 +293,21 @@
 		9C81DECB2117CF0700203F89 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9C81DECC2117D00B00203F89 /* ValidarService.swift */,
+				9C81DECE2128C6CF00203F89 /* ConnectionService.swift */,
+				9C81DED021290C8A00203F89 /* FirebaseService.swift */,
+				9C81DED2212921BF00203F89 /* RestService.swift */,
 			);
 			path = Services;
+			sourceTree = SOURCE_ROOT;
+		};
+		9C81DED42129259500203F89 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C81DEE7212A0EA200203F89 /* PrincipalController.swift */,
+				9C81DEE9212A15AE00203F89 /* SideMenuController.swift */,
+			);
+			path = Controllers;
 			sourceTree = SOURCE_ROOT;
 		};
 		E58D0909938163F71B7C5F5F /* Pods */ = {
@@ -320,6 +353,7 @@
 				TargetAttributes = {
 					9C71D4BF2102D51800CF131A = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -407,20 +441,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C71D4C62102D51800CF131A /* ViewController.swift in Sources */,
+				9C81DEEA212A15AE00203F89 /* SideMenuController.swift in Sources */,
 				9C81DE77211685A800203F89 /* GrupoBean.swift in Sources */,
 				9C81DE5F21167E8500203F89 /* CalificacionesBean.swift in Sources */,
 				9C81DE7B2116868A00203F89 /* ItemBean.swift in Sources */,
 				9C81DE832116938C00203F89 /* PagoBean.swift in Sources */,
 				9C81DE73211684C700203F89 /* DeviceTokenBean.swift in Sources */,
 				9C81DE8921169D8E00203F89 /* PromedioBean.swift in Sources */,
+				9C81DECD2117D00B00203F89 /* ValidarService.swift in Sources */,
 				9C81DEBB211769D800203F89 /* Task2.swift in Sources */,
 				9C81DE812116904C00203F89 /* NotificacionBean.swift in Sources */,
 				9C81DEBD21176A5F00203F89 /* Token.swift in Sources */,
 				9C81DEB92117694000203F89 /* Task.swift in Sources */,
+				9C81DEE8212A0EA200203F89 /* PrincipalController.swift in Sources */,
 				9C81DE692116824100203F89 /* ConfiguracionBackEndBean.swift in Sources */,
 				9C81DEB7211768C300203F89 /* TabPagoBean.swift in Sources */,
 				9C81DE75211684F200203F89 /* DocenteBean.swift in Sources */,
 				9C81DEA52116A94000203F89 /* ResponsePagosPorAlumnoBean.swift in Sources */,
+				9C81DED121290C8A00203F89 /* FirebaseService.swift in Sources */,
 				9C81DE652116816700203F89 /* ConceptoAsistenciaBean.swift in Sources */,
 				9C81DEA32116A8D700203F89 /* ResponseObtenerDetalleMateriaBean.swift in Sources */,
 				9C81DEB32117584D00203F89 /* ResponseValidaCuentaAlumnoBean.swift in Sources */,
@@ -433,6 +471,7 @@
 				9C81DE6D2116834E00203F89 /* ConfiguracionFirebase.swift in Sources */,
 				9C81DE67211681D100203F89 /* ConceptoPagoBean.swift in Sources */,
 				9C81DEA721174F4B00203F89 /* ResponsePersisteRegistroDispositivoBean.swift in Sources */,
+				9C81DED3212921BF00203F89 /* RestService.swift in Sources */,
 				9C81DEAD2117565600203F89 /* ResponseTokenBean.swift in Sources */,
 				9C81DEC321176B7000203F89 /* VersionAppBean.swift in Sources */,
 				9C81DEA921174FDC00203F89 /* ResponsePersistirIdFirebaseBean.swift in Sources */,
@@ -448,6 +487,7 @@
 				9C81DE8F21169EDA00203F89 /* RequestUsuario.swift in Sources */,
 				9C81DE9F2116A65000203F89 /* ResponseErrorBean.swift in Sources */,
 				9C81DE9121169F1D00203F89 /* ResponseBase.swift in Sources */,
+				9C81DECF2128C6CF00203F89 /* ConnectionService.swift in Sources */,
 				9C81DEAF2117573400203F89 /* ResponseUsuarioBean.swift in Sources */,
 				9C81DE992116A4E000203F89 /* ResponseChildRespuestaBean.swift in Sources */,
 				9C81DE712116846300203F89 /* ConfiguracionVersionBean.swift in Sources */,
@@ -461,6 +501,7 @@
 				9C81DE9D2116A5CA00203F89 /* ResponseConfiguracionAppBean.swift in Sources */,
 				9C81DE8D21169E7E00203F89 /* RequestRegisterBean.swift in Sources */,
 				9C71D4C42102D51800CF131A /* AppDelegate.swift in Sources */,
+				9C81DEE2212A06BB00203F89 /* SWRevealViewController.m in Sources */,
 				9C81DE9B2116A57700203F89 /* ResponseCommonItemBean.swift in Sources */,
 				9C81DECA2117CAA800203F89 /* Utilerias.swift in Sources */,
 				9C81DEAB2117504000203F89 /* ResponseSubChildRespuestaBean.swift in Sources */,
@@ -602,6 +643,7 @@
 			baseConfigurationReference = 3CD1DBA012A668125916E99E /* Pods-CepcmApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHR87T77X7;
 				INFOPLIST_FILE = CepcmApp/Info.plist;
@@ -609,6 +651,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.jtec.colpos.CepcmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CepcmApp/CepcmApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -619,6 +663,7 @@
 			baseConfigurationReference = 1BA9995596CE3D2AA58A3F1D /* Pods-CepcmApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHR87T77X7;
 				INFOPLIST_FILE = CepcmApp/Info.plist;
@@ -626,6 +671,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.jtec.colpos.CepcmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CepcmApp/CepcmApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

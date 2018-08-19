@@ -19,7 +19,28 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        // Show the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        // Hide the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 
-
+    @IBAction func lanzarValidacion() {
+        
+          if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ValidarController") as? ValidarController {
+            
+            self.navigationController?.pushViewController(viewController, animated: true)
+            
+        }
+        
+    }
+    
 }
 

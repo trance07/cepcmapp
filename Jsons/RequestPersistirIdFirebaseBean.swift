@@ -11,5 +11,5 @@ struct RequestPersistirIdFirebaseBean : Codable {
     var id_firebase : String? = nil
     var id_aplicacion : Int? = 0
     var id_tipo_usuario : Int? = 0
-    var id_usuario : Int? = 0
+    var id_usuario : Int? = nil
 }
