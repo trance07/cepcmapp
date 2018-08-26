@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1BA18E212A21CB004A4118 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BA18D212A21CB004A4118 /* SideMenuController.swift */; };
+		9C1BA190212A2274004A4118 /* PrincipalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BA18F212A2274004A4118 /* PrincipalController.swift */; };
+		9C433C5821325291008A92B8 /* TerminosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5721325291008A92B8 /* TerminosController.swift */; };
+		9C433C5A21325994008A92B8 /* NotificacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5921325994008A92B8 /* NotificacionController.swift */; };
+		9C433C5C21325E2A008A92B8 /* NovedadesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5B21325E2A008A92B8 /* NovedadesController.swift */; };
+		9C433C5E21326A76008A92B8 /* AcercaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5D21326A76008A92B8 /* AcercaController.swift */; };
 		9C5AEF8C21054C3F00D821D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */; };
 		9C71D4C42102D51800CF131A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D4C32102D51800CF131A /* AppDelegate.swift */; };
 		9C71D4C62102D51800CF131A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D4C52102D51800CF131A /* ViewController.swift */; };
@@ -74,8 +80,7 @@
 		9C81DED121290C8A00203F89 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DED021290C8A00203F89 /* FirebaseService.swift */; };
 		9C81DED3212921BF00203F89 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DED2212921BF00203F89 /* RestService.swift */; };
 		9C81DEE2212A06BB00203F89 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEE0212A06BB00203F89 /* SWRevealViewController.m */; };
-		9C81DEE8212A0EA200203F89 /* PrincipalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEE7212A0EA200203F89 /* PrincipalController.swift */; };
-		9C81DEEA212A15AE00203F89 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEE9212A15AE00203F89 /* SideMenuController.swift */; };
+		9C8F568621324EB000AC38ED /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F568521324EB000AC38ED /* InicioController.swift */; };
 		9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */; };
 		BCAD3B13C1EF8DA68F4D1736 /* Pods_CepcmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +88,12 @@
 /* Begin PBXFileReference section */
 		1BA9995596CE3D2AA58A3F1D /* Pods-CepcmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CepcmApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp.release.xcconfig"; sourceTree = "<group>"; };
 		3CD1DBA012A668125916E99E /* Pods-CepcmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CepcmApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9C1BA18D212A21CB004A4118 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
+		9C1BA18F212A2274004A4118 /* PrincipalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalController.swift; sourceTree = "<group>"; };
+		9C433C5721325291008A92B8 /* TerminosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminosController.swift; sourceTree = "<group>"; };
+		9C433C5921325994008A92B8 /* NotificacionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacionController.swift; sourceTree = "<group>"; };
+		9C433C5B21325E2A008A92B8 /* NovedadesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovedadesController.swift; sourceTree = "<group>"; };
+		9C433C5D21326A76008A92B8 /* AcercaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcercaController.swift; sourceTree = "<group>"; };
 		9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C71D4C02102D51800CF131A /* CepcmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CepcmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C71D4C32102D51800CF131A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,8 +165,7 @@
 		9C81DEE0212A06BB00203F89 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		9C81DEE1212A06BB00203F89 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		9C81DEE6212A0BB300203F89 /* CepcmApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CepcmApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		9C81DEE7212A0EA200203F89 /* PrincipalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalController.swift; sourceTree = "<group>"; };
-		9C81DEE9212A15AE00203F89 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
+		9C8F568521324EB000AC38ED /* InicioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
 		9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
 		C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CepcmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -304,8 +314,13 @@
 		9C81DED42129259500203F89 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9C81DEE7212A0EA200203F89 /* PrincipalController.swift */,
-				9C81DEE9212A15AE00203F89 /* SideMenuController.swift */,
+				9C1BA18D212A21CB004A4118 /* SideMenuController.swift */,
+				9C1BA18F212A2274004A4118 /* PrincipalController.swift */,
+				9C8F568521324EB000AC38ED /* InicioController.swift */,
+				9C433C5721325291008A92B8 /* TerminosController.swift */,
+				9C433C5921325994008A92B8 /* NotificacionController.swift */,
+				9C433C5B21325E2A008A92B8 /* NovedadesController.swift */,
+				9C433C5D21326A76008A92B8 /* AcercaController.swift */,
 			);
 			path = Controllers;
 			sourceTree = SOURCE_ROOT;
@@ -416,15 +431,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -441,7 +460,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C71D4C62102D51800CF131A /* ViewController.swift in Sources */,
-				9C81DEEA212A15AE00203F89 /* SideMenuController.swift in Sources */,
 				9C81DE77211685A800203F89 /* GrupoBean.swift in Sources */,
 				9C81DE5F21167E8500203F89 /* CalificacionesBean.swift in Sources */,
 				9C81DE7B2116868A00203F89 /* ItemBean.swift in Sources */,
@@ -451,9 +469,10 @@
 				9C81DECD2117D00B00203F89 /* ValidarService.swift in Sources */,
 				9C81DEBB211769D800203F89 /* Task2.swift in Sources */,
 				9C81DE812116904C00203F89 /* NotificacionBean.swift in Sources */,
+				9C1BA190212A2274004A4118 /* PrincipalController.swift in Sources */,
 				9C81DEBD21176A5F00203F89 /* Token.swift in Sources */,
+				9C433C5A21325994008A92B8 /* NotificacionController.swift in Sources */,
 				9C81DEB92117694000203F89 /* Task.swift in Sources */,
-				9C81DEE8212A0EA200203F89 /* PrincipalController.swift in Sources */,
 				9C81DE692116824100203F89 /* ConfiguracionBackEndBean.swift in Sources */,
 				9C81DEB7211768C300203F89 /* TabPagoBean.swift in Sources */,
 				9C81DE75211684F200203F89 /* DocenteBean.swift in Sources */,
@@ -491,18 +510,23 @@
 				9C81DEAF2117573400203F89 /* ResponseUsuarioBean.swift in Sources */,
 				9C81DE992116A4E000203F89 /* ResponseChildRespuestaBean.swift in Sources */,
 				9C81DE712116846300203F89 /* ConfiguracionVersionBean.swift in Sources */,
+				9C8F568621324EB000AC38ED /* InicioController.swift in Sources */,
 				9C81DE6121167FB000203F89 /* CalificacionMateriaBean.swift in Sources */,
 				9C81DE852116945300203F89 /* PagosBean.swift in Sources */,
 				9C81DE952116A28000203F89 /* ResponseCalendarioEscolarBean.swift in Sources */,
 				9C81DE972116A42700203F89 /* ResponseCalificacionesPorAlumnoGrupoBean.swift in Sources */,
 				9C81DE6B211682BF00203F89 /* ConfiguracionBannerBean.swift in Sources */,
 				9C81DE8B21169DF700203F89 /* RequestPersistirIdFirebaseBean.swift in Sources */,
+				9C1BA18E212A21CB004A4118 /* SideMenuController.swift in Sources */,
 				9C81DE792116863F00203F89 /* ImagenBannerBean.swift in Sources */,
 				9C81DE9D2116A5CA00203F89 /* ResponseConfiguracionAppBean.swift in Sources */,
+				9C433C5C21325E2A008A92B8 /* NovedadesController.swift in Sources */,
 				9C81DE8D21169E7E00203F89 /* RequestRegisterBean.swift in Sources */,
+				9C433C5E21326A76008A92B8 /* AcercaController.swift in Sources */,
 				9C71D4C42102D51800CF131A /* AppDelegate.swift in Sources */,
 				9C81DEE2212A06BB00203F89 /* SWRevealViewController.m in Sources */,
 				9C81DE9B2116A57700203F89 /* ResponseCommonItemBean.swift in Sources */,
+				9C433C5821325291008A92B8 /* TerminosController.swift in Sources */,
 				9C81DECA2117CAA800203F89 /* Utilerias.swift in Sources */,
 				9C81DEAB2117504000203F89 /* ResponseSubChildRespuestaBean.swift in Sources */,
 				9C81DEC72117B3F700203F89 /* ValidarController.swift in Sources */,
