@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C042F98213B6EC200292A1E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042F97213B6EC200292A1E /* ImageCollectionViewCell.swift */; };
+		9C042F9A213C62D500292A1E /* AdeudoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042F99213C62D500292A1E /* AdeudoController.swift */; };
+		9C042F9C213C642B00292A1E /* CalificacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042F9B213C642B00292A1E /* CalificacionController.swift */; };
+		9C042F9E213C656A00292A1E /* MateriaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042F9D213C656A00292A1E /* MateriaController.swift */; };
+		9C042FA0213C664A00292A1E /* PagosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042F9F213C664A00292A1E /* PagosController.swift */; };
+		9C042FA2213CA19300292A1E /* RecuperarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042FA1213CA19300292A1E /* RecuperarController.swift */; };
 		9C1BA18E212A21CB004A4118 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BA18D212A21CB004A4118 /* SideMenuController.swift */; };
 		9C1BA190212A2274004A4118 /* PrincipalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BA18F212A2274004A4118 /* PrincipalController.swift */; };
 		9C433C5821325291008A92B8 /* TerminosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5721325291008A92B8 /* TerminosController.swift */; };
 		9C433C5A21325994008A92B8 /* NotificacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5921325994008A92B8 /* NotificacionController.swift */; };
 		9C433C5C21325E2A008A92B8 /* NovedadesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5B21325E2A008A92B8 /* NovedadesController.swift */; };
 		9C433C5E21326A76008A92B8 /* AcercaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5D21326A76008A92B8 /* AcercaController.swift */; };
+		9C433C6021334E6D008A92B8 /* SesionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5F21334E6D008A92B8 /* SesionController.swift */; };
 		9C5AEF8C21054C3F00D821D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */; };
 		9C71D4C42102D51800CF131A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D4C32102D51800CF131A /* AppDelegate.swift */; };
 		9C71D4C62102D51800CF131A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D4C52102D51800CF131A /* ViewController.swift */; };
@@ -81,6 +88,7 @@
 		9C81DED3212921BF00203F89 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DED2212921BF00203F89 /* RestService.swift */; };
 		9C81DEE2212A06BB00203F89 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEE0212A06BB00203F89 /* SWRevealViewController.m */; };
 		9C8F568621324EB000AC38ED /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F568521324EB000AC38ED /* InicioController.swift */; };
+		9CE9576F21336DA100C1CE2D /* IniciarSesionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9576E21336DA100C1CE2D /* IniciarSesionService.swift */; };
 		9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */; };
 		BCAD3B13C1EF8DA68F4D1736 /* Pods_CepcmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */; };
 /* End PBXBuildFile section */
@@ -88,12 +96,19 @@
 /* Begin PBXFileReference section */
 		1BA9995596CE3D2AA58A3F1D /* Pods-CepcmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CepcmApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp.release.xcconfig"; sourceTree = "<group>"; };
 		3CD1DBA012A668125916E99E /* Pods-CepcmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CepcmApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9C042F97213B6EC200292A1E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C042F99213C62D500292A1E /* AdeudoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdeudoController.swift; sourceTree = "<group>"; };
+		9C042F9B213C642B00292A1E /* CalificacionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalificacionController.swift; sourceTree = "<group>"; };
+		9C042F9D213C656A00292A1E /* MateriaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriaController.swift; sourceTree = "<group>"; };
+		9C042F9F213C664A00292A1E /* PagosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagosController.swift; sourceTree = "<group>"; };
+		9C042FA1213CA19300292A1E /* RecuperarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperarController.swift; sourceTree = "<group>"; };
 		9C1BA18D212A21CB004A4118 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		9C1BA18F212A2274004A4118 /* PrincipalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalController.swift; sourceTree = "<group>"; };
 		9C433C5721325291008A92B8 /* TerminosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminosController.swift; sourceTree = "<group>"; };
 		9C433C5921325994008A92B8 /* NotificacionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacionController.swift; sourceTree = "<group>"; };
 		9C433C5B21325E2A008A92B8 /* NovedadesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovedadesController.swift; sourceTree = "<group>"; };
 		9C433C5D21326A76008A92B8 /* AcercaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcercaController.swift; sourceTree = "<group>"; };
+		9C433C5F21334E6D008A92B8 /* SesionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionController.swift; sourceTree = "<group>"; };
 		9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C71D4C02102D51800CF131A /* CepcmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CepcmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C71D4C32102D51800CF131A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +181,7 @@
 		9C81DEE1212A06BB00203F89 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		9C81DEE6212A0BB300203F89 /* CepcmApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CepcmApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		9C8F568521324EB000AC38ED /* InicioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
+		9CE9576E21336DA100C1CE2D /* IniciarSesionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniciarSesionService.swift; sourceTree = "<group>"; };
 		9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
 		C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CepcmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -296,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				9C81DEC92117CAA800203F89 /* Utilerias.swift */,
+				9C042F97213B6EC200292A1E /* ImageCollectionViewCell.swift */,
 			);
 			path = Utils;
 			sourceTree = SOURCE_ROOT;
@@ -307,6 +324,7 @@
 				9C81DECE2128C6CF00203F89 /* ConnectionService.swift */,
 				9C81DED021290C8A00203F89 /* FirebaseService.swift */,
 				9C81DED2212921BF00203F89 /* RestService.swift */,
+				9CE9576E21336DA100C1CE2D /* IniciarSesionService.swift */,
 			);
 			path = Services;
 			sourceTree = SOURCE_ROOT;
@@ -321,6 +339,12 @@
 				9C433C5921325994008A92B8 /* NotificacionController.swift */,
 				9C433C5B21325E2A008A92B8 /* NovedadesController.swift */,
 				9C433C5D21326A76008A92B8 /* AcercaController.swift */,
+				9C433C5F21334E6D008A92B8 /* SesionController.swift */,
+				9C042F99213C62D500292A1E /* AdeudoController.swift */,
+				9C042F9B213C642B00292A1E /* CalificacionController.swift */,
+				9C042F9D213C656A00292A1E /* MateriaController.swift */,
+				9C042F9F213C664A00292A1E /* PagosController.swift */,
+				9C042FA1213CA19300292A1E /* RecuperarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = SOURCE_ROOT;
@@ -434,6 +458,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -443,6 +468,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -463,9 +489,11 @@
 				9C81DE77211685A800203F89 /* GrupoBean.swift in Sources */,
 				9C81DE5F21167E8500203F89 /* CalificacionesBean.swift in Sources */,
 				9C81DE7B2116868A00203F89 /* ItemBean.swift in Sources */,
+				9C042F9C213C642B00292A1E /* CalificacionController.swift in Sources */,
 				9C81DE832116938C00203F89 /* PagoBean.swift in Sources */,
 				9C81DE73211684C700203F89 /* DeviceTokenBean.swift in Sources */,
 				9C81DE8921169D8E00203F89 /* PromedioBean.swift in Sources */,
+				9C042FA2213CA19300292A1E /* RecuperarController.swift in Sources */,
 				9C81DECD2117D00B00203F89 /* ValidarService.swift in Sources */,
 				9C81DEBB211769D800203F89 /* Task2.swift in Sources */,
 				9C81DE812116904C00203F89 /* NotificacionBean.swift in Sources */,
@@ -481,14 +509,17 @@
 				9C81DE652116816700203F89 /* ConceptoAsistenciaBean.swift in Sources */,
 				9C81DEA32116A8D700203F89 /* ResponseObtenerDetalleMateriaBean.swift in Sources */,
 				9C81DEB32117584D00203F89 /* ResponseValidaCuentaAlumnoBean.swift in Sources */,
+				9C042F98213B6EC200292A1E /* ImageCollectionViewCell.swift in Sources */,
 				9C81DE592116794E00203F89 /* AlumnoBean.swift in Sources */,
 				9C81DE7F2116896A00203F89 /* MateriaCarreraBean.swift in Sources */,
 				9C81DEB1211757C100203F89 /* RespuestaValidaCuentaAlumnoBean.swift in Sources */,
 				9C81DE7D2116889A00203F89 /* MateriaBean.swift in Sources */,
+				9C042F9E213C656A00292A1E /* MateriaController.swift in Sources */,
 				9C81DEB5211765F000203F89 /* SessionBean.swift in Sources */,
 				9C81DE5D21167D9800203F89 /* CalificacionDetalleBean.swift in Sources */,
 				9C81DE6D2116834E00203F89 /* ConfiguracionFirebase.swift in Sources */,
 				9C81DE67211681D100203F89 /* ConceptoPagoBean.swift in Sources */,
+				9C433C6021334E6D008A92B8 /* SesionController.swift in Sources */,
 				9C81DEA721174F4B00203F89 /* ResponsePersisteRegistroDispositivoBean.swift in Sources */,
 				9C81DED3212921BF00203F89 /* RestService.swift in Sources */,
 				9C81DEAD2117565600203F89 /* ResponseTokenBean.swift in Sources */,
@@ -497,12 +528,14 @@
 				9C81DE6F211683D000203F89 /* ConfiguracionModuloFirebase.swift in Sources */,
 				9C81DE5B211679F200203F89 /* CalendarioMateriaBean.swift in Sources */,
 				9C81DEC52117917A00203F89 /* ResponseBean.swift in Sources */,
+				9C042FA0213C664A00292A1E /* PagosController.swift in Sources */,
 				9C81DEA12116A75F00203F89 /* ResponseMateriasPorCarreraBean.swift in Sources */,
 				9C81DE63211680D700203F89 /* CarreraBean.swift in Sources */,
 				9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */,
 				9C81DEC121176B2700203F89 /* UsuarioBean.swift in Sources */,
 				9C81DE872116974400203F89 /* PagosPorAlumnoBean.swift in Sources */,
 				9C81DEBF21176AAC00203F89 /* TokenOautBean.swift in Sources */,
+				9C042F9A213C62D500292A1E /* AdeudoController.swift in Sources */,
 				9C81DE8F21169EDA00203F89 /* RequestUsuario.swift in Sources */,
 				9C81DE9F2116A65000203F89 /* ResponseErrorBean.swift in Sources */,
 				9C81DE9121169F1D00203F89 /* ResponseBase.swift in Sources */,
@@ -516,6 +549,7 @@
 				9C81DE952116A28000203F89 /* ResponseCalendarioEscolarBean.swift in Sources */,
 				9C81DE972116A42700203F89 /* ResponseCalificacionesPorAlumnoGrupoBean.swift in Sources */,
 				9C81DE6B211682BF00203F89 /* ConfiguracionBannerBean.swift in Sources */,
+				9CE9576F21336DA100C1CE2D /* IniciarSesionService.swift in Sources */,
 				9C81DE8B21169DF700203F89 /* RequestPersistirIdFirebaseBean.swift in Sources */,
 				9C1BA18E212A21CB004A4118 /* SideMenuController.swift in Sources */,
 				9C81DE792116863F00203F89 /* ImagenBannerBean.swift in Sources */,

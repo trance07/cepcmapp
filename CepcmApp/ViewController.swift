@@ -10,6 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBAction func lanzarValidacion() {
+        
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ValidarController") as? ValidarController {
+            
+            self.navigationController?.pushViewController(viewController, animated: true)
+            
+        }
+        
+    }
+    
+    @IBAction func lanzarSesion() {
+        
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SesionController") as? SesionController {
+            
+            self.navigationController?.pushViewController(viewController, animated: true)
+            
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,15 +53,7 @@ class ViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
-    @IBAction func lanzarValidacion() {
-        
-          if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ValidarController") as? ValidarController {
-            
-            self.navigationController?.pushViewController(viewController, animated: true)
-            
-        }
-        
-    }
+   
     
 }
 

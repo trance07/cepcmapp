@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5BFB25CEC98D84EC0B306235DF62BDEB"
+               BlueprintIdentifier = "D0C5259CB6963CCF881263E5212A4666"
                BlueprintName = "Pods-CepcmApp"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Pods-CepcmApp.framework">

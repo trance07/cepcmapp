@@ -15,5 +15,6 @@ target 'CepcmApp' do
   pod 'Firebase/Auth'
   pod 'SideMenu'
   pod 'Alamofire', '~> 4.7'
+  pod 'ImageSlideshow', '~> 1.6'
   
 end
