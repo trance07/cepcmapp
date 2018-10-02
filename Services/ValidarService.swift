@@ -11,7 +11,7 @@ import Alamofire
 
 class ValidarService {
     
-    let app_cepcm_host : String = "http://187.190.149.140:8083/accesoController/validarCuentaAlumno"
+    let app_cepcm_host : String = "http://187.190.149.140:8083/CEPCM_MOVIL/accesoController/validarCuentaAlumno"
     
     let app_cepcm_domain_name : String = "cepcm.domain"
     

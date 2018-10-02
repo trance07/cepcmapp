@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CalendarKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DateToolsSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FirebaseAuth.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -40,6 +50,11 @@
 			<false/>
 		</dict>
 		<key>ImageSlideshow.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Neon.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
