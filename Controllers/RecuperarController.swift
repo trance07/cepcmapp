@@ -10,9 +10,13 @@ import UIKit
 
 class RecuperarController: UIViewController {
     
+    let firebaseService : FirebaseService = FirebaseService()
+    
     let mensajeVacio : String = "El correo electrónico no puede estar vacio."
     
     let mensajeEmail : String = "Se debe indicar un correo electrónico válido."
+    
+    let mensajeExito : String = "Se enviará un correo electrónico para que puedas recuperar tu contraseña"
     
     let mensajeConexion : String = "Verifica tu conexión a internet"
     
@@ -57,6 +61,8 @@ class RecuperarController: UIViewController {
         if ConnectionService.isConnectedToNetwork() {
         
             /// se debe lanzar proceso de recuperacion de password
+            firebaseService.recuperarPassword(email: email)
+            self.presentarAlerta(mensaje: self.mensajeExito)
             
         } else {
             

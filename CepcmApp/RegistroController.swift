@@ -26,6 +26,8 @@ class RegistroController: UIViewController {
     
     let mensajeErrorRegistro : String = "Ocurrió un error en el registro, intente más tarde."
     
+    let mensajeVerificacion : String = "Un mensaje será enviado a la dirección de correo electrónico especificada. Este correo contiene un enlace para completar el proceso de verficación."
+    
     let titulo : String = "CEPCM"
     
     var matriculaText : String? = ""
@@ -107,7 +109,27 @@ class RegistroController: UIViewController {
                 request.id_tipo_usuario = self.id_tipo_usuario_alumno
                 
                 let restService = RestService()
-                restService.persistirIdFirebaseEnBackend(request: request)
+                restService.persistirIdFirebaseEnBackend(request: request) { (resultado) in
+                    
+                    if resultado.respuesta != nil {
+                        
+                        if resultado.respuesta?.codigo == 0 {
+                            
+                            self.presentarAlerta(mensaje: self.mensajeVerificacion)
+                            
+                        } else if resultado.respuesta?.codigo == -1 {
+                            
+                            self.presentarAlerta(mensaje: (resultado.respuesta?.mensaje)!)
+                            
+                        }
+                        
+                    } else {
+                        
+                        self.presentarAlerta(mensaje: self.mensajeErrorRegistro)
+                        
+                    }
+                    
+                }
                 
             } else {
                 

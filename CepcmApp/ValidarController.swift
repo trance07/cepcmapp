@@ -17,6 +17,8 @@ class ValidarController: UIViewController {
     
     let mensajeConexion : String = "Verifica tu conexión a internet"
     
+    let mensajeIncorrecto : String = "La matricula y/o el curp son incorrectos, favor de verificar"
+    
     let validarService : ValidarService = ValidarService()
     
     @IBOutlet weak var matricula: UITextField!
@@ -52,20 +54,27 @@ class ValidarController: UIViewController {
             
             if ConnectionService.isConnectedToNetwork() {
             
-                let respuesta = self.validarService.validarDatos(request: request)
-                if respuesta == true {
+                self.validarService.validarDatos(request: request) { (resultado) in
                     
-                    
-                    if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistroController") as? RegistroController {
+                    if resultado == true {
                         
-                        viewController.matriculaText = self.matricula?.text
-                        viewController.curpText = self.curp?.text
                         
-                        self.navigationController?.pushViewController(viewController, animated: true)
+                        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistroController") as? RegistroController {
+                            
+                            viewController.matriculaText = self.matricula?.text
+                            viewController.curpText = self.curp?.text
+                            
+                            self.navigationController?.pushViewController(viewController, animated: true)
+                            
+                            
+                        }
                         
+                        
+                    } else {
+                        
+                        self.presentarAlerta(mensaje: self.mensajeIncorrecto)
                         
                     }
-                    
                     
                 }
                 

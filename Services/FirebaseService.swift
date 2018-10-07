@@ -8,8 +8,29 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseDatabase
 
 class FirebaseService {
+    
+    let firebase_field_alumnos : String = "alumnos"
+    
+    func recuperarPassword(email: String) {
+        
+        print("---> Recuperar password")
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            
+            print("---> Enviando correo de recuperacion")
+            
+        }
+        
+    }
+    
+    func persistirDatosAlumnoFirebase() {
+        
+        print("---> Persistir datos en firebase")
+        
+        
+    }
     
     func crearCuentaFirebase(email : String, password : String) -> String {
         
@@ -20,7 +41,7 @@ class FirebaseService {
             (user, error) in
             
             if error == nil {
-                
+                print("el user es: \(user)")
                 print("el user id es: \(user?.user.uid)")
                 regreso = (user?.user.uid)!
                 

@@ -11,16 +11,19 @@ import Alamofire
 
 class ValidarService {
     
+    let userDefaults = UserDefaults.standard
+    
     let app_cepcm_host : String = "http://187.190.149.140:8083/CEPCM_MOVIL/accesoController/validarCuentaAlumno"
     
     let app_cepcm_domain_name : String = "cepcm.domain"
     
     
-    func validarDatos(request : RequestUsuario) -> Bool {
+    func validarDatos(request : RequestUsuario, resultado: @escaping (Bool) -> ()) -> Void {
         print("---> Validador Service")
         
         
         let encoder = JSONEncoder()
+        
         do {
             
             let jsonData = try encoder.encode(request)
@@ -35,14 +38,29 @@ class ValidarService {
             Alamofire.request(req).responseJSON { response in
                 switch response.result {
                 case .success(let data):
-                    print("\n Success: \(response)")
+                    //print("\n Success: \(response.data)")
                     
-                    // Do your code here...
+                    do {
+                    
+                        let json = try JSONDecoder().decode(ResponseValidaCuentaAlumnoBean.self, from: response.data!)
+                        //print("el resultado es: \(json.respuesta?.valido)")
+                        if json.respuesta?.valido == true {
+                            resultado(true)
+                        } else {
+                            resultado(false)
+                        }
+                        
+                    } catch let errorJson {
+                        print(errorJson)
+                        resultado(false)
+                    }
+                    
+                    
                     
                 case .failure(let error):
-                    print("\n Failure: \(error.localizedDescription)")
+                    //print("\n Failure: \(error.localizedDescription)")
                     
-                    // Do your code here...
+                    resultado(false)
                     
                 }
             
@@ -50,9 +68,11 @@ class ValidarService {
             
         } catch {
             
+            resultado(false)
+            
         }
         
-        return true
+        
     }
     
 }

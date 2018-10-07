@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Services/ValidarService.swift"
-            timestampString = "560177110.721601"
+            timestampString = "560640452.045997"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "validarDatos(request:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "validarDatos(request:resultado:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
