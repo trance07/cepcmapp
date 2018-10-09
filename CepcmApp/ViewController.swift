@@ -25,15 +25,16 @@ class ViewController: UIViewController {
         
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SesionController") as? SesionController {
             
-            self.navigationController?.pushViewController(viewController, animated: true)
+            self.present(viewController, animated: true, completion: nil)
             
         }
+        
+    
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +46,9 @@ class ViewController: UIViewController {
         super.viewWillAppear(true)
         // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+      
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

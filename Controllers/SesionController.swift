@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SesionController: UIViewController {
+class SesionController: UIViewController, UITextFieldDelegate {
 
     let mensajeConexion : String = "Verifica tu conexión a internet"
     
@@ -18,16 +18,17 @@ class SesionController: UIViewController {
     
     let titulo : String = "CEPCM"
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
     
-    @IBOutlet weak var correo: UITextField!
+    @IBOutlet weak var txtCorreo: UITextField!
     
     @IBAction func lanzarRecuperacion() {
         
         print("---> Evento lanzar recuperacion")
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecuperarController") as? RecuperarController {
             
-            self.navigationController?.pushViewController(viewController, animated: true)
+             self.present(viewController, animated: true, completion: nil)
+            //self.navigationController?.pushViewController(viewController, animated: true)
             
         }
         
@@ -37,17 +38,17 @@ class SesionController: UIViewController {
         
         print("---> Evento iniciar sesion")
         
-        if (self.correo.text?.isEmpty)! || (self.password.text?.isEmpty)! {
+        if (self.txtCorreo.text?.isEmpty)! || (self.txtPassword.text?.isEmpty)! {
             
             presentarAlerta(mensaje: mensajeVacio)
             
-        } else if Utilerias.validarEmail(email: (self.correo.text)!) == false {
+        } else if Utilerias.validarEmail(email: (self.txtCorreo.text)!) == false {
             
             presentarAlerta(mensaje: self.mensajeEmail)
             
         } else {
             
-            procesarSesion(email: self.correo.text!, password: self.password.text!)
+            procesarSesion(email: self.txtCorreo.text!, password: self.txtPassword.text!)
             
         }
         
@@ -57,7 +58,8 @@ class SesionController: UIViewController {
         
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewControllerLogin") as? ViewController {
             
-            self.navigationController?.pushViewController(viewController, animated: true)
+             self.present(viewController, animated: true, completion: nil)
+             //self.navigationController?.pushViewController(viewController, animated: true)
             
         }
         
@@ -67,26 +69,46 @@ class SesionController: UIViewController {
         
         print("---> Procesando sesion")
         
-        //if ConnectionService.isConnectedToNetwork() {
+        //Guarda la Sesion de la persona logueada
         
-            if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PrincipalController") as? PrincipalController {
-                
-                self.navigationController?.pushViewController(viewController, animated: true)
-                
-            }
-            
-        /*} else {
-            
-            presentarAlerta(mensaje: self.mensajeConexion)
-            
-        }*/
+        LoadingController.stop()
+       
+        Session.shared.user?.idUsuario = "123"
+        Session.shared.user?.nombres = "Juan Carlos"
+        Session.shared.user?.apaterno = "Cas"
+        Session.shared.user?.amaterno = "Mar"
+        Session.shared.user?.email = "mail@mail.com"
+        Session.shared.user?.firstLoad = nil
+   
+       
+        //TODO: Mandar a registrar el device al back
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.checkLogin()
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //Configuracion para el teclado
+        txtCorreo.delegate = self
+        txtPassword.delegate = self
+        
+        txtCorreo.text = "mail@mail.com"
+        txtPassword.text = "123456"
+      
+    }
+    
+    //Configuracion para el teclado
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    //Configuracion para el teclado
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -119,5 +141,8 @@ class SesionController: UIViewController {
         present(alert, animated: true)
         
     }
+    
+
+    
     
 }

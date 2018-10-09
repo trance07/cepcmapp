@@ -182,6 +182,17 @@
                                     </collectionView>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pni-za-mR2" userLabel="btnLogout">
+                                <rect key="frame" x="16" y="72" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.60923499719999996" green="0.1019850939" blue="0.46128920490000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="lanzarLogout" destination="Z7R-9w-j4u" eventType="touchUpInside" id="h4L-dT-0Z8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -189,9 +200,12 @@
                             <constraint firstAttribute="trailing" secondItem="naz-c4-jut" secondAttribute="trailing" id="IPh-e5-gY5"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="leading" secondItem="rQl-Hv-mDv" secondAttribute="leading" id="Kca-lM-8Pk"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="top" secondItem="rQl-Hv-mDv" secondAttribute="top" id="Ovk-pr-Lt8"/>
+                            <constraint firstItem="Pni-za-mR2" firstAttribute="top" secondItem="uGT-b6-3gK" secondAttribute="bottom" constant="8" symbolic="YES" id="eMI-Fb-Rj1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pni-za-mR2" secondAttribute="trailing" id="fmE-Sm-Zau"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="leading" secondItem="rQl-Hv-mDv" secondAttribute="leading" id="inw-6b-PFw"/>
                             <constraint firstAttribute="trailing" secondItem="naz-c4-jut" secondAttribute="trailing" id="lBZ-Us-UzM"/>
                             <constraint firstAttribute="bottom" secondItem="naz-c4-jut" secondAttribute="bottom" id="sHg-ae-daL"/>
+                            <constraint firstItem="Pni-za-mR2" firstAttribute="leading" secondItem="rQl-Hv-mDv" secondAttribute="leadingMargin" id="u9y-EZ-FVT"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="top" secondItem="uGT-b6-3gK" secondAttribute="bottom" constant="8" id="vUG-cF-QCJ"/>
                         </constraints>
                     </view>
@@ -451,8 +465,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="correo" destination="DDp-SR-s8y" id="XYf-VA-NH4"/>
-                        <outlet property="password" destination="h7C-d4-pOQ" id="kT8-tn-J4C"/>
+                        <outlet property="txtCorreo" destination="DDp-SR-s8y" id="XYf-VA-NH4"/>
+                        <outlet property="txtPassword" destination="h7C-d4-pOQ" id="kT8-tn-J4C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9j2-e4-aTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -834,7 +848,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="117" id="G4u-mA-2Wm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="117" id="G4u-mA-2Wm">
                                         <rect key="frame" x="0.0" y="28" width="375" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G4u-mA-2Wm" id="Bwt-5T-6qS">

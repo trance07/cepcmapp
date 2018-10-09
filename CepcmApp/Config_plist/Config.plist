@@ -4,5 +4,18 @@
 <dict>
 	<key>Ambiente</key>
 	<string>Desarrollo</string>
+    <key>Requests</key>
+    <dict>
+        <key>Produccion</key>
+        <dict>
+            <key>LOGIN</key>
+            <string>https://urlprologin.gnp.com.mx/auth/login</string>
+        </dict>
+        <key>DES</key>
+        <dict>
+            <key>LOGIN</key>
+            <string>http://urldeslogin.gnp.com.mx/auth/login</string>
+        </dict>
+    </dict>
 </dict>
 </plist>

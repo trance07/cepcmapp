@@ -99,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let session = Session.shared.user!
                     let data = NSKeyedArchiver.archivedData(withRootObject: session)
                     let keyChain = KeychainSwift()
-                    keyChain.set(data, forKey: "CEPCM_SESSION_GNP")
+                    keyChain.set(data, forKey: "CEPCM_SESSION")
                
                     let adminController = storyBoard.instantiateViewController(withIdentifier: "PrincipalController")
                     self.window?.rootViewController = adminController
