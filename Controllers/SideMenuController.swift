@@ -170,7 +170,7 @@ class SideMenuController: UITableViewController {
         
         let aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: {(action) -> Void in
             
-            if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+            if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewControllerLogin") as? ViewController {
                 
                 self.navigationController?.pushViewController(viewController, animated: true)
                 

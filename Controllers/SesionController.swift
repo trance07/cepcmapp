@@ -55,7 +55,7 @@ class SesionController: UIViewController {
     
     @IBAction func lanzarCancelacion() {
         
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewControllerLogin") as? ViewController {
             
             self.navigationController?.pushViewController(viewController, animated: true)
             
