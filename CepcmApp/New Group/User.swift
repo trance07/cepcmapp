@@ -10,6 +10,7 @@ import Foundation
 
 class User: NSObject, NSCoding {
     
+    var idUsuario: String? { didSet{valueChanged()} }
     var matricula: String? { didSet{valueChanged()} }
     var nombres: String? { didSet{valueChanged()} }
     var apaterno: String? { didSet{valueChanged()} }
@@ -19,7 +20,7 @@ class User: NSObject, NSCoding {
   
     var firstLoad: String? { didSet{valueChanged()} }
     var idAplicacion: String? { didSet{valueChanged()} }
-    var idUsuario: String? { didSet{valueChanged()} }
+   
    
  
     
@@ -35,6 +36,7 @@ class User: NSObject, NSCoding {
     
     required init(coder aDecoder: NSCoder) {
         
+        self.idUsuario = aDecoder.decodeObject(forKey: "idUsuario") as? String
         self.matricula = aDecoder.decodeObject(forKey: "matricula") as? String
         self.apaterno = aDecoder.decodeObject(forKey: "apaterno") as? String
         self.amaterno = aDecoder.decodeObject(forKey: "amaterno") as? String
@@ -50,6 +52,7 @@ class User: NSObject, NSCoding {
     
     func encode(with aCoder: NSCoder) {
         
+        aCoder.encode(idUsuario, forKey: "idUsuario")
         aCoder.encode(matricula, forKey: "matricula")
         aCoder.encode(apaterno, forKey: "apaterno")
         aCoder.encode(amaterno, forKey: "matamaternoricula")
@@ -57,7 +60,7 @@ class User: NSObject, NSCoding {
         aCoder.encode(email, forKey: "email")
         //aCoder.encode(firstLoad, forKey: "firstLoad")
         //aCoder.encode(idAplicacion, forKey: "idAplicacion")
-        //aCoder.encode(idUsuario, forKey: "idUsuario")
+        
        
         
     }
