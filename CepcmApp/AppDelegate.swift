@@ -13,10 +13,27 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var ref: DatabaseReference!
 
+    override init() {
+        //leyendo el archivo Config.plist
+        let filePath = Bundle.main.path(forResource: "Config", ofType: "plist")
+        let configPlist = NSDictionary(contentsOfFile: filePath!)
+        let ambiente = configPlist?["Ambiente"] as! String
+     
+        var configPath = ""
+        if ambiente == "Desarrollo"{
+            configPath = Bundle.main.path(forResource: "Des-GoogleService-Info", ofType: "plist")!
+        }else if ambiente == "Produccion"{
+            configPath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")!
+        }
+        let fileOpts = FirebaseOptions.init(contentsOfFile: configPath)
+        FirebaseApp.configure(options: fileOpts!)
+        ref = Database.database().reference()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
+        
         return true
     }
 

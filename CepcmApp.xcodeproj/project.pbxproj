@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41A1A0A5216CEBCF001C302A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41A1A0A4216CEBCF001C302A /* Config.plist */; };
 		9C0005C7216AB6C800F428D4 /* MateriaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0005C6216AB6C800F428D4 /* MateriaService.swift */; };
 		9C042F98213B6EC200292A1E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042F97213B6EC200292A1E /* ImageCollectionViewCell.swift */; };
 		9C042F9A213C62D500292A1E /* AdeudoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042F99213C62D500292A1E /* AdeudoController.swift */; };
@@ -21,7 +22,7 @@
 		9C433C5C21325E2A008A92B8 /* NovedadesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5B21325E2A008A92B8 /* NovedadesController.swift */; };
 		9C433C5E21326A76008A92B8 /* AcercaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5D21326A76008A92B8 /* AcercaController.swift */; };
 		9C433C6021334E6D008A92B8 /* SesionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5F21334E6D008A92B8 /* SesionController.swift */; };
-		9C5AEF8C21054C3F00D821D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */; };
+		9C5AEF8C21054C3F00D821D1 /* Des-GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5AEF8B21054C3E00D821D1 /* Des-GoogleService-Info.plist */; };
 		9C71D4C42102D51800CF131A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D4C32102D51800CF131A /* AppDelegate.swift */; };
 		9C71D4C62102D51800CF131A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D4C52102D51800CF131A /* ViewController.swift */; };
 		9C71D4C92102D51800CF131A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C71D4C72102D51800CF131A /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 /* Begin PBXFileReference section */
 		1BA9995596CE3D2AA58A3F1D /* Pods-CepcmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CepcmApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp.release.xcconfig"; sourceTree = "<group>"; };
 		3CD1DBA012A668125916E99E /* Pods-CepcmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CepcmApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp.debug.xcconfig"; sourceTree = "<group>"; };
+		41A1A0A4216CEBCF001C302A /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Config.plist; path = Config_plist/Config.plist; sourceTree = "<group>"; };
 		9C0005C6216AB6C800F428D4 /* MateriaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriaService.swift; sourceTree = "<group>"; };
 		9C042F97213B6EC200292A1E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C042F99213C62D500292A1E /* AdeudoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdeudoController.swift; sourceTree = "<group>"; };
@@ -111,7 +113,7 @@
 		9C433C5B21325E2A008A92B8 /* NovedadesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovedadesController.swift; sourceTree = "<group>"; };
 		9C433C5D21326A76008A92B8 /* AcercaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcercaController.swift; sourceTree = "<group>"; };
 		9C433C5F21334E6D008A92B8 /* SesionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionController.swift; sourceTree = "<group>"; };
-		9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C5AEF8B21054C3E00D821D1 /* Des-GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Des-GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C71D4C02102D51800CF131A /* CepcmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CepcmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C71D4C32102D51800CF131A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C71D4C52102D51800CF131A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -242,9 +244,10 @@
 				9C81DEC62117B3F700203F89 /* ValidarController.swift */,
 				9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */,
 				9C71D4CA2102D51800CF131A /* Assets.xcassets */,
-				9C5AEF8B21054C3E00D821D1 /* GoogleService-Info.plist */,
+				9C5AEF8B21054C3E00D821D1 /* Des-GoogleService-Info.plist */,
 				9C71D4CC2102D51800CF131A /* LaunchScreen.storyboard */,
 				9C71D4CF2102D51800CF131A /* Info.plist */,
+				41A1A0A4216CEBCF001C302A /* Config.plist */,
 			);
 			path = CepcmApp;
 			sourceTree = "<group>";
@@ -424,8 +427,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C71D4CE2102D51800CF131A /* LaunchScreen.storyboard in Resources */,
-				9C5AEF8C21054C3F00D821D1 /* GoogleService-Info.plist in Resources */,
+				9C5AEF8C21054C3F00D821D1 /* Des-GoogleService-Info.plist in Resources */,
 				9C71D4CB2102D51800CF131A /* Assets.xcassets in Resources */,
+				41A1A0A5216CEBCF001C302A /* Config.plist in Resources */,
 				9C71D4C92102D51800CF131A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
