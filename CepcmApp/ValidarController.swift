@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ValidarController: UIViewController {
+class ValidarController: UIViewController ,UITextFieldDelegate{
 
    
     let titulo : String = "CEPCM"
@@ -21,14 +21,31 @@ class ValidarController: UIViewController {
     
     let validarService : ValidarService = ValidarService()
     
-    @IBOutlet weak var matricula: UITextField!
+    @IBOutlet weak var txtMatricula: UITextField!
     
-    @IBOutlet weak var curp: UITextField!
+    @IBOutlet weak var txtCurp: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Configuracion para el teclado
+        txtMatricula.delegate = self
+        txtCurp.delegate = self
+        
+        txtMatricula.text = "123"
+        txtCurp.text = "123"
 
-        // Do any additional setup after loading the view.
+    }
+    
+    //Configuracion para el teclado
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    //Configuracion para el teclado
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +58,7 @@ class ValidarController: UIViewController {
     @IBAction func validarDatos() {
         print("validando datos...")
         
-        if (self.matricula.text?.isEmpty)! || (self.curp.text?.isEmpty)! {
+        if (self.txtMatricula.text?.isEmpty)! || (self.txtCurp.text?.isEmpty)! {
             
             self.presentarAlerta(mensaje: self.mensajeVacio)
             
@@ -49,8 +66,8 @@ class ValidarController: UIViewController {
             
             print("Entrando en el else")
             var request = RequestUsuario()
-            request.matricula = self.matricula.text
-            request.curp = self.curp.text?.uppercased()
+            request.matricula = self.txtMatricula.text
+            request.curp = self.txtCurp.text?.uppercased()
             
             if ConnectionService.isConnectedToNetwork() {
             
@@ -58,17 +75,16 @@ class ValidarController: UIViewController {
                     
                     if resultado == true {
                         
-                        
                         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistroController") as? RegistroController {
                             
-                            viewController.matriculaText = self.matricula?.text
-                            viewController.curpText = self.curp?.text
+                            viewController.matriculaText = self.txtMatricula?.text
+                            viewController.curpText = self.txtCurp?.text
                             
-                            self.navigationController?.pushViewController(viewController, animated: true)
+                           // self.navigationController?.pushViewController(viewController, animated: true)
                             
+                              self.present(viewController, animated: true, completion: nil)
                             
                         }
-                        
                         
                     } else {
                         

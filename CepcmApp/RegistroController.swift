@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistroController: UIViewController {
+class RegistroController: UIViewController, UITextFieldDelegate {
 
     let length_min_pass : Int = 6
     
@@ -38,24 +38,41 @@ class RegistroController: UIViewController {
     
     let id_aplicaion : Int = 1
     
-    @IBOutlet weak var matricula: UITextField!
+    @IBOutlet weak var txtMatricula: UITextField!
     
-    @IBOutlet weak var curp: UITextField!
+    @IBOutlet weak var txtCurp: UITextField!
     
-    @IBOutlet weak var correo: UITextField!
+    @IBOutlet weak var txtCorreo: UITextField!
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
     
-    @IBOutlet weak var confPassword: UITextField!
+    @IBOutlet weak var txtConfPassword: UITextField!
     
     var firebaseService : FirebaseService = FirebaseService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.matricula.text = matriculaText
-        self.curp.text = curpText
+        self.txtMatricula.text = matriculaText
+        self.txtCurp.text = curpText
         
+        txtMatricula.delegate = self
+        txtCurp.delegate = self
+        txtCorreo.delegate = self
+        txtPassword.delegate = self
+        txtConfPassword.delegate = self
+        
+    }
+    
+    //Configuracion para el teclado
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    //Configuracion para el teclado
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,28 +83,28 @@ class RegistroController: UIViewController {
     @IBAction func validarUsuario() {
         print("---> Evento de validar datos")
         
-        if (self.matricula.text?.isEmpty)! || (self.curp.text?.isEmpty)! || (self.correo.text?.isEmpty)! || (self.password.text?.isEmpty)! || (self.confPassword.text?.isEmpty)! {
+        if (self.txtMatricula.text?.isEmpty)! || (self.txtCurp.text?.isEmpty)! || (self.txtCorreo.text?.isEmpty)! || (self.txtPassword.text?.isEmpty)! || (self.txtConfPassword.text?.isEmpty)! {
             
             print("---> Alguno de los campos esta vacio")
             
             presentarAlerta(mensaje: self.mensajeVacio)
             
-        } else if Utilerias.validarEmail(email: (self.correo.text)!) == false {
+        } else if Utilerias.validarEmail(email: (self.txtCorreo.text)!) == false {
             
             presentarAlerta(mensaje: self.mensajeEmail)
             
-        } else if (self.password.text?.count)! < self.length_min_pass {
+        } else if (self.txtPassword.text?.count)! < self.length_min_pass {
             
             presentarAlerta(mensaje: self.mensajeMinPassword)
             
-        } else if (self.password.text)! != (self.confPassword.text)! {
+        } else if (self.txtPassword.text)! != (self.txtConfPassword.text)! {
             
             presentarAlerta(mensaje: self.mensajeDiffPassword)
             
         } else {
             
             print("---> Los campos estan validados, se puede enviar registro")
-            procesarRegistro(email: self.correo.text!, password: self.password.text!)
+            procesarRegistro(email: self.txtCorreo.text!, password: self.txtPassword.text!)
             
         }
         

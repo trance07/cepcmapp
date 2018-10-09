@@ -11,39 +11,24 @@ import Alamofire
 
 class ValidarService {
     
-    let userDefaults = UserDefaults.standard
-    
-    let app_cepcm_host : String = "http://187.190.149.140:8083/CEPCM_MOVIL/accesoController/validarCuentaAlumno"
-    
-    let app_cepcm_domain_name : String = "cepcm.domain"
-    
-    
     func validarDatos(request : RequestUsuario, resultado: @escaping (Bool) -> ()) -> Void {
         print("---> Validador Service")
         
+        //Cargando la url de validacion de la cuenta del alumno
+        let url = URLHandler.getUrl(urlName: URLHandler.VALIDA_CUENTA_ALUMNO)
         
-        let encoder = JSONEncoder()
-        
-        do {
-            
+          do {
+
+            let encoder = JSONEncoder()
             let jsonData = try encoder.encode(request)
             
-            print("jsonData: \(jsonData)")
-            let url = URL(string: app_cepcm_host)
-            var req = URLRequest(url: url!)
-            req.httpMethod = HTTPMethod.post.rawValue
-            req.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-            req.httpBody = jsonData
-            
-            Alamofire.request(req).responseJSON { response in
-                switch response.result {
-                case .success(let data):
-                    //print("\n Success: \(response.data)")
+            URLHandler.postRequest(urlString: url, jsonData: jsonData, headers: nil) { (response) in
+                
+                if response != nil{
                     
                     do {
-                    
-                        let json = try JSONDecoder().decode(ResponseValidaCuentaAlumnoBean.self, from: response.data!)
-                        //print("el resultado es: \(json.respuesta?.valido)")
+                        
+                        let json = try JSONDecoder().decode(ResponseValidaCuentaAlumnoBean.self, from: response as! Data)
                         if json.respuesta?.valido == true {
                             resultado(true)
                         } else {
@@ -55,23 +40,18 @@ class ValidarService {
                         resultado(false)
                     }
                     
-                    
-                    
-                case .failure(let error):
-                    //print("\n Failure: \(error.localizedDescription)")
-                    
-                    resultado(false)
+                }else{
+                    resultado(true)
                     
                 }
+                
+            }// fin postRequest
             
-            }
-            
-        } catch {
+          } catch {
             
             resultado(false)
             
         }
-        
         
     }
     

@@ -616,8 +616,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="curp" destination="5sX-3m-msx" id="BIN-Si-G9Q"/>
-                        <outlet property="matricula" destination="pWE-Qj-Nr4" id="QAu-cD-87w"/>
+                        <outlet property="txtCurp" destination="5sX-3m-msx" id="BIN-Si-G9Q"/>
+                        <outlet property="txtMatricula" destination="pWE-Qj-Nr4" id="QAu-cD-87w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vc9-Ds-Vat" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -767,11 +767,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confPassword" destination="8K5-yp-pVY" id="1qt-C8-WwH"/>
-                        <outlet property="correo" destination="3wR-tq-2zm" id="Ihf-Pz-CcZ"/>
-                        <outlet property="curp" destination="k4X-6B-exG" id="B9D-ZR-80u"/>
-                        <outlet property="matricula" destination="q0h-hV-YQr" id="KP9-yP-CEx"/>
-                        <outlet property="password" destination="xbE-dE-Zpn" id="EXX-OQ-VSf"/>
+                        <outlet property="txtConfPassword" destination="8K5-yp-pVY" id="1qt-C8-WwH"/>
+                        <outlet property="txtCorreo" destination="3wR-tq-2zm" id="Ihf-Pz-CcZ"/>
+                        <outlet property="txtCurp" destination="k4X-6B-exG" id="B9D-ZR-80u"/>
+                        <outlet property="txtMatricula" destination="q0h-hV-YQr" id="KP9-yP-CEx"/>
+                        <outlet property="txtPassword" destination="xbE-dE-Zpn" id="EXX-OQ-VSf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYM-cO-RGK" userLabel="First Responder" sceneMemberID="firstResponder"/>

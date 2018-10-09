@@ -15,7 +15,9 @@ class ViewController: UIViewController {
         
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ValidarController") as? ValidarController {
             
-            self.navigationController?.pushViewController(viewController, animated: true)
+            //self.navigationController?.pushViewController(viewController, animated: true)
+            
+              self.present(viewController, animated: true, completion: nil)
             
         }
         
