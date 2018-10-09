@@ -17,5 +17,6 @@ target 'CepcmApp' do
   pod 'Alamofire', '~> 4.7'
   pod 'ImageSlideshow', '~> 1.6'
   pod 'CalendarKit'
+  pod 'KeychainSwift'
   
 end
