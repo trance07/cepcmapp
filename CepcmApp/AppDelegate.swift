@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import KeychainSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,7 +37,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
             
         UINavigationBar.appearance().tintColor = Colors.brightOrange()
+        
+        let attributes: [NSAttributedStringKey: AnyObject] = [
+            NSAttributedStringKey.font: Fonts.AvenirMedium(size: 18),
+            NSAttributedStringKey.foregroundColor: Colors.darkColor()
+        ]
+        
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        
+        UITabBar.appearance().tintColor = Colors.darkColor()
+       // application.registerForRemoteNotifications()
+        //ESTO ES PARA CONFIGURAR FACEBOOK
+        /*FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)*/
+        
+        let filePath = Bundle.main.path(forResource: "Config", ofType: "plist")
+        let configPlist = NSDictionary(contentsOfFile: filePath!)
+        //Se guardar el plist
+        RUtil.persistValue(value: configPlist!, key: "config")
+        
+        Session.add(token: DeviceToken())
+        Session.add(session: User())
     
+        checkLogin()
+        
         return true
     }
 
@@ -62,6 +85,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func checkLogin() {
+        
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        self.window?.makeKeyAndVisible()
+        
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        
+        //Inicia la validacion de la sesion
+        if RUtil.valueForKey_(key: "SESSION") != nil {
+            if Session.shared.user?.idUsuario != nil {
+                
+                    let session = Session.shared.user!
+                    let data = NSKeyedArchiver.archivedData(withRootObject: session)
+                    let keyChain = KeychainSwift()
+                    keyChain.set(data, forKey: "CEPCM_SESSION_GNP")
+               
+                    let adminController = storyBoard.instantiateViewController(withIdentifier: "PrincipalController")
+                    self.window?.rootViewController = adminController
+            }else{
+                //No hay sesion se manda al login
+                let loginController = storyBoard.instantiateViewController(withIdentifier: "ViewControllerLogin")
+                self.window?.rootViewController = loginController
+            }
+        }else{
+             //No hay sesion se manda al login
+            let loginController = storyBoard.instantiateViewController(withIdentifier: "ViewControllerLogin")
+            self.window?.rootViewController = loginController
+        }
+        
+        
+        
+        
+    }
 
 }
 
