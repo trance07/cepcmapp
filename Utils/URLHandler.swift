@@ -47,44 +47,5 @@ class URLHandler: NSObject {
         }
     }
     
-    class func postRequest(urlString:String, jsonData:Data?, headers: [String:String]? = nil, completion: @escaping (_ result: AnyObject?) -> Void ){
-        //print("postRequest URL: \(url)")
-        let manager = Alamofire.SessionManager.default
-        manager.session.configuration.timeoutIntervalForRequest = 3
-        
-        do {
-           
-            let url = URL(string: urlString)
-            var req = URLRequest(url: url!)
-            req.httpMethod = HTTPMethod.post.rawValue
-            req.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-            req.httpBody = jsonData
-            
-            Alamofire.request(req).responseJSON { response in
-                switch response.result {
-                case .success(let data):
-                    
-                     let json = response.data! as AnyObject
-                     completion(json)
-                
-                case .failure(let error):
-                   
-                    //TODO: Cachar cuando la wifi bloquea las urls
-                    
-                    completion(nil)
-                    
-                }
-                
-            }
-            
-        } catch {
-            
-            completion(nil)
-            
-        }
-        
-    }
-  
-    
    
 }

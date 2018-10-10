@@ -18,7 +18,14 @@ struct Constants {
     static let appAviso = "Aviso"
     
     struct ERROR {
-        static let noServiceAvailable = "Conexión no disponible.\nPor favor, verifica la conexión a internet o intenta de nuevo más tarde.";
+        static let noServiceAvailable = "Servicio no disponible.\nPor favor intenta de nuevo más tarde.";
+        static let noInternetAvailable = "Verifica tu conexión a internet e intenta nuevamente";
+    }
+    
+    struct ERRORCODE {
+        static let timeOut = 1;
+        static let noInternetAvailable = 2;
+        static let errorDesconocido = 3;
     }
     
     struct Segue {

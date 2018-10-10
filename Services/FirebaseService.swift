@@ -34,9 +34,9 @@ class FirebaseService {
         var userFirebase = userDefaults.object(forKey: "userFirebase")
         var database = Database.database().reference(withPath: self.firebase_field_alumnos)
         
-        userFirebase.currentUser?.sendEmailVerification { (error) in
+       /* userFirebase.currentUser?.sendEmailVerification { (error) in
             // falta contenido aqui
-        }
+        }*/
         
     }
     
@@ -54,9 +54,9 @@ class FirebaseService {
                 print("el user es: \(user)")
                 print("el user id es: \(user?.user.uid)")
                 
-                userDefaults.set(email, forKey: "emailAlumno")
-                userDefaults.set((user?.user.uid)!, forKey: "uidAlumno")
-                userDefaults.set(userFirebase, forKey: "userFirebase")
+                self.userDefaults.set(email, forKey: "emailAlumno")
+                self.userDefaults.set((user?.user.uid)!, forKey: "uidAlumno")
+                self.userDefaults.set(userFirebase, forKey: "userFirebase")
                 
                 regreso = (user?.user.uid)!
                 

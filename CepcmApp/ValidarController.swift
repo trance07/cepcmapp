@@ -69,36 +69,27 @@ class ValidarController: UIViewController ,UITextFieldDelegate{
             request.matricula = self.txtMatricula.text
             request.curp = self.txtCurp.text?.uppercased()
             
-            if ConnectionService.isConnectedToNetwork() {
-            
-                self.validarService.validarDatos(request: request) { (resultado) in
+            self.validarService.validarDatos(request: request) { (resultado, response) in
+                
+                if resultado == true {
                     
-                    if resultado == true {
+                    if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistroController") as? RegistroController {
                         
-                        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistroController") as? RegistroController {
-                            
-                            viewController.matriculaText = self.txtMatricula?.text
-                            viewController.curpText = self.txtCurp?.text
-                            
-                           // self.navigationController?.pushViewController(viewController, animated: true)
-                            
-                              self.present(viewController, animated: true, completion: nil)
-                            
-                        }
-                        
-                    } else {
-                        
-                        self.presentarAlerta(mensaje: self.mensajeIncorrecto)
+                        viewController.matriculaText = self.txtMatricula?.text
+                        viewController.curpText = self.txtCurp?.text
+                        //Persistir la informacion del alumno en la sesion
+                        self.present(viewController, animated: true, completion: nil)
                         
                     }
                     
+                } else {
+                    
+                    self.presentarAlerta(mensaje: response as! String )
+                    
                 }
                 
-            } else {
-                
-                self.presentarAlerta(mensaje: mensajeConexion)
-                
-            }
+            }// fin validarDatos
+          
             
         }
         

@@ -11,7 +11,7 @@ import Alamofire
 
 class ValidarService {
     
-    func validarDatos(request : RequestUsuario, resultado: @escaping (Bool) -> ()) -> Void {
+    func validarDatos(request : RequestUsuario, callback: @escaping (Bool,AnyObject) -> ()) -> Void {
         print("---> Validador Service")
         
         //Cargando la url de validacion de la cuenta del alumno
@@ -22,26 +22,29 @@ class ValidarService {
             let encoder = JSONEncoder()
             let jsonData = try encoder.encode(request)
             
-            URLHandler.postRequest(urlString: url, jsonData: jsonData, headers: nil) { (response) in
+            ServiciosUtil.postRequest(urlString: url, jsonData: jsonData, headers: nil) { (exito, response) in
                 
-                if response != nil{
+                if exito {
                     
                     do {
                         
                         let json = try JSONDecoder().decode(ResponseValidaCuentaAlumnoBean.self, from: response as! Data)
                         if json.respuesta?.valido == true {
-                            resultado(true)
+                            callback(true,json as AnyObject)
                         } else {
-                            resultado(false)
+                            //No en todos los servicios se debe de mostrar el error que regresa el back
+                            callback(false,json.respuesta?.mensaje as AnyObject)
                         }
                         
                     } catch let errorJson {
                         print(errorJson)
-                        resultado(false)
+                        callback(false, Constants.ERROR.noServiceAvailable as AnyObject)
                     }
                     
-                }else{
-                    resultado(true)
+                }else{ //error al realizar la peticion
+                    
+                    let errorBean = response as! ErrorBean
+                    callback(false,errorBean.mensaje! as AnyObject)
                     
                 }
                 
@@ -49,7 +52,7 @@ class ValidarService {
             
           } catch {
             
-            resultado(false)
+            callback(false,Constants.ERROR.noServiceAvailable as AnyObject)
             
         }
         
