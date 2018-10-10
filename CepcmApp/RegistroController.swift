@@ -127,6 +127,7 @@ class RegistroController: UIViewController, UITextFieldDelegate {
                 
                 let restService = RestService()
                 restService.persistirIdFirebaseEnBackend(request: request) { (resultado) in
+                self.firebaseService.persistirDatosAlumnoFirebase()
                     
                     if resultado.respuesta != nil {
                         
