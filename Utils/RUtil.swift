@@ -73,36 +73,36 @@ class RUtil: NSObject{
     }
     
     /*class func formIsValid(form: UIView) -> Bool {
-        var isBad = false
-        
-        for view in form.subviews {
-            if let field = view as? RTextField {
-                if field.isMandatory {
-                    if field.text!.characters.count > 0 {
-                        isBad = false
-                    } else {
-                        isBad = true
-                        break
-                    }
-                }
-            } else {
-                for view2 in view.subviews {
-                    if let field = view2 as? RTextField {
-                        if field.isMandatory {
-                            if field.text!.characters.count > 0 {
-                                isBad = false
-                            } else {
-                                isBad = true
-                                break
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
-        return !isBad
-    }*/
+     var isBad = false
+     
+     for view in form.subviews {
+     if let field = view as? RTextField {
+     if field.isMandatory {
+     if field.text!.characters.count > 0 {
+     isBad = false
+     } else {
+     isBad = true
+     break
+     }
+     }
+     } else {
+     for view2 in view.subviews {
+     if let field = view2 as? RTextField {
+     if field.isMandatory {
+     if field.text!.characters.count > 0 {
+     isBad = false
+     } else {
+     isBad = true
+     break
+     }
+     }
+     }
+     }
+     }
+     }
+     
+     return !isBad
+     }*/
     
     class func keyboardHeightFrom(notification: Notification) -> CGFloat {
         let userInfo = notification.userInfo
@@ -511,10 +511,10 @@ class RUtil: NSObject{
     
     
     /*class func networkAvailable() -> Bool {
-        let conn = Connection.reachabilityForInternet()
-        let connected = conn?.isReachable()
-        return connected!
-    }*/
+     let conn = Connection.reachabilityForInternet()
+     let connected = conn?.isReachable()
+     return connected!
+     }*/
     
     class func isConnectedToNetwork() -> Bool {
         var zeroAddress = sockaddr_in()

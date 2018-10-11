@@ -55,7 +55,7 @@ struct Constants {
         static let assisted = "segue.assisted"
         
         static let profileData = "segue.profile.data"
-      
+        
     }
     
 }

@@ -61,7 +61,7 @@ class LoadingController: UIViewController {
         request = URLRequest(url: URL(fileURLWithPath:path!))
         request.cachePolicy = .returnCacheDataElseLoad
         webView.load(request)
-     
+        
         
     }
     

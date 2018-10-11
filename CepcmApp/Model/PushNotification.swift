@@ -48,5 +48,5 @@ class PushNotification: NSObject, NSCoding {
         aCoder.encode(isRead, forKey: "isRead")
     }
     
-
+    
 }

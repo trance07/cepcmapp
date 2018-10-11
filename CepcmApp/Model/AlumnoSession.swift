@@ -17,12 +17,12 @@ class User: NSObject, NSCoding {
     var amaterno: String? { didSet{valueChanged()} }
     var email: String? { didSet{valueChanged()} }
     
-  
+    
     var firstLoad: String? { didSet{valueChanged()} }
     var idAplicacion: String? { didSet{valueChanged()} }
-   
-   
- 
+    
+    
+    
     
     override init() {
         super.init()
@@ -42,11 +42,11 @@ class User: NSObject, NSCoding {
         self.amaterno = aDecoder.decodeObject(forKey: "amaterno") as? String
         self.nombres = aDecoder.decodeObject(forKey: "nombres") as? String
         self.email = aDecoder.decodeObject(forKey: "email") as? String
-      
-//        self.firstLoad = aDecoder.decodeObject(forKey: "firstLoad") as? String
-//        self.idAplicacion = aDecoder.decodeObject(forKey: "idAplicacion") as? String
-//        self.idUsuario = aDecoder.decodeObject(forKey: "idUsuario") as? String
-  
+        
+        //        self.firstLoad = aDecoder.decodeObject(forKey: "firstLoad") as? String
+        //        self.idAplicacion = aDecoder.decodeObject(forKey: "idAplicacion") as? String
+        //        self.idUsuario = aDecoder.decodeObject(forKey: "idUsuario") as? String
+        
         
     }
     
@@ -61,7 +61,7 @@ class User: NSObject, NSCoding {
         //aCoder.encode(firstLoad, forKey: "firstLoad")
         //aCoder.encode(idAplicacion, forKey: "idAplicacion")
         
-       
+        
         
     }
 }

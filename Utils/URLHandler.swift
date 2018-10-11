@@ -47,5 +47,5 @@ class URLHandler: NSObject {
         }
     }
     
-   
+    
 }
