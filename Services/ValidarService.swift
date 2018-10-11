@@ -11,6 +11,8 @@ import Alamofire
 
 class ValidarService {
     
+    let userDefaults = UserDefaults.standard
+    
     func validarDatos(request : RequestUsuario, callback: @escaping (Bool,AnyObject) -> ()) -> Void {
         print("---> Validador Service")
         
