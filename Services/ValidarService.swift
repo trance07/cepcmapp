@@ -33,6 +33,7 @@ class ValidarService {
                             callback(true,json as AnyObject)
                         } else {
                             //No en todos los servicios se debe de mostrar el error que regresa el back
+                            //Para este servicio de validar datos del alumno si aplica pintar el msg
                             callback(false,json.respuesta?.mensaje as AnyObject)
                         }
                         

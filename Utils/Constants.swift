@@ -23,9 +23,14 @@ struct Constants {
     }
     
     struct ERRORCODE {
-        static let timeOut = 1;
-        static let noInternetAvailable = 2;
-        static let errorDesconocido = 3;
+        static let timeOut                  = "001";
+        static let noInternetAvailable      = "002";
+        static let errorDesconocido         = "003";
+        static let invalidURL               = "004";
+        static let parameterEncodingFailed  = "005";
+        static let multipartEncodingFailed  = "006";
+        static let responseValidationFailed = "007";
+        static let localizedDescription     = "008";
     }
     
     struct Segue {
