@@ -32,7 +32,7 @@ class ValidarService {
                         
                         let json = try JSONDecoder().decode(ResponseValidaCuentaAlumnoBean.self, from: response as! Data)
                         if json.respuesta?.valido == true {
-                            callback(true,json as AnyObject)
+                            callback(true,json.respuesta as AnyObject)
                         } else {
                             //No en todos los servicios se debe de mostrar el error que regresa el back
                             //Para este servicio de validar datos del alumno si aplica pintar el msg

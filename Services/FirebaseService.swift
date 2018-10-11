@@ -40,7 +40,7 @@ class FirebaseService {
         
     }
     
-    func crearCuentaFirebase(email : String, password : String) -> String {
+    func crearCuentaFirebase(email : String, password : String, callback: @escaping (Bool,AnyObject) -> ()) -> Void {
         
         print("---> Creando cuenta en firebase")
         var regreso :  String = ""
@@ -50,7 +50,18 @@ class FirebaseService {
         userFirebase.createUser(withEmail: email, password: password, completion: {
             (user, error) in
             
-            if error == nil {
+            if error != nil {
+                
+                ServiciosUtil.validaResponseErrorFirebase(error: (error?._code)!, callback: { (response) in
+                    
+                    let errorBean = response as! ErrorBean
+                    callback(false,errorBean.mensaje! as AnyObject)
+                    
+                })
+                
+            } else {
+                
+                
                 print("el user es: \(user)")
                 print("el user id es: \(user?.user.uid)")
                 
@@ -58,18 +69,15 @@ class FirebaseService {
                 self.userDefaults.set((user?.user.uid)!, forKey: "uidAlumno")
                 self.userDefaults.set(userFirebase, forKey: "userFirebase")
                 
-                regreso = (user?.user.uid)!
+                var uid = (user?.user.uid)!
                 
-            } else {
-                regreso = "error"
+                callback(true,uid as AnyObject)
             }
             
             
             
         })
         
-        
-        return regreso
         
     }
     

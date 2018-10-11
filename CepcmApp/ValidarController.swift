@@ -15,10 +15,6 @@ class ValidarController: UIViewController ,UITextFieldDelegate{
     
     let mensajeVacio : String = "Los campos no pueden ir vacíos."
     
-    let mensajeConexion : String = "Verifica tu conexión a internet"
-    
-    let mensajeIncorrecto : String = "La matricula y/o el curp son incorrectos, favor de verificar"
-    
     let validarService : ValidarService = ValidarService()
     
     @IBOutlet weak var txtMatricula: UITextField!
@@ -32,8 +28,8 @@ class ValidarController: UIViewController ,UITextFieldDelegate{
         txtMatricula.delegate = self
         txtCurp.delegate = self
         
-        txtMatricula.text = "123"
-        txtCurp.text = "123"
+        txtMatricula.text = "1033117120"
+        txtCurp.text = "AORO860319MDFNBL09"
 
     }
     
@@ -56,7 +52,7 @@ class ValidarController: UIViewController ,UITextFieldDelegate{
 
     
     @IBAction func validarDatos() {
-        print("validando datos...")
+        print("validando cuenta del alumno...")
         
         if (self.txtMatricula.text?.isEmpty)! || (self.txtCurp.text?.isEmpty)! {
             
@@ -64,7 +60,6 @@ class ValidarController: UIViewController ,UITextFieldDelegate{
             
         } else {
             
-            print("Entrando en el else")
             var request = RequestUsuario()
             request.matricula = self.txtMatricula.text
             request.curp = self.txtCurp.text?.uppercased()
@@ -77,7 +72,11 @@ class ValidarController: UIViewController ,UITextFieldDelegate{
                         
                         viewController.matriculaText = self.txtMatricula?.text
                         viewController.curpText = self.txtCurp?.text
+                        
                         //Persistir la informacion del alumno en la sesion
+                        let respuestaValidaCuentaAlumnoBean = response as! RespuestaValidaCuentaAlumnoBean
+                        Session.add(alumno: respuestaValidaCuentaAlumnoBean.alumno!);
+                        
                         self.present(viewController, animated: true, completion: nil)
                         
                     }

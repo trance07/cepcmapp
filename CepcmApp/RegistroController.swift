@@ -62,6 +62,10 @@ class RegistroController: UIViewController, UITextFieldDelegate {
         txtPassword.delegate = self
         txtConfPassword.delegate = self
         
+        self.txtCorreo.text = "icsjccm@gmail.com"
+        self.txtPassword.text = "123456"
+        self.txtConfPassword.text = "123456"
+        
     }
     
     //Configuracion para el teclado
@@ -113,54 +117,52 @@ class RegistroController: UIViewController, UITextFieldDelegate {
     func procesarRegistro(email : String, password : String) -> Void {
         
         print("---> Procesando registro de cuenta")
-        if ConnectionService.isConnectedToNetwork() {
-
-            let resultado = self.firebaseService.crearCuentaFirebase(email: email, password: password)
-            
-            if resultado != "error" {
-                
-                var request = RequestPersistirIdFirebaseBean()
-                request.correo = email
-                request.id_firebase = resultado
-                request.id_aplicacion = self.id_aplicaion
-                request.id_tipo_usuario = self.id_tipo_usuario_alumno
-                
-                let restService = RestService()
-                restService.persistirIdFirebaseEnBackend(request: request) { (resultado) in
-                self.firebaseService.persistirDatosAlumnoFirebase()
+      
+           self.firebaseService.crearCuentaFirebase(email: email, password: password) { (resultado, response) in
+          
+                if resultado == true {
                     
-                    if resultado.respuesta != nil {
+                    
+                    
+                    var request = RequestPersistirIdFirebaseBean()
+                    request.correo = email
+                    request.id_firebase = response as? String
+                    request.id_aplicacion = self.id_aplicaion
+                    request.id_tipo_usuario = self.id_tipo_usuario_alumno
+                    
+                    let restService = RestService()
+                    restService.persistirIdFirebaseEnBackend(request: request) { (resultado) in
+                        self.firebaseService.persistirDatosAlumnoFirebase()
                         
-                        if resultado.respuesta?.codigo == 0 {
+                        if resultado.respuesta != nil {
                             
-                            self.presentarAlerta(mensaje: self.mensajeVerificacion)
+                            if resultado.respuesta?.codigo == 0 {
+                                
+                                self.presentarAlerta(mensaje: self.mensajeVerificacion)
+                                
+                            } else if resultado.respuesta?.codigo == -1 {
+                                
+                                self.presentarAlerta(mensaje: (resultado.respuesta?.mensaje)!)
+                                
+                            }
                             
-                        } else if resultado.respuesta?.codigo == -1 {
+                        } else {
                             
-                            self.presentarAlerta(mensaje: (resultado.respuesta?.mensaje)!)
+                            self.presentarAlerta(mensaje: self.mensajeErrorRegistro)
                             
                         }
                         
-                    } else {
-                        
-                        self.presentarAlerta(mensaje: self.mensajeErrorRegistro)
-                        
                     }
                     
+                } else {
+                    
+                    self.presentarAlerta(mensaje: response as! String )
+                    
                 }
-                
-            } else {
-                
-                presentarAlerta(mensaje: self.mensajeErrorRegistro)
-                
-            }
             
+            }// fin crearCuentaFirebase
             
-        } else {
-            
-            presentarAlerta(mensaje: self.mensajeConexion)
-            
-        }
+        
         
     }
     
