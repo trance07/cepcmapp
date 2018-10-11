@@ -42,12 +42,32 @@ class ServiciosUtil: NSObject {
             
             Alamofire.request(req).responseJSON { response in
                 
+                 print(response)
                 
                 switch response.result {
                 case .success( _):
                     
-                    let json = response.data! as AnyObject
-                    callback(true, json)
+                    ///Se valida si no trono la peticion
+                    do {
+                        
+                        let json = try JSONDecoder().decode(ResponseBase.self, from: response.data! )
+                        if json.codigo == 0 {
+                            
+                            let json = response.data! as AnyObject
+                            callback(true, json)
+                         
+                        } else {
+                            //Error 500
+                           callback(false, Constants.ERROR.noServiceAvailable as AnyObject)
+                        }
+                        
+                    } catch let errorJson {
+                        print(errorJson)
+                        callback(false, Constants.ERROR.noServiceAvailable as AnyObject)
+                    }
+                    ///
+                    
+                  
                     
                 case .failure(let error):
                     var errorBean = ErrorBean()

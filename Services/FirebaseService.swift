@@ -67,7 +67,7 @@ class FirebaseService {
                 
                 self.userDefaults.set(email, forKey: "emailAlumno")
                 self.userDefaults.set((user?.user.uid)!, forKey: "uidAlumno")
-                self.userDefaults.set(userFirebase, forKey: "userFirebase")
+              
                 
                 var uid = (user?.user.uid)!
                 

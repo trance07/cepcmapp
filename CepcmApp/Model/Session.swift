@@ -41,19 +41,6 @@ class Session: NSObject {
         
     }
     
-    class func add(alumno: AlumnoBean) {
-        let session = User()
-        session.idUsuario = String (describing: alumno.id)
-        
-        Session.shared.user = session
-        
-        if RUtil.valueForKey_(key: "SESSION") != nil {
-            let sessionData = RUtil.valueForKey_(key: "SESSION") as! Data
-            if let session = NSKeyedUnarchiver.unarchiveObject(with: sessionData) as? User{
-                Session.shared.user = session
-            }
-        }
-        
-    }
+    
 }
 

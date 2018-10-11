@@ -73,7 +73,7 @@ class SesionController: UIViewController, UITextFieldDelegate {
         
         LoadingController.stop()
        
-        Session.shared.user?.idUsuario = "123"
+        Session.shared.user?.idUsuario = 123
         Session.shared.user?.nombres = "Juan Carlos"
         Session.shared.user?.apaterno = "Cas"
         Session.shared.user?.amaterno = "Mar"

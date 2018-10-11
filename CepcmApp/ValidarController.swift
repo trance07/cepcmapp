@@ -75,7 +75,14 @@ class ValidarController: UIViewController ,UITextFieldDelegate{
                         
                         //Persistir la informacion del alumno en la sesion
                         let respuestaValidaCuentaAlumnoBean = response as! RespuestaValidaCuentaAlumnoBean
-                        Session.add(alumno: respuestaValidaCuentaAlumnoBean.alumno!);
+                        
+                        Session.shared.user?.idUsuario = respuestaValidaCuentaAlumnoBean.alumno?.id
+                        /*Session.shared.user?.nombres = "Juan Carlos"
+                        Session.shared.user?.apaterno = "Cas"
+                        Session.shared.user?.amaterno = "Mar"
+                        Session.shared.user?.email = "mail@mail.com"
+                        Session.shared.user?.firstLoad = nil*/
+                        //Session.add(alumno: respuestaValidaCuentaAlumnoBean.alumno!);
                         
                         self.present(viewController, animated: true, completion: nil)
                         

@@ -10,7 +10,7 @@ import Foundation
 
 class User: NSObject, NSCoding {
     
-    var idUsuario: String? { didSet{valueChanged()} }
+    var idUsuario: Int? { didSet{valueChanged()} }
     var matricula: String? { didSet{valueChanged()} }
     var nombres: String? { didSet{valueChanged()} }
     var apaterno: String? { didSet{valueChanged()} }
@@ -36,7 +36,7 @@ class User: NSObject, NSCoding {
     
     required init(coder aDecoder: NSCoder) {
         
-        self.idUsuario = aDecoder.decodeObject(forKey: "idUsuario") as? String
+        self.idUsuario = aDecoder.decodeObject(forKey: "idUsuario") as? Int
         self.matricula = aDecoder.decodeObject(forKey: "matricula") as? String
         self.apaterno = aDecoder.decodeObject(forKey: "apaterno") as? String
         self.amaterno = aDecoder.decodeObject(forKey: "amaterno") as? String

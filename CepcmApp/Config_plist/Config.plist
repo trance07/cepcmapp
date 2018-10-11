@@ -8,6 +8,8 @@
 	<dict>
 		<key>Produccion</key>
 		<dict>
+			<key>PERSISTIR_ID_FIREBASE_POR_USUARIO</key>
+			<string>http://187.190.149.140:8083/CEPCM_MOVIL/accesoController/persistirIdFirebasePorUsuario</string>
 			<key>LOGIN</key>
 			<string>https://urlprologin.gnp.com.mx/auth/login</string>
 			<key>VALIDA_CUENTA_ALUMNO</key>
@@ -15,6 +17,8 @@
 		</dict>
 		<key>Desarrollo</key>
 		<dict>
+			<key>PERSISTIR_ID_FIREBASE_POR_USUARIO</key>
+			<string>http://187.190.149.140:8083/CEPCM_MOVIL/accesoController/persistirIdFirebasePorUsuario</string>
 			<key>LOGIN</key>
 			<string>http://urldeslogin.gnp.com.mx/auth/login</string>
 			<key>VALIDA_CUENTA_ALUMNO</key>

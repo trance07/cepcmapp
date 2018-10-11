@@ -7,7 +7,8 @@
 //
 
 struct ResponsePersistirIdFirebaseBean : Codable {
-    var codigo : String = "000"
+    var codigo : Int = 0
     var mensaje : String? = nil
     var respuesta : ResponseBase? = nil
+    
 }

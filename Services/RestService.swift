@@ -11,50 +11,50 @@ import Alamofire
 
 class RestService {
     
-    let app_cepcm_host_registrar : String = "http://187.190.149.140:8083/CEPCM_MOVIL/accesoController/persistirIdFirebasePorUsuario"
     
-    func persistirIdFirebaseEnBackend(request : RequestPersistirIdFirebaseBean, resultado: @escaping (ResponsePersistirIdFirebaseBean) -> ()) -> Void {
+    func persistirIdFirebaseEnBackend(request : RequestPersistirIdFirebaseBean, callback: @escaping (Bool,AnyObject?) -> ()) -> Void {
+        print("---> Validador Service")
+       
+        let url = URLHandler.getUrl(urlName: URLHandler.PERSISTIR_ID_FIREBASE_POR_USUARIO)
         
-        let encoder = JSONEncoder()
         do {
             
+            let encoder = JSONEncoder()
             let jsonData = try encoder.encode(request)
-            let url = URL(string: app_cepcm_host_registrar)
-            var req = URLRequest(url: url!)
-            req.httpMethod = HTTPMethod.post.rawValue
-            req.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-            req.httpBody = jsonData
             
-            Alamofire.request(req).responseJSON { response in
-                print("---> Registrando datos de usuario en backend")
-                switch response.result {
+            ServiciosUtil.postRequest(urlString: url, jsonData: jsonData, headers: nil) { (exito, response) in
+                
+                if exito {
                     
-                    case .success(let data):
-                        print("\n Success en backend: \(response)")
-                    
-                        do {
-                            
-                            let json = try JSONDecoder().decode(ResponsePersistirIdFirebaseBean.self, from: response.data!)
-                            resultado(json)
-                            
-                        } catch let errorJson {
+                    do {
                         
-                            print(errorJson)
-                            
+                        let json = try JSONDecoder().decode(ResponsePersistirIdFirebaseBean.self, from: response as! Data)
+                        if json.respuesta?.codigo == 0 {
+                            callback(true, nil)
+                        } else {
+                            //No en todos los servicios se debe de mostrar el error que regresa el back
+                            //Para este servicio de validar datos del alumno si aplica pintar el msg
+                            callback(false,json.respuesta?.mensaje as AnyObject)
                         }
+                        
+                    } catch let errorJson {
+                        print(errorJson)
+                        callback(false, Constants.ERROR.noServiceAvailable as AnyObject)
+                    }
                     
-                    case .failure(let error):
-                        print("\n Failure: \(error.localizedDescription)")
+                }else{ //error al realizar la peticion
                     
-                        // Do your code here...
+                    let errorBean = response as! ErrorBean
+                    callback(false,errorBean.mensaje! as AnyObject)
                     
                 }
                 
-            }
+            }// fin postRequest
             
+        } catch {
             
-        } catch let errorGeneral {
-            print(errorGeneral)
+            callback(false,Constants.ERROR.noServiceAvailable as AnyObject)
+            
         }
         
     }

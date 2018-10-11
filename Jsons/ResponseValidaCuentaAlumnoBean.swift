@@ -7,7 +7,5 @@
 //
 
 struct ResponseValidaCuentaAlumnoBean : Codable {
-    var codigo : Int = 0
-    var mensaje : String? = nil
     var respuesta : RespuestaValidaCuentaAlumnoBean? = nil
 }

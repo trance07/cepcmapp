@@ -31,6 +31,8 @@ class URLHandler: NSObject {
     static let UPDATE_DEVICETOKEN = "UPDATE_DEVICETOKEN"
     
     static let VALIDA_CUENTA_ALUMNO = "VALIDA_CUENTA_ALUMNO"
+    static let PERSISTIR_ID_FIREBASE_POR_USUARIO = "PERSISTIR_ID_FIREBASE_POR_USUARIO"
+
     
     
     class func getUrl(urlName:String) -> String {

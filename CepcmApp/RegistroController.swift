@@ -50,6 +50,8 @@ class RegistroController: UIViewController, UITextFieldDelegate {
     
     var firebaseService : FirebaseService = FirebaseService()
     
+    let restService : RestService = RestService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,7 +64,7 @@ class RegistroController: UIViewController, UITextFieldDelegate {
         txtPassword.delegate = self
         txtConfPassword.delegate = self
         
-        self.txtCorreo.text = "icsjccm@gmail.com"
+        self.txtCorreo.text = "iscjccm@gmail.com"
         self.txtPassword.text = "123456"
         self.txtConfPassword.text = "123456"
         
@@ -129,9 +131,30 @@ class RegistroController: UIViewController, UITextFieldDelegate {
                     request.id_firebase = response as? String
                     request.id_aplicacion = self.id_aplicaion
                     request.id_tipo_usuario = self.id_tipo_usuario_alumno
+                    print(Session.shared.user?.idUsuario)
+                    request.id_usuario = Session.shared.user?.idUsuario
                     
-                    let restService = RestService()
-                    restService.persistirIdFirebaseEnBackend(request: request) { (resultado) in
+                    self.restService.persistirIdFirebaseEnBackend(request: request) { (resultado, response) in
+                    
+                        if resultado == true {
+                            
+                            if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistroController") as? RegistroController {
+                                
+                                self.presentarAlerta(mensaje: self.mensajeVerificacion)
+                                
+                            }
+                            
+                        } else {
+                            
+                            self.presentarAlerta(mensaje: response as! String )
+                            
+                        }
+                    }// fin persistirIdFirebaseEnBackend
+                    
+                    //let restService = RestService()
+                    /*restService.persistirIdFirebaseEnBackend(request: request) { (resultado) in
+                        
+                        ASD
                         self.firebaseService.persistirDatosAlumnoFirebase()
                         
                         if resultado.respuesta != nil {
@@ -152,7 +175,8 @@ class RegistroController: UIViewController, UITextFieldDelegate {
                             
                         }
                         
-                    }
+                    }*/
+                    
                     
                 } else {
                     
