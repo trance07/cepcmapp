@@ -17,6 +17,7 @@
 import UIKit
 import Alamofire
 import JavaScriptCore
+import FirebaseAuth
 
 class ServiciosUtil: NSObject {
     
@@ -130,6 +131,58 @@ class ServiciosUtil: NSObject {
             callback(false, errorBean as AnyObject)
         }
         
+        
+    }
+    
+    class func validaResponseErrorFirebase(error: Int, callback: @escaping ( _ result: AnyObject?) -> Void ){
+        
+         var errorBean = ErrorBean()
+        
+        if let errorCode = AuthErrorCode(rawValue: error) {
+            
+            switch errorCode {
+            case .emailAlreadyInUse:
+                errorBean.codigo = Constants.ERRORCODE.emailAlreadyInUse
+                errorBean.mensaje = Constants.ERROR.emailAlreadyInUse
+                print( "The email is already in use with another account")
+            case .userNotFound:
+                errorBean.codigo = Constants.ERRORCODE.userNotFound
+                errorBean.mensaje = Constants.ERROR.userNotFound
+                print(  "Account not found for the specified user. Please check and try again")
+            case .userDisabled:
+                errorBean.codigo = Constants.ERRORCODE.userDisabled
+                errorBean.mensaje = Constants.ERROR.userDisabled
+                print(  "Your account has been disabled. Please contact support.")
+            case .invalidEmail, .invalidSender, .invalidRecipientEmail:
+                errorBean.codigo = Constants.ERRORCODE.invalidEmail
+                errorBean.mensaje = Constants.ERROR.invalidEmail
+                print(  "Please enter a valid email")
+            case .networkError:
+                errorBean.codigo = Constants.ERRORCODE.networkError
+                errorBean.mensaje = Constants.ERROR.noInternetAvailable
+                print(  "Network error. Please try again.")
+            case .weakPassword:
+                errorBean.codigo = Constants.ERRORCODE.weakPassword
+                errorBean.mensaje = Constants.ERROR.weakPassword
+                print(  "Your password is too weak. The password must be 6 characters long or more.")
+            case .wrongPassword:
+                errorBean.codigo = Constants.ERRORCODE.wrongPassword
+                errorBean.mensaje = Constants.ERROR.wrongPassword
+                print(  "Your password is incorrect. Please try again or use 'Forgot password' to reset your password")
+            default:
+                errorBean.codigo = Constants.ERRORCODE.errorDesconocido
+                errorBean.mensaje = Constants.ERROR.noServiceAvailable
+                print(  "Unknown error occurred")
+            }
+        
+        
+       
+        }else{
+            errorBean.codigo = Constants.ERRORCODE.errorDesconocido
+            errorBean.mensaje = Constants.ERROR.noServiceAvailable
+        }
+        
+        callback(errorBean as AnyObject)
         
     }
   

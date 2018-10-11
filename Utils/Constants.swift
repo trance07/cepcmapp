@@ -20,6 +20,12 @@ struct Constants {
     struct ERROR {
         static let noServiceAvailable = "Servicio no disponible.\nPor favor intenta de nuevo más tarde.";
         static let noInternetAvailable = "Verifica tu conexión a internet e intenta nuevamente";
+        static let emailAlreadyInUse = "Este correo ya ha sido registrado.";
+        static let userNotFound             = "No existe una cuenta asociada al correo electrónico especificado, favor de registrarse.";
+        static let userDisabled             = "Usuario bloqueado.";
+        static let invalidEmail             = "El correo electronico es invalido, favor de verificar";
+        static let weakPassword             = "La contraseña debe contener al menos 6 caracteres.";
+        static let wrongPassword            = "La contraseña proporcionada no es válida.";
     }
     
     struct ERRORCODE {
@@ -31,6 +37,14 @@ struct Constants {
         static let multipartEncodingFailed  = "006";
         static let responseValidationFailed = "007";
         static let localizedDescription     = "008";
+        static let emailAlreadyInUse        = "009";
+        static let userNotFound             = "010";
+        static let userDisabled             = "011";
+        static let invalidEmail             = "012";
+        static let networkError             = "013";
+        static let weakPassword             = "014";
+        static let wrongPassword            = "015";
+        
     }
     
     struct Segue {

@@ -20,5 +20,5 @@ struct SessionBean : Codable {
     var bannerHome : ConfiguracionBannerBean? = nil
     var backendConf : ConfiguracionBackEndBean? = ConfiguracionBackEndBean()
     var configuracionmodulos : ConfiguracionFirebase? = ConfiguracionFirebase()
-    var usuarioBean : UsuarioBean? = nil
+    var alumnoBean : AlumnoBean? = nil
 }

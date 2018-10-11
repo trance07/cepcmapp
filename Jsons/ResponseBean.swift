@@ -9,5 +9,5 @@
 struct ResponseBean : Codable {
     var valido : Bool? = false
     var mensaje : String? = nil
-    var usuario : UsuarioBean? = nil
+    var alumno : AlumnoBean? = nil
 }
