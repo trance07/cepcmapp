@@ -17,12 +17,25 @@ class FirebaseService {
     let firebase_field_alumnos : String = "alumnos"
     
     
-    func recuperarPassword(email: String) {
+    func recuperarPassword(email: String, callback: @escaping (Bool,AnyObject) -> ()) -> Void {
         
         print("---> Recuperar password")
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             
-            print("---> Enviando correo de recuperacion")
+            if error != nil {
+                
+                ServiciosUtil.validaResponseErrorFirebase(error: (error?._code)!, callback: { (response) in
+                    
+                    let errorBean = response as! ErrorBean
+                    callback(false,errorBean.mensaje! as AnyObject)
+                    
+                })
+                
+            } else {
+                
+                callback(true,"ok" as AnyObject)
+            }
+            
             
         }
         
