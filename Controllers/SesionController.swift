@@ -22,6 +22,8 @@ class SesionController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var txtCorreo: UITextField!
     
+    var firebaseService : FirebaseService = FirebaseService()
+    
     @IBAction func lanzarRecuperacion() {
         
         print("---> Evento lanzar recuperacion")
@@ -67,24 +69,33 @@ class SesionController: UIViewController, UITextFieldDelegate {
     
     func procesarSesion(email : String, password : String) -> Void {
         
-        print("---> Procesando sesion")
+        //
+        self.firebaseService.loguearCuentaFirebase(email: email, password: password) { (resultado, response) in
+            
+            if resultado == true {
+                
+                LoadingController.stop()
+                //Guarda la Sesion de la persona logueada
+              
+                Session.shared.user?.email = email
+                Session.shared.user?.uuid = response as! String
+                
+                //TODO: Mandar a registrar el device al back
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.checkLogin()
+                
+            } else {
+                
+                self.presentarAlerta(mensaje: response as! String )
+                
+            }
+          
+            
+        }// fin crearCuentaFirebase
         
-        //Guarda la Sesion de la persona logueada
-        
-        LoadingController.stop()
        
-        Session.shared.user?.idUsuario = 123
-        Session.shared.user?.nombres = "Juan Carlos"
-        Session.shared.user?.apaterno = "Cas"
-        Session.shared.user?.amaterno = "Mar"
-        Session.shared.user?.email = "mail@mail.com"
-        Session.shared.user?.firstLoad = nil
-   
-       
-        //TODO: Mandar a registrar el device al back
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.checkLogin()
+
         
     }
     
@@ -95,7 +106,7 @@ class SesionController: UIViewController, UITextFieldDelegate {
         txtCorreo.delegate = self
         txtPassword.delegate = self
         
-        txtCorreo.text = "mail@mail.com"
+        txtCorreo.text = "iscjccm@gmail.com"
         txtPassword.text = "123456"
       
     }

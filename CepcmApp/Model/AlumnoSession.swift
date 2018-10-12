@@ -21,6 +21,8 @@ class User: NSObject, NSCoding {
     var firstLoad: String? { didSet{valueChanged()} }
     var idAplicacion: String? { didSet{valueChanged()} }
     
+    var uuid: String? { didSet{valueChanged()} }
+    
     
     
     
@@ -42,6 +44,8 @@ class User: NSObject, NSCoding {
         self.amaterno = aDecoder.decodeObject(forKey: "amaterno") as? String
         self.nombres = aDecoder.decodeObject(forKey: "nombres") as? String
         self.email = aDecoder.decodeObject(forKey: "email") as? String
+        self.uuid = aDecoder.decodeObject(forKey: "uuid") as? String
+        
         
         //        self.firstLoad = aDecoder.decodeObject(forKey: "firstLoad") as? String
         //        self.idAplicacion = aDecoder.decodeObject(forKey: "idAplicacion") as? String
@@ -58,6 +62,7 @@ class User: NSObject, NSCoding {
         aCoder.encode(amaterno, forKey: "matamaternoricula")
         aCoder.encode(nombres, forKey: "nombres")
         aCoder.encode(email, forKey: "email")
+        aCoder.encode(uuid, forKey: "uuid")
         //aCoder.encode(firstLoad, forKey: "firstLoad")
         //aCoder.encode(idAplicacion, forKey: "idAplicacion")
         

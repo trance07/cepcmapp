@@ -17,6 +17,11 @@ struct Constants {
     static let appName = "CEPCM Móvil"
     static let appAviso = "Aviso"
     
+    struct INFO {
+        static let validateRegisterEmailVerification = "n mensaje será enviado a la dirección de correo electrónico especificada. Este correo contiene un enlace para completar el proceso de verificación."
+        
+    }
+    
     struct ERROR {
         static let noServiceAvailable = "Servicio no disponible.\nPor favor intenta de nuevo más tarde.";
         static let noInternetAvailable = "Verifica tu conexión a internet e intenta nuevamente";

@@ -77,11 +77,10 @@ class ValidarController: UIViewController ,UITextFieldDelegate{
                         let respuestaValidaCuentaAlumnoBean = response as! RespuestaValidaCuentaAlumnoBean
                         
                         Session.shared.user?.idUsuario = respuestaValidaCuentaAlumnoBean.alumno?.id
-                        /*Session.shared.user?.nombres = "Juan Carlos"
-                        Session.shared.user?.apaterno = "Cas"
-                        Session.shared.user?.amaterno = "Mar"
-                        Session.shared.user?.email = "mail@mail.com"
-                        Session.shared.user?.firstLoad = nil*/
+                        Session.shared.user?.nombres = respuestaValidaCuentaAlumnoBean.alumno?.nombres
+                        Session.shared.user?.apaterno = respuestaValidaCuentaAlumnoBean.alumno?.apaterno
+                        Session.shared.user?.amaterno = respuestaValidaCuentaAlumnoBean.alumno?.apaterno
+                       
                         //Session.add(alumno: respuestaValidaCuentaAlumnoBean.alumno!);
                         
                         self.present(viewController, animated: true, completion: nil)

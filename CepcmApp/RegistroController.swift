@@ -124,7 +124,7 @@ class RegistroController: UIViewController, UITextFieldDelegate {
           
                 if resultado == true {
                     
-                    
+                    Session.shared.user?.email = email
                     
                     var request = RequestPersistirIdFirebaseBean()
                     request.correo = email
@@ -134,55 +134,52 @@ class RegistroController: UIViewController, UITextFieldDelegate {
                     print(Session.shared.user?.idUsuario)
                     request.id_usuario = Session.shared.user?.idUsuario
                     
-                    self.restService.persistirIdFirebaseEnBackend(request: request) { (resultado, response) in
+                   // self.restService.persistirIdFirebaseEnBackend(request: request) { (resultado, response) in
                     
-                        if resultado == true {
+                      //  if resultado == true {
                             
-                            if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistroController") as? RegistroController {
+                          /*  self.firebaseService.enviarEmailVerificacion(email: email) { (resultado, response) in
+                                
+                                if resultado == true {
+                                    
+                                     self.presentarAlerta(mensaje: response as! String )
+                                    
+                                }else{
+                                    
+                                     self.presentarAlerta(mensaje: response as! String )
+                                }
+                                
+                            }//fin enviarEmailVerificacion*/
+                            
+                            /*if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistroController") as? RegistroController {
                                 
                                 self.presentarAlerta(mensaje: self.mensajeVerificacion)
                                 
+                            }*/
+                    
+                            if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistroController") as? RegistroController {
+                                
+                                  self.present(viewController, animated: true, completion: nil)
+                                
                             }
+                        
+                      
                             
                         } else {
                             
                             self.presentarAlerta(mensaje: response as! String )
                             
                         }
-                    }// fin persistirIdFirebaseEnBackend
+                   // }// fin persistirIdFirebaseEnBackend
                     
-                    //let restService = RestService()
-                    /*restService.persistirIdFirebaseEnBackend(request: request) { (resultado) in
-                        
-                        ASD
-                        self.firebaseService.persistirDatosAlumnoFirebase()
-                        
-                        if resultado.respuesta != nil {
-                            
-                            if resultado.respuesta?.codigo == 0 {
-                                
-                                self.presentarAlerta(mensaje: self.mensajeVerificacion)
-                                
-                            } else if resultado.respuesta?.codigo == -1 {
-                                
-                                self.presentarAlerta(mensaje: (resultado.respuesta?.mensaje)!)
-                                
-                            }
-                            
-                        } else {
-                            
-                            self.presentarAlerta(mensaje: self.mensajeErrorRegistro)
-                            
-                        }
-                        
-                    }*/
+            
                     
                     
-                } else {
+                /*} else {
                     
                     self.presentarAlerta(mensaje: response as! String )
                     
-                }
+                }*/
             
             }// fin crearCuentaFirebase
             
@@ -205,8 +202,9 @@ class RegistroController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func regresar() {
-        
-        dismiss(animated: true, completion: nil)
+       
+        self.dismiss(animated: true, completion: nil)
+      
     }
 
     

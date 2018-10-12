@@ -94,15 +94,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Inicia la validacion de la sesion
         if RUtil.valueForKey_(key: "SESSION") != nil {
-            if Session.shared.user?.idUsuario != nil {
+            if Session.shared.user?.uuid != nil {
                 
+                
+                if((Auth.auth().currentUser) != nil){
+                    
                     let session = Session.shared.user!
                     let data = NSKeyedArchiver.archivedData(withRootObject: session)
                     let keyChain = KeychainSwift()
                     keyChain.set(data, forKey: "CEPCM_SESSION")
-               
+                    
                     let adminController = storyBoard.instantiateViewController(withIdentifier: "PrincipalController")
                     self.window?.rootViewController = adminController
+                }else{
+                    
+                    RUtil.removeObjectFor(key: "SESSION")
+                    let keychain = KeychainSwift()
+                    keychain.delete("CEPCM_SESSION")
+                    Session.add(session: User())
+                    
+                }
+                
+                
             }else{
                 //No hay sesion se manda al login
                 let loginController = storyBoard.instantiateViewController(withIdentifier: "ViewControllerLogin")
