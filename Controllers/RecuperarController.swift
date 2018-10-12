@@ -25,15 +25,9 @@ class RecuperarController: UIViewController {
     @IBOutlet weak var correo: UITextField!
     
     @IBAction func lanzarCancelar() {
-        
-        print("---> Lanzar cancelacion")
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SesionController") as? SesionController {
             
-            self.navigationController?.pushViewController(viewController, animated: true)
-            
-        }
-
-        
+        self.dismiss(animated: true, completion: nil)
+       
     }
     
     @IBAction func lanzarAceptar() {
@@ -58,19 +52,22 @@ class RecuperarController: UIViewController {
     
     func enviarCorreo(email : String) -> Void {
         
-        if ConnectionService.isConnectedToNetwork() {
-        
             /// se debe lanzar proceso de recuperacion de password
-            firebaseService.recuperarPassword(email: email)
-            self.presentarAlerta(mensaje: self.mensajeExito)
-            
-        } else {
-            
-            presentarAlerta(mensaje: self.mensajeConexion)
-
-            
-        }
-        
+            firebaseService.recuperarPassword(email: email){ (resultado, response) in
+                
+                if resultado == true {
+                    
+                    self.presentarAlerta(mensaje: self.mensajeExito)
+                    
+                    
+                } else {
+                    
+                    self.presentarAlerta(mensaje: response as! String )
+                    
+                }
+                
+            }// fin recuperarPassword
+       
     }
     
     func presentarAlerta( mensaje : String) -> Void {
