@@ -7,8 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410E8976216FDAAC00565D4B /* RUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E8975216FDAAC00565D4B /* RUtil.swift */; };
+		410E8978216FDB0700565D4B /* ErrorBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E8977216FDB0700565D4B /* ErrorBean.swift */; };
+		410E897A216FDB3900565D4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E8979216FDB3900565D4B /* Constants.swift */; };
+		410E897C216FDB7500565D4B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E897B216FDB7500565D4B /* Colors.swift */; };
+		410E897E216FDB9100565D4B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E897D216FDB9100565D4B /* Fonts.swift */; };
+		410E8981216FDC3900565D4B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E8980216FDC3900565D4B /* Session.swift */; };
+		410E8983216FDC5000565D4B /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E8982216FDC5000565D4B /* PushNotification.swift */; };
+		410E8985216FDC6D00565D4B /* DeviceToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E8984216FDC6D00565D4B /* DeviceToken.swift */; };
+		410E8987216FDC8100565D4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E8986216FDC8100565D4B /* User.swift */; };
+		410E898B216FDD1400565D4B /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E898A216FDD1400565D4B /* LoadingController.swift */; };
+		412BBCA42174EA6300F16F50 /* TokenOaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BBCA32174EA6300F16F50 /* TokenOaut.swift */; };
+		412BBCA62174EDBC00F16F50 /* RequestGeneraTokenBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BBCA52174EDBC00F16F50 /* RequestGeneraTokenBean.swift */; };
+		412BBCA821761C6700F16F50 /* ResponseBaseOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BBCA721761C6700F16F50 /* ResponseBaseOAuth.swift */; };
+		412BBCAA21762A1700F16F50 /* ResponseErrorOauthBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BBCA921762A1700F16F50 /* ResponseErrorOauthBean.swift */; };
+		415DE8862178F74F00C3D229 /* MateriasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415DE8852178F74F00C3D229 /* MateriasCell.swift */; };
+		4161D066216FD9ED004D6304 /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161D065216FD9ED004D6304 /* URLHandler.swift */; };
+		4161D068216FDA36004D6304 /* ServiciosUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161D067216FDA36004D6304 /* ServiciosUtil.swift */; };
+		416EE5D52174DDCE0007E5E9 /* RegistroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EE5D42174DDCE0007E5E9 /* RegistroService.swift */; };
+		416EE5D72174DE1E0007E5E9 /* RequestRegistraDispositivoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EE5D62174DE1E0007E5E9 /* RequestRegistraDispositivoBean.swift */; };
+		416EE5D92174DFB10007E5E9 /* ResponseRegistroDispositivoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EE5D82174DFB10007E5E9 /* ResponseRegistroDispositivoBean.swift */; };
+		416EE5DB2174E0230007E5E9 /* RespuestaRegistroDispositivoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EE5DA2174E0230007E5E9 /* RespuestaRegistroDispositivoBean.swift */; };
 		41A1A0A5216CEBCF001C302A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41A1A0A4216CEBCF001C302A /* Config.plist */; };
-		9C0005C7216AB6C800F428D4 /* MateriaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0005C6216AB6C800F428D4 /* MateriaService.swift */; };
+		41E5683C2178E5BC00D9F014 /* Grupo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E5683B2178E5BC00D9F014 /* Grupo.swift */; };
+		9C0005C7216AB6C800F428D4 /* MateriasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0005C6216AB6C800F428D4 /* MateriasService.swift */; };
 		9C042F98213B6EC200292A1E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042F97213B6EC200292A1E /* ImageCollectionViewCell.swift */; };
 		9C042F9A213C62D500292A1E /* AdeudoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042F99213C62D500292A1E /* AdeudoController.swift */; };
 		9C042F9C213C642B00292A1E /* CalificacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042F9B213C642B00292A1E /* CalificacionController.swift */; };
@@ -79,7 +101,6 @@
 		9C81DEBB211769D800203F89 /* Task2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEBA211769D800203F89 /* Task2.swift */; };
 		9C81DEBD21176A5F00203F89 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEBC21176A5F00203F89 /* Token.swift */; };
 		9C81DEBF21176AAC00203F89 /* TokenOautBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEBE21176AAC00203F89 /* TokenOautBean.swift */; };
-		9C81DEC121176B2700203F89 /* UsuarioBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC021176B2700203F89 /* UsuarioBean.swift */; };
 		9C81DEC321176B7000203F89 /* VersionAppBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC221176B7000203F89 /* VersionAppBean.swift */; };
 		9C81DEC52117917A00203F89 /* ResponseBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC42117917A00203F89 /* ResponseBean.swift */; };
 		9C81DEC72117B3F700203F89 /* ValidarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEC62117B3F700203F89 /* ValidarController.swift */; };
@@ -98,8 +119,30 @@
 /* Begin PBXFileReference section */
 		1BA9995596CE3D2AA58A3F1D /* Pods-CepcmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CepcmApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp.release.xcconfig"; sourceTree = "<group>"; };
 		3CD1DBA012A668125916E99E /* Pods-CepcmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CepcmApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CepcmApp/Pods-CepcmApp.debug.xcconfig"; sourceTree = "<group>"; };
+		410E8975216FDAAC00565D4B /* RUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUtil.swift; sourceTree = "<group>"; };
+		410E8977216FDB0700565D4B /* ErrorBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBean.swift; sourceTree = "<group>"; };
+		410E8979216FDB3900565D4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		410E897B216FDB7500565D4B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		410E897D216FDB9100565D4B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		410E8980216FDC3900565D4B /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		410E8982216FDC5000565D4B /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		410E8984216FDC6D00565D4B /* DeviceToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceToken.swift; sourceTree = "<group>"; };
+		410E8986216FDC8100565D4B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		410E898A216FDD1400565D4B /* LoadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
+		412BBCA32174EA6300F16F50 /* TokenOaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenOaut.swift; sourceTree = "<group>"; };
+		412BBCA52174EDBC00F16F50 /* RequestGeneraTokenBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGeneraTokenBean.swift; sourceTree = "<group>"; };
+		412BBCA721761C6700F16F50 /* ResponseBaseOAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBaseOAuth.swift; sourceTree = "<group>"; };
+		412BBCA921762A1700F16F50 /* ResponseErrorOauthBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseErrorOauthBean.swift; sourceTree = "<group>"; };
+		415DE8852178F74F00C3D229 /* MateriasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriasCell.swift; sourceTree = "<group>"; };
+		4161D065216FD9ED004D6304 /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
+		4161D067216FDA36004D6304 /* ServiciosUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiciosUtil.swift; sourceTree = "<group>"; };
+		416EE5D42174DDCE0007E5E9 /* RegistroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroService.swift; sourceTree = "<group>"; };
+		416EE5D62174DE1E0007E5E9 /* RequestRegistraDispositivoBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRegistraDispositivoBean.swift; sourceTree = "<group>"; };
+		416EE5D82174DFB10007E5E9 /* ResponseRegistroDispositivoBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseRegistroDispositivoBean.swift; sourceTree = "<group>"; };
+		416EE5DA2174E0230007E5E9 /* RespuestaRegistroDispositivoBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RespuestaRegistroDispositivoBean.swift; sourceTree = "<group>"; };
 		41A1A0A4216CEBCF001C302A /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Config.plist; path = Config_plist/Config.plist; sourceTree = "<group>"; };
-		9C0005C6216AB6C800F428D4 /* MateriaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriaService.swift; sourceTree = "<group>"; };
+		41E5683B2178E5BC00D9F014 /* Grupo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grupo.swift; sourceTree = "<group>"; };
+		9C0005C6216AB6C800F428D4 /* MateriasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriasService.swift; sourceTree = "<group>"; };
 		9C042F97213B6EC200292A1E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C042F99213C62D500292A1E /* AdeudoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdeudoController.swift; sourceTree = "<group>"; };
 		9C042F9B213C642B00292A1E /* CalificacionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalificacionController.swift; sourceTree = "<group>"; };
@@ -172,7 +215,6 @@
 		9C81DEBA211769D800203F89 /* Task2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task2.swift; sourceTree = "<group>"; };
 		9C81DEBC21176A5F00203F89 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		9C81DEBE21176AAC00203F89 /* TokenOautBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenOautBean.swift; sourceTree = "<group>"; };
-		9C81DEC021176B2700203F89 /* UsuarioBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioBean.swift; sourceTree = "<group>"; };
 		9C81DEC221176B7000203F89 /* VersionAppBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionAppBean.swift; sourceTree = "<group>"; };
 		9C81DEC42117917A00203F89 /* ResponseBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBean.swift; sourceTree = "<group>"; };
 		9C81DEC62117B3F700203F89 /* ValidarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidarController.swift; sourceTree = "<group>"; };
@@ -210,6 +252,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		410E897F216FDC2800565D4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41E5683A2178E59600D9F014 /* Session */,
+				410E8982216FDC5000565D4B /* PushNotification.swift */,
+				415DE8852178F74F00C3D229 /* MateriasCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		410E8989216FDD0400565D4B /* CEPCM_Framework */ = {
+			isa = PBXGroup;
+			children = (
+				410E898A216FDD1400565D4B /* LoadingController.swift */,
+			);
+			path = CEPCM_Framework;
+			sourceTree = "<group>";
+		};
+		41E5683A2178E59600D9F014 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				410E8980216FDC3900565D4B /* Session.swift */,
+				410E8984216FDC6D00565D4B /* DeviceToken.swift */,
+				412BBCA32174EA6300F16F50 /* TokenOaut.swift */,
+				410E8986216FDC8100565D4B /* User.swift */,
+				41E5683B2178E5BC00D9F014 /* Grupo.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		9C71D4B72102D51800CF131A = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +303,8 @@
 		9C71D4C22102D51800CF131A /* CepcmApp */ = {
 			isa = PBXGroup;
 			children = (
+				410E8989216FDD0400565D4B /* CEPCM_Framework */,
+				410E897F216FDC2800565D4B /* Model */,
 				9C81DEE6212A0BB300203F89 /* CepcmApp-Bridging-Header.h */,
 				9C81DED42129259500203F89 /* Controllers */,
 				9C81DECB2117CF0700203F89 /* Services */,
@@ -290,6 +364,7 @@
 				9C81DE9A2116A57700203F89 /* ResponseCommonItemBean.swift */,
 				9C81DE9C2116A5CA00203F89 /* ResponseConfiguracionAppBean.swift */,
 				9C81DE9E2116A65000203F89 /* ResponseErrorBean.swift */,
+				412BBCA921762A1700F16F50 /* ResponseErrorOauthBean.swift */,
 				9C81DEA02116A75F00203F89 /* ResponseMateriasPorCarreraBean.swift */,
 				9C81DEA22116A8D700203F89 /* ResponseObtenerDetalleMateriaBean.swift */,
 				9C81DEA42116A94000203F89 /* ResponsePagosPorAlumnoBean.swift */,
@@ -306,9 +381,14 @@
 				9C81DEBA211769D800203F89 /* Task2.swift */,
 				9C81DEBC21176A5F00203F89 /* Token.swift */,
 				9C81DEBE21176AAC00203F89 /* TokenOautBean.swift */,
-				9C81DEC021176B2700203F89 /* UsuarioBean.swift */,
 				9C81DEC221176B7000203F89 /* VersionAppBean.swift */,
 				9C81DEC42117917A00203F89 /* ResponseBean.swift */,
+				410E8977216FDB0700565D4B /* ErrorBean.swift */,
+				416EE5D62174DE1E0007E5E9 /* RequestRegistraDispositivoBean.swift */,
+				416EE5D82174DFB10007E5E9 /* ResponseRegistroDispositivoBean.swift */,
+				416EE5DA2174E0230007E5E9 /* RespuestaRegistroDispositivoBean.swift */,
+				412BBCA52174EDBC00F16F50 /* RequestGeneraTokenBean.swift */,
+				412BBCA721761C6700F16F50 /* ResponseBaseOAuth.swift */,
 			);
 			path = Jsons;
 			sourceTree = SOURCE_ROOT;
@@ -318,6 +398,12 @@
 			children = (
 				9C81DEC92117CAA800203F89 /* Utilerias.swift */,
 				9C042F97213B6EC200292A1E /* ImageCollectionViewCell.swift */,
+				4161D065216FD9ED004D6304 /* URLHandler.swift */,
+				4161D067216FDA36004D6304 /* ServiciosUtil.swift */,
+				410E8975216FDAAC00565D4B /* RUtil.swift */,
+				410E8979216FDB3900565D4B /* Constants.swift */,
+				410E897B216FDB7500565D4B /* Colors.swift */,
+				410E897D216FDB9100565D4B /* Fonts.swift */,
 			);
 			path = Utils;
 			sourceTree = SOURCE_ROOT;
@@ -330,7 +416,8 @@
 				9C81DED021290C8A00203F89 /* FirebaseService.swift */,
 				9C81DED2212921BF00203F89 /* RestService.swift */,
 				9CE9576E21336DA100C1CE2D /* IniciarSesionService.swift */,
-				9C0005C6216AB6C800F428D4 /* MateriaService.swift */,
+				9C0005C6216AB6C800F428D4 /* MateriasService.swift */,
+				416EE5D42174DDCE0007E5E9 /* RegistroService.swift */,
 			);
 			path = Services;
 			sourceTree = SOURCE_ROOT;
@@ -511,7 +598,11 @@
 				9C042FA2213CA19300292A1E /* RecuperarController.swift in Sources */,
 				9C81DECD2117D00B00203F89 /* ValidarService.swift in Sources */,
 				9C81DEBB211769D800203F89 /* Task2.swift in Sources */,
+				410E897A216FDB3900565D4B /* Constants.swift in Sources */,
 				9C81DE812116904C00203F89 /* NotificacionBean.swift in Sources */,
+				412BBCA821761C6700F16F50 /* ResponseBaseOAuth.swift in Sources */,
+				416EE5D92174DFB10007E5E9 /* ResponseRegistroDispositivoBean.swift in Sources */,
+				416EE5D72174DE1E0007E5E9 /* RequestRegistraDispositivoBean.swift in Sources */,
 				9C1BA190212A2274004A4118 /* PrincipalController.swift in Sources */,
 				9C81DEBD21176A5F00203F89 /* Token.swift in Sources */,
 				9C433C5A21325994008A92B8 /* NotificacionController.swift in Sources */,
@@ -523,21 +614,27 @@
 				9C81DED121290C8A00203F89 /* FirebaseService.swift in Sources */,
 				9C81DE652116816700203F89 /* ConceptoAsistenciaBean.swift in Sources */,
 				9C81DEA32116A8D700203F89 /* ResponseObtenerDetalleMateriaBean.swift in Sources */,
+				41E5683C2178E5BC00D9F014 /* Grupo.swift in Sources */,
 				9C81DEB32117584D00203F89 /* ResponseValidaCuentaAlumnoBean.swift in Sources */,
 				9C042F98213B6EC200292A1E /* ImageCollectionViewCell.swift in Sources */,
 				9C81DE592116794E00203F89 /* AlumnoBean.swift in Sources */,
 				9C81DE7F2116896A00203F89 /* MateriaCarreraBean.swift in Sources */,
 				9C81DEB1211757C100203F89 /* RespuestaValidaCuentaAlumnoBean.swift in Sources */,
+				4161D066216FD9ED004D6304 /* URLHandler.swift in Sources */,
 				9C81DE7D2116889A00203F89 /* MateriaBean.swift in Sources */,
 				9C042F9E213C656A00292A1E /* MateriaController.swift in Sources */,
 				9C81DEB5211765F000203F89 /* SessionBean.swift in Sources */,
 				9C81DE5D21167D9800203F89 /* CalificacionDetalleBean.swift in Sources */,
+				415DE8862178F74F00C3D229 /* MateriasCell.swift in Sources */,
 				9C81DE6D2116834E00203F89 /* ConfiguracionFirebase.swift in Sources */,
 				9C81DE67211681D100203F89 /* ConceptoPagoBean.swift in Sources */,
 				9C433C6021334E6D008A92B8 /* SesionController.swift in Sources */,
+				416EE5DB2174E0230007E5E9 /* RespuestaRegistroDispositivoBean.swift in Sources */,
 				9C81DEA721174F4B00203F89 /* ResponsePersisteRegistroDispositivoBean.swift in Sources */,
+				412BBCA62174EDBC00F16F50 /* RequestGeneraTokenBean.swift in Sources */,
 				9C81DED3212921BF00203F89 /* RestService.swift in Sources */,
 				9C81DEAD2117565600203F89 /* ResponseTokenBean.swift in Sources */,
+				410E8983216FDC5000565D4B /* PushNotification.swift in Sources */,
 				9C81DEC321176B7000203F89 /* VersionAppBean.swift in Sources */,
 				9C81DEA921174FDC00203F89 /* ResponsePersistirIdFirebaseBean.swift in Sources */,
 				9C81DE6F211683D000203F89 /* ConfiguracionModuloFirebase.swift in Sources */,
@@ -547,34 +644,45 @@
 				9C81DEA12116A75F00203F89 /* ResponseMateriasPorCarreraBean.swift in Sources */,
 				9C81DE63211680D700203F89 /* CarreraBean.swift in Sources */,
 				9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */,
-				9C81DEC121176B2700203F89 /* UsuarioBean.swift in Sources */,
 				9C81DE872116974400203F89 /* PagosPorAlumnoBean.swift in Sources */,
 				9C81DEBF21176AAC00203F89 /* TokenOautBean.swift in Sources */,
 				9C042F9A213C62D500292A1E /* AdeudoController.swift in Sources */,
-				9C0005C7216AB6C800F428D4 /* MateriaService.swift in Sources */,
+				9C0005C7216AB6C800F428D4 /* MateriasService.swift in Sources */,
 				9C81DE8F21169EDA00203F89 /* RequestUsuario.swift in Sources */,
 				9C81DE9F2116A65000203F89 /* ResponseErrorBean.swift in Sources */,
 				9C81DE9121169F1D00203F89 /* ResponseBase.swift in Sources */,
 				9C81DECF2128C6CF00203F89 /* ConnectionService.swift in Sources */,
 				9C81DEAF2117573400203F89 /* ResponseUsuarioBean.swift in Sources */,
+				410E8985216FDC6D00565D4B /* DeviceToken.swift in Sources */,
 				9C81DE992116A4E000203F89 /* ResponseChildRespuestaBean.swift in Sources */,
+				410E8981216FDC3900565D4B /* Session.swift in Sources */,
 				9C81DE712116846300203F89 /* ConfiguracionVersionBean.swift in Sources */,
 				9C8F568621324EB000AC38ED /* InicioController.swift in Sources */,
+				410E8987216FDC8100565D4B /* User.swift in Sources */,
+				412BBCA42174EA6300F16F50 /* TokenOaut.swift in Sources */,
 				9C81DE6121167FB000203F89 /* CalificacionMateriaBean.swift in Sources */,
 				9C81DE852116945300203F89 /* PagosBean.swift in Sources */,
+				410E8976216FDAAC00565D4B /* RUtil.swift in Sources */,
 				9C81DE952116A28000203F89 /* ResponseCalendarioEscolarBean.swift in Sources */,
 				9C81DE972116A42700203F89 /* ResponseCalificacionesPorAlumnoGrupoBean.swift in Sources */,
 				9C81DE6B211682BF00203F89 /* ConfiguracionBannerBean.swift in Sources */,
 				9CE9576F21336DA100C1CE2D /* IniciarSesionService.swift in Sources */,
 				9C81DE8B21169DF700203F89 /* RequestPersistirIdFirebaseBean.swift in Sources */,
 				9C1BA18E212A21CB004A4118 /* SideMenuController.swift in Sources */,
+				410E8978216FDB0700565D4B /* ErrorBean.swift in Sources */,
+				410E897C216FDB7500565D4B /* Colors.swift in Sources */,
+				412BBCAA21762A1700F16F50 /* ResponseErrorOauthBean.swift in Sources */,
 				9C81DE792116863F00203F89 /* ImagenBannerBean.swift in Sources */,
 				9C81DE9D2116A5CA00203F89 /* ResponseConfiguracionAppBean.swift in Sources */,
+				4161D068216FDA36004D6304 /* ServiciosUtil.swift in Sources */,
 				9C433C5C21325E2A008A92B8 /* NovedadesController.swift in Sources */,
 				9C81DE8D21169E7E00203F89 /* RequestRegisterBean.swift in Sources */,
 				9C433C5E21326A76008A92B8 /* AcercaController.swift in Sources */,
+				410E897E216FDB9100565D4B /* Fonts.swift in Sources */,
 				9C71D4C42102D51800CF131A /* AppDelegate.swift in Sources */,
+				416EE5D52174DDCE0007E5E9 /* RegistroService.swift in Sources */,
 				9C81DEE2212A06BB00203F89 /* SWRevealViewController.m in Sources */,
+				410E898B216FDD1400565D4B /* LoadingController.swift in Sources */,
 				9C81DE9B2116A57700203F89 /* ResponseCommonItemBean.swift in Sources */,
 				9C433C5821325291008A92B8 /* TerminosController.swift in Sources */,
 				9C81DECA2117CAA800203F89 /* Utilerias.swift in Sources */,

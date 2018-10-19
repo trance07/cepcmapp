@@ -12,5 +12,5 @@ struct ResponseTokenBean : Codable {
     var scope : String? = nil
     var fecha_generacion : String? = nil
     var access_token : String? = nil
-    var expires_in : Int64? = nil
+    var expires_in : UInt64? = nil
 }

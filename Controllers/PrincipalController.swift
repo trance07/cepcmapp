@@ -10,6 +10,7 @@ import UIKit
 import SideMenu
 import KeychainSwift
 import Firebase
+import FirebaseAuth
 
 class PrincipalController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -117,7 +118,9 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MateriaController") as? MateriaController {
             
-            self.navigationController?.pushViewController(viewController, animated: true)
+            
+            self.present(viewController, animated: true, completion: nil)
+          //  self.navigationController?.pushViewController(viewController, animated: true)
             
         }
         
@@ -150,12 +153,12 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     @objc func close(){
         
-        //Haciendo logout de firebase
-        /*do {
+      
+        do {
             try Auth.auth().signOut()
         } catch {
            
-        }*/
+        }
         
       
         ref.removeAllObservers()
@@ -173,9 +176,11 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
             RUtil.persistValue(value: uMail as AnyObject, key: "lastUser")
         }
         
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         //Removiendo la sesion
         RUtil.removeObjectFor(key: "SESSION")
+        RUtil.removeObjectFor(key: "GRUPO")
         let keychain = KeychainSwift()
         keychain.delete("CEPCM_SESSION")
         Session.add(session: User())

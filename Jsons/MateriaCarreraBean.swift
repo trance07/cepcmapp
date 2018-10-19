@@ -7,8 +7,6 @@
 //
 
 struct MateriaCarreraBean : Codable {
-    var modulo : Int? = nil
+    var descripcion : String? = nil
     var clave : String? = nil
-    var seriacion : Int? = nil
-    var curriculum : Bool? = nil
 }

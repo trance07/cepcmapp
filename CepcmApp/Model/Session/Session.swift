@@ -12,10 +12,13 @@ class Session: NSObject {
     private override init() {}
     
     var user: User?
+    var grupo: Grupo?
     var token: DeviceToken?
+    var tokenOaut: TokenOaut?
     
     class func clean() {
         shared.user = nil
+        //shared.grupo = nil
     }
     
     class func add(token: DeviceToken){
@@ -39,6 +42,29 @@ class Session: NSObject {
             }
         }
         
+    }
+    
+    class func add(grupo: Grupo) {
+        Session.shared.grupo = grupo
+        
+        if RUtil.valueForKey_(key: "GRUPO") != nil {
+            let grupoData = RUtil.valueForKey_(key: "GRUPO") as! Data
+            if let grupo = NSKeyedUnarchiver.unarchiveObject(with: grupoData) as? Grupo{
+                Session.shared.grupo = grupo
+            }
+        }
+        
+    }
+    
+    class func add(tokenOaut: TokenOaut){
+        Session.shared.tokenOaut = tokenOaut
+        
+        if RUtil.valueForKey_(key: "TOKEN_OAUT_") != nil {
+            let reportData = RUtil.valueForKey_(key: "TOKEN_OAUT_") as! Data
+            if let tokenOaut = NSKeyedUnarchiver.unarchiveObject(with: reportData) as? TokenOaut{
+                Session.shared.tokenOaut = tokenOaut
+            }
+        }
     }
     
     

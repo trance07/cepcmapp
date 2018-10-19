@@ -14,8 +14,7 @@ class FirebaseService {
     
     let userDefaults = UserDefaults.standard
     
-    let firebase_field_alumnos : String = "alumnos"
-    
+
     
     func recuperarPassword(email: String, callback: @escaping (Bool,AnyObject) -> ()) -> Void {
         
@@ -38,18 +37,6 @@ class FirebaseService {
             
             
         }
-        
-    }
-    
-    func persistirDatosAlumnoFirebase() {
-        
-        print("---> Persistir datos en firebase")
-        var userFirebase = userDefaults.object(forKey: "userFirebase")
-        var database = Database.database().reference(withPath: self.firebase_field_alumnos)
-        
-       /* userFirebase.currentUser?.sendEmailVerification { (error) in
-            // falta contenido aqui
-        }*/
         
     }
     
@@ -158,4 +145,20 @@ class FirebaseService {
     
     
     
+    func persistirDatosAlumnoEnFirebase(alumno : AlumnoBean? , grupo : GrupoBean?, callback: @escaping (Bool) -> ()) -> Void {
+        
+        print("---> Persistiendo los datos del alumno en firebase ")
+        
+        let userUid = Auth.auth().currentUser?.uid
+    
+        let refAlumnos = Database.database().reference().child(Constants.FIREBASE_FIELD.ALUMNOS)
+
+        refAlumnos.child(userUid!).child("alumno").setValue(alumno?.getArrayObj())
+        refAlumnos.child(userUid!).child("grupo").setValue(grupo?.getArrayObj())
+        
+        callback(true)
+        
+        
+        
+    }//Fin persistirDatosAlumnoEnFirebase
 }

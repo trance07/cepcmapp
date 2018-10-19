@@ -24,6 +24,8 @@ class SesionController: UIViewController, UITextFieldDelegate {
     
     var firebaseService : FirebaseService = FirebaseService()
     
+     let registroService : RegistroService = RegistroService()
+    
     @IBAction func lanzarRecuperacion() {
         
         print("---> Evento lanzar recuperacion")
@@ -80,24 +82,46 @@ class SesionController: UIViewController, UITextFieldDelegate {
                 Session.shared.user?.email = email
                 Session.shared.user?.uuid = response as! String
                 
-                //TODO: Mandar a registrar el device al back
+                //TODO: obtener el id del dispositivo correcto
+                var request = RequestRegistroDispositivoBean()
+                request.id_dispositivo = "123"
+               
+                self.registroService.registrarDispositivo(request: request) { (resultado, response) in
                 
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.checkLogin()
+                  if resultado == true {
+                    
+                        let respuestaRegistroDispositivo = response as! RespuestaRegistroDispositivoBean
+                    
+                        //Se persiste la informacion del alumno en firebase
+                        self.firebaseService.persistirDatosAlumnoEnFirebase(alumno: respuestaRegistroDispositivo.alumno, grupo: respuestaRegistroDispositivo.grupo!, callback: { (_ ) in
+                            
+                            Session.shared.grupo?.id = respuestaRegistroDispositivo.grupo!.id
+                            Session.shared.grupo?.descripcion = respuestaRegistroDispositivo.grupo!.descripcion
+                          
+                            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                            appDelegate.checkLogin()
+                            
+                        })// fin persistirDatosAlumnoEnFirebase
+               
+                } else {
+                     
+                     self.presentarAlerta(mensaje: response as! String )
+                     
+                }
                 
-            } else {
+            }// fin registrarDispositivo
+                
+        } else {
                 
                 self.presentarAlerta(mensaje: response as! String )
                 
-            }
-          
+        }
             
-        }// fin crearCuentaFirebase
+    }// fin crearCuentaFirebase
         
-       
-
-        
-    }
+}
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

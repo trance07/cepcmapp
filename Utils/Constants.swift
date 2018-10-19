@@ -17,6 +17,8 @@ struct Constants {
     static let appName = "CEPCM Móvil"
     static let appAviso = "Aviso"
     
+    static let AUTHORIZATION_REST = "Basic Y2xpZW50YXBwOjEyMzQ1Ng=="
+    
     struct INFO {
         static let validateRegisterEmailVerification = "n mensaje será enviado a la dirección de correo electrónico especificada. Este correo contiene un enlace para completar el proceso de verificación."
         
@@ -31,6 +33,7 @@ struct Constants {
         static let invalidEmail             = "El correo electronico es invalido, favor de verificar";
         static let weakPassword             = "La contraseña debe contener al menos 6 caracteres.";
         static let wrongPassword            = "La contraseña proporcionada no es válida.";
+        static let unauthorized             = "unauthorized"
     }
     
     struct ERRORCODE {
@@ -49,6 +52,10 @@ struct Constants {
         static let networkError             = "013";
         static let weakPassword             = "014";
         static let wrongPassword            = "015";
+        static let parserError              = "016";
+        static let internalError            = "017";
+        static let unauthorized             = "018";
+        
         
     }
     
@@ -60,6 +67,12 @@ struct Constants {
         static let assisted = "segue.assisted"
         
         static let profileData = "segue.profile.data"
+        
+    }
+    
+    struct FIREBASE_FIELD {
+        static let ALUMNOS = "alumnos"
+      
         
     }
     

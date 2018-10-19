@@ -12,4 +12,13 @@ struct AlumnoBean: Codable {
     var apaterno : String?
     var amaterno : String?
     var matricula : String?
+    
+    func getArrayObj() -> [String : Any] {
+        return [ "id":id,
+                 "matricula":matricula,
+                 "nombres":nombres,
+                 "apaterno":apaterno,
+                 "amaterno":amaterno
+               ] as [String : Any]
+    }
 }

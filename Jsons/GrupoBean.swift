@@ -11,4 +11,12 @@ struct GrupoBean : Codable {
     var descripcion : String? = nil
     var carrera : CarreraBean? = nil
     var localidad : ItemBean? = nil
+    
+    func getArrayObj() -> [String : Any] {
+        return [ "id":id,
+                 "descripcion":descripcion,
+                 "carrera":carrera?.getArrayObj(),
+                 "localidad":localidad?.getArrayObj()
+            ] as [String : Any]
+    }
 }

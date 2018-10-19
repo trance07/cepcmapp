@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import KeychainSwift
+import FirebaseAuth
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -109,6 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }else{
                     
                     RUtil.removeObjectFor(key: "SESSION")
+                    RUtil.removeObjectFor(key: "GRUPO")
                     let keychain = KeychainSwift()
                     keychain.delete("CEPCM_SESSION")
                     Session.add(session: User())

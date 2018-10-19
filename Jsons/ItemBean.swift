@@ -9,4 +9,10 @@
 struct ItemBean : Codable {
     var id : Int? = 0
     var descripcion : String? = nil
+    
+    func getArrayObj() -> [String : Any] {
+        return [ "id":id,
+                 "descripcion":descripcion
+            ] as [String : Any]
+    }
 }
