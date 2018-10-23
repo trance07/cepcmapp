@@ -107,7 +107,9 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CalificacionController") as? CalificacionController {
             
-            self.navigationController?.pushViewController(viewController, animated: true)
+            print("--> Lanzando push calificacion")
+            self.present(viewController, animated: true, completion: nil)
+            //self.navigationController?.pushViewController(viewController, animated: true)
             
         }
         

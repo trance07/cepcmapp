@@ -7,13 +7,13 @@
 //
 
 struct MateriaBean : Codable {
-    var id : Int
-    var modulo : Int
-    var descripcion : String
-    var clave : String
-    var seriacion : Int
-    var curricular : Bool
-    var creditos : Double
-    var str_curricular : String
-    var materia_terminada : Bool
+    var id : Int?
+    var modulo : Int?
+    var descripcion : String?
+    var clave : String?
+    var seriacion : Int?
+    var curricular : Bool?
+    var creditos : Double?
+    var str_curricular : String?
+    var materia_terminada : Bool?
 }

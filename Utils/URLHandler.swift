@@ -35,7 +35,7 @@ class URLHandler: NSObject {
     static let PERSISTIR_DISPOSITIVO = "PERSISTIR_DISPOSITIVO"
     static let OAUTH_TOKEN = "OAUTH_TOKEN"
     static let MATERIAS_POR_ALUMNO = "MATERIAS_POR_ALUMNO"
-
+    static let CALIFICACIONES_POR_ALUMNO = "CALIFICACIONES_POR_ALUMNO"
     
     
     class func getUrl(urlName:String) -> String {

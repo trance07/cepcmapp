@@ -7,5 +7,7 @@
 //
 
 struct ResponseCalificacionesPorAlumnoGrupoBean : Codable {
+    var codigo: Int = 0
+    var mensaje: String? = nil
     var respuesta : PromedioBean? = nil
 }

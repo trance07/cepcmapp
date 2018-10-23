@@ -143,8 +143,6 @@ class FirebaseService {
         
     }//Fin crearCuentaFirebase
     
-    
-    
     func persistirDatosAlumnoEnFirebase(alumno : AlumnoBean? , grupo : GrupoBean?, callback: @escaping (Bool) -> ()) -> Void {
         
         print("---> Persistiendo los datos del alumno en firebase ")

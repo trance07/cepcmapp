@@ -7,29 +7,75 @@
 //
 
 import UIKit
+import Foundation
 
-class CalificacionController: UIViewController {
+class CalificacionController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var userDefaults = UserDefaults.standard
+    
+    var calificaciones = [CalificacionesBean]()
+    
+    @IBOutlet weak var califTable: UITableView!
 
+    let calificacionService : CalificacionesService = CalificacionesService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.califTable.dataSource = self
+        self.califTable.delegate = self
+        
+        self.calificacionService.obtenerCalificacionesFirebase()
+        /*
+        self.calificacionService.obtenerCalificacionesBackend() { (resultado, response) in
+            
+            if resultado == true {
+                let promedioBean = response as! PromedioBean
+                
+                self.calificaciones = promedioBean.calificaciones!
+                
+                self.califTable.reloadData()
+                
+            } else {
+                print(".---> El resultado no es true")
+            }
+            
+        }*/
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("********* tamanio de calificaciones: \(calificaciones.count)")
+        return calificaciones.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CalificacionCell") as! CalificacionCell
+        cell.setCalificacion(calificacion: calificaciones[indexPath.item].str_calificacion!)
+        cell.setClave(clave: (calificaciones[indexPath.item].materia?.clave)!)
+        cell.setFecha(fecha: calificaciones[indexPath.item].fecha!)
+        cell.setMateria(materia: (calificaciones[indexPath.item].materia?.descripcion)!)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CalificacionController.lanzarDetalle))
+        cell.addGestureRecognizer(tapGesture)
+        
+        return cell;
+        
+        
+    }
+    
+    @objc func lanzarDetalle() -> Void {
+        
+        
+        print("----> Lanzando detalle")
+        
+        
+    }
+    
 }

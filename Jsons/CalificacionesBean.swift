@@ -7,14 +7,14 @@
 //
 
 struct CalificacionesBean : Codable {
-    var id : Int
-    var calificacion : Int
-    var str_calificacion : String
-    var regularizo : Bool
-    var tiene_adeudo : Bool
-    var calificacion_liberada : Bool
-    var fecha : String
-    var reprobada : Bool
-    var detalle_reprobada : String
-    var materia : MateriaBean
+    var id : Int?
+    var calificacion : Int?
+    var str_calificacion : String?
+    var regularizo : Bool?
+    var tiene_adeudo : Bool?
+    var calificacion_liberada : Bool?
+    var fecha : String?
+    var reprobada : Bool?
+    var detalle_reprobada : String?
+    var materia : MateriaBean?
 }

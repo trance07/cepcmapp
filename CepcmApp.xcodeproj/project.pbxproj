@@ -39,6 +39,8 @@
 		9C042FA2213CA19300292A1E /* RecuperarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C042FA1213CA19300292A1E /* RecuperarController.swift */; };
 		9C1BA18E212A21CB004A4118 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BA18D212A21CB004A4118 /* SideMenuController.swift */; };
 		9C1BA190212A2274004A4118 /* PrincipalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BA18F212A2274004A4118 /* PrincipalController.swift */; };
+		9C338D6F217D3599006DDF51 /* CalificacionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C338D6E217D3599006DDF51 /* CalificacionCell.swift */; };
+		9C338D71217E02BB006DDF51 /* DetalleCalificacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C338D70217E02BA006DDF51 /* DetalleCalificacionController.swift */; };
 		9C433C5821325291008A92B8 /* TerminosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5721325291008A92B8 /* TerminosController.swift */; };
 		9C433C5A21325994008A92B8 /* NotificacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5921325994008A92B8 /* NotificacionController.swift */; };
 		9C433C5C21325E2A008A92B8 /* NovedadesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C433C5B21325E2A008A92B8 /* NovedadesController.swift */; };
@@ -111,6 +113,7 @@
 		9C81DED3212921BF00203F89 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DED2212921BF00203F89 /* RestService.swift */; };
 		9C81DEE2212A06BB00203F89 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEE0212A06BB00203F89 /* SWRevealViewController.m */; };
 		9C8F568621324EB000AC38ED /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F568521324EB000AC38ED /* InicioController.swift */; };
+		9C9758FD217C13F7005E44C7 /* CalificacionesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9758FC217C13F7005E44C7 /* CalificacionesService.swift */; };
 		9CE9576F21336DA100C1CE2D /* IniciarSesionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9576E21336DA100C1CE2D /* IniciarSesionService.swift */; };
 		9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */; };
 		BCAD3B13C1EF8DA68F4D1736 /* Pods_CepcmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */; };
@@ -151,6 +154,8 @@
 		9C042FA1213CA19300292A1E /* RecuperarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperarController.swift; sourceTree = "<group>"; };
 		9C1BA18D212A21CB004A4118 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		9C1BA18F212A2274004A4118 /* PrincipalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalController.swift; sourceTree = "<group>"; };
+		9C338D6E217D3599006DDF51 /* CalificacionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalificacionCell.swift; sourceTree = "<group>"; };
+		9C338D70217E02BA006DDF51 /* DetalleCalificacionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleCalificacionController.swift; sourceTree = "<group>"; };
 		9C433C5721325291008A92B8 /* TerminosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminosController.swift; sourceTree = "<group>"; };
 		9C433C5921325994008A92B8 /* NotificacionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacionController.swift; sourceTree = "<group>"; };
 		9C433C5B21325E2A008A92B8 /* NovedadesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovedadesController.swift; sourceTree = "<group>"; };
@@ -227,6 +232,7 @@
 		9C81DEE1212A06BB00203F89 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		9C81DEE6212A0BB300203F89 /* CepcmApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CepcmApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		9C8F568521324EB000AC38ED /* InicioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
+		9C9758FC217C13F7005E44C7 /* CalificacionesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalificacionesService.swift; sourceTree = "<group>"; };
 		9CE9576E21336DA100C1CE2D /* IniciarSesionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniciarSesionService.swift; sourceTree = "<group>"; };
 		9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
 		C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CepcmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +264,7 @@
 				41E5683A2178E59600D9F014 /* Session */,
 				410E8982216FDC5000565D4B /* PushNotification.swift */,
 				415DE8852178F74F00C3D229 /* MateriasCell.swift */,
+				9C338D6E217D3599006DDF51 /* CalificacionCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -418,6 +425,7 @@
 				9CE9576E21336DA100C1CE2D /* IniciarSesionService.swift */,
 				9C0005C6216AB6C800F428D4 /* MateriasService.swift */,
 				416EE5D42174DDCE0007E5E9 /* RegistroService.swift */,
+				9C9758FC217C13F7005E44C7 /* CalificacionesService.swift */,
 			);
 			path = Services;
 			sourceTree = SOURCE_ROOT;
@@ -438,6 +446,7 @@
 				9C042F9D213C656A00292A1E /* MateriaController.swift */,
 				9C042F9F213C664A00292A1E /* PagosController.swift */,
 				9C042FA1213CA19300292A1E /* RecuperarController.swift */,
+				9C338D70217E02BA006DDF51 /* DetalleCalificacionController.swift */,
 			);
 			path = Controllers;
 			sourceTree = SOURCE_ROOT;
@@ -615,6 +624,7 @@
 				9C81DE652116816700203F89 /* ConceptoAsistenciaBean.swift in Sources */,
 				9C81DEA32116A8D700203F89 /* ResponseObtenerDetalleMateriaBean.swift in Sources */,
 				41E5683C2178E5BC00D9F014 /* Grupo.swift in Sources */,
+				9C9758FD217C13F7005E44C7 /* CalificacionesService.swift in Sources */,
 				9C81DEB32117584D00203F89 /* ResponseValidaCuentaAlumnoBean.swift in Sources */,
 				9C042F98213B6EC200292A1E /* ImageCollectionViewCell.swift in Sources */,
 				9C81DE592116794E00203F89 /* AlumnoBean.swift in Sources */,
@@ -628,6 +638,7 @@
 				415DE8862178F74F00C3D229 /* MateriasCell.swift in Sources */,
 				9C81DE6D2116834E00203F89 /* ConfiguracionFirebase.swift in Sources */,
 				9C81DE67211681D100203F89 /* ConceptoPagoBean.swift in Sources */,
+				9C338D71217E02BB006DDF51 /* DetalleCalificacionController.swift in Sources */,
 				9C433C6021334E6D008A92B8 /* SesionController.swift in Sources */,
 				416EE5DB2174E0230007E5E9 /* RespuestaRegistroDispositivoBean.swift in Sources */,
 				9C81DEA721174F4B00203F89 /* ResponsePersisteRegistroDispositivoBean.swift in Sources */,
@@ -663,6 +674,7 @@
 				9C81DE6121167FB000203F89 /* CalificacionMateriaBean.swift in Sources */,
 				9C81DE852116945300203F89 /* PagosBean.swift in Sources */,
 				410E8976216FDAAC00565D4B /* RUtil.swift in Sources */,
+				9C338D6F217D3599006DDF51 /* CalificacionCell.swift in Sources */,
 				9C81DE952116A28000203F89 /* ResponseCalendarioEscolarBean.swift in Sources */,
 				9C81DE972116A42700203F89 /* ResponseCalificacionesPorAlumnoGrupoBean.swift in Sources */,
 				9C81DE6B211682BF00203F89 /* ConfiguracionBannerBean.swift in Sources */,
