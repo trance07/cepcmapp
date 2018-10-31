@@ -460,11 +460,7 @@ class ServiciosUtil: NSObject {
     
     class func obtenerToken( callback: @escaping (_ token:String) -> Void ){
         
-        if(Session.shared.tokenOaut != nil){
-            
-            callback((Session.shared.tokenOaut?.access_token)!)
-            
-        }else{
+        if(Session.shared.tokenOaut == nil  || Session.shared.tokenOaut?.refresh_token == nil ){
             
             self.generarToken { (exito, token) in
                 if(exito){
@@ -475,8 +471,37 @@ class ServiciosUtil: NSObject {
                     callback("")
                 }
             }
-        
+            
+        }else{
+             //si el token no es nulo se valida el tiempo de vida de este
+            let fechaGeneracion = NSString(string: (Session.shared.tokenOaut?.fecha_generacion)!).doubleValue
+            let ahora = Date().timeIntervalSince1970 * 1000
+            var expires_in = Session.shared.tokenOaut?.expires_in
+            
+            if(expires_in == nil){
+                expires_in = 0
+            }
+            
+            let doubleExpire: Double = (Double(expires_in!) * 1000) - 2000
+            
+            if((ahora - fechaGeneracion) > doubleExpire ){
+                  //se regenera el token
+                self.generarToken { (exito, token) in
+                    if(exito){
+                        
+                        callback(token as! String)
+                        
+                    }else{
+                        callback("")
+                    }
+                }
+           }else{
+                callback((Session.shared.tokenOaut?.access_token)!)
+            }
+            
+            
         }
+       
         
     }
     

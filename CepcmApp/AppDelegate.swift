@@ -59,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Session.add(token: DeviceToken())
         Session.add(session: User())
+        Session.add(tokenOaut: TokenOaut())
     
         checkLogin()
         

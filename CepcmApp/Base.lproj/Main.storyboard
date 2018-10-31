@@ -210,12 +210,8 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="bQy-aX-fi3">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu-filled" id="7G6-mv-cUM">
-                            <connections>
-                                <segue destination="P66-PV-7gZ" kind="presentation" id="p9w-PQ-K9Z"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="5xZ-3e-OXw">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu-filled" id="cF3-cX-a8i"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -968,13 +964,30 @@
                             <constraint firstItem="B49-oX-9yD" firstAttribute="leading" secondItem="6e0-S6-uM9" secondAttribute="leading" id="qcX-li-Brf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="R8C-kY-o3Q"/>
                     <connections>
                         <outlet property="tblMaterias" destination="B49-oX-9yD" id="VSp-3X-TYa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASa-SA-5FT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4204" y="759.67016491754134"/>
+            <point key="canvasLocation" x="5138" y="778"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wsx-4I-OeL">
+            <objects>
+                <navigationController id="5GI-a9-elm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qPa-Hx-cOZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JXA-6g-i8D" kind="relationship" relationship="rootViewController" id="7k2-1W-TGQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rqf-OT-00M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4346" y="786"/>
         </scene>
         <!--Pagos Controller-->
         <scene sceneID="ynl-cc-9u2">
@@ -1087,6 +1100,6 @@
         <image name="menu-filled" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p9w-PQ-K9Z"/>
+        <segue reference="Xxb-xm-12h"/>
     </inferredMetricsTieBreakers>
 </document>

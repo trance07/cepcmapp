@@ -186,6 +186,7 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         let keychain = KeychainSwift()
         keychain.delete("CEPCM_SESSION")
         Session.add(session: User())
+        Session.add(tokenOaut: TokenOaut())
         
         appDelegate.checkLogin()
         
