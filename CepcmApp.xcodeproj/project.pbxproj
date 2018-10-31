@@ -52,6 +52,7 @@
 		9C71D4C92102D51800CF131A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C71D4C72102D51800CF131A /* Main.storyboard */; };
 		9C71D4CB2102D51800CF131A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C71D4CA2102D51800CF131A /* Assets.xcassets */; };
 		9C71D4CE2102D51800CF131A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C71D4CC2102D51800CF131A /* LaunchScreen.storyboard */; };
+		9C770D2F2185432F00733E02 /* ListaCalificaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C770D2E2185432E00733E02 /* ListaCalificaciones.swift */; };
 		9C81DE592116794E00203F89 /* AlumnoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE582116794E00203F89 /* AlumnoBean.swift */; };
 		9C81DE5B211679F200203F89 /* CalendarioMateriaBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE5A211679F200203F89 /* CalendarioMateriaBean.swift */; };
 		9C81DE5D21167D9800203F89 /* CalificacionDetalleBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DE5C21167D9800203F89 /* CalificacionDetalleBean.swift */; };
@@ -169,6 +170,7 @@
 		9C71D4CA2102D51800CF131A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C71D4CD2102D51800CF131A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C71D4CF2102D51800CF131A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C770D2E2185432E00733E02 /* ListaCalificaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCalificaciones.swift; sourceTree = "<group>"; };
 		9C81DE582116794E00203F89 /* AlumnoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumnoBean.swift; sourceTree = "<group>"; };
 		9C81DE5A211679F200203F89 /* CalendarioMateriaBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarioMateriaBean.swift; sourceTree = "<group>"; };
 		9C81DE5C21167D9800203F89 /* CalificacionDetalleBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalificacionDetalleBean.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				412BBCA32174EA6300F16F50 /* TokenOaut.swift */,
 				410E8986216FDC8100565D4B /* User.swift */,
 				41E5683B2178E5BC00D9F014 /* Grupo.swift */,
+				9C770D2E2185432E00733E02 /* ListaCalificaciones.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				9C81DEBD21176A5F00203F89 /* Token.swift in Sources */,
 				9C433C5A21325994008A92B8 /* NotificacionController.swift in Sources */,
 				9C81DEB92117694000203F89 /* Task.swift in Sources */,
+				9C770D2F2185432F00733E02 /* ListaCalificaciones.swift in Sources */,
 				9C81DE692116824100203F89 /* ConfiguracionBackEndBean.swift in Sources */,
 				9C81DEB7211768C300203F89 /* TabPagoBean.swift in Sources */,
 				9C81DE75211684F200203F89 /* DocenteBean.swift in Sources */,

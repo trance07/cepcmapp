@@ -11,6 +11,8 @@ import Foundation
 
 class CalificacionController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let titulo : String = "CEPCM"
+    
     var userDefaults = UserDefaults.standard
     
     var calificaciones = [CalificacionesBean]()
@@ -25,7 +27,25 @@ class CalificacionController: UIViewController, UITableViewDataSource, UITableVi
         self.califTable.dataSource = self
         self.califTable.delegate = self
         
-        self.calificacionService.obtenerCalificacionesFirebase()
+        self.calificacionService.obtenerCalificacionesFirebase() { (resultado, response) in
+            
+            if resultado == false {
+                
+                print("---> No se pueden mostrar las calificaciones")
+                self.presentarAlerta(mensaje: response as! String )
+                
+            } else {
+                
+                print("---> Se pueden mostrar las calificaciones")
+                
+                self.calificaciones =  response as! [CalificacionesBean]
+                
+                self.califTable.reloadData()
+
+                
+            }
+            
+        }
         /*
         self.calificacionService.obtenerCalificacionesBackend() { (resultado, response) in
             
@@ -75,6 +95,20 @@ class CalificacionController: UIViewController, UITableViewDataSource, UITableVi
         
         print("----> Lanzando detalle")
         
+        
+    }
+    
+    func presentarAlerta( mensaje : String) -> Void {
+        
+        print("---> Generando mensaje de alerta")
+        
+        let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true)
         
     }
     
