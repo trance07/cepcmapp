@@ -67,5 +67,9 @@ class Colors: NSObject {
     }
     
     
+    class func brightCherry() -> UIColor {
+        return UIColor(red: 128.0/255.0, green: 21.0/255.0, blue: 21.0/255.0, alpha: 1.0)
+    }
+    
     
 }

@@ -60,25 +60,30 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
 
-    @IBAction func activarSideBar(_ sender: UIBarButtonItem) {
-        
-        let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "sideMenuNavigation") as! UISideMenuNavigationController
-        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
-        
-        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
-        
-        
-        present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)
-        
-        
-        dismiss(animated: true, completion: nil)
-        
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
         
+        
+      
+        /*let menuHamburguesa = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(activarSideBar))
+        //let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(activarSideBar))
+        self.navigationItem.leftBarButtonItem = menuHamburguesa
+       */
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        //  navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -108,8 +113,7 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CalificacionController") as? CalificacionController {
             
             print("--> Lanzando push calificacion")
-            self.present(viewController, animated: true, completion: nil)
-            //self.navigationController?.pushViewController(viewController, animated: true)
+            self.navigationController?.pushViewController(viewController, animated: true)
             
         }
         
@@ -120,9 +124,7 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MateriaController") as? MateriaController {
             
-            
-            self.present(viewController, animated: true, completion: nil)
-          //  self.navigationController?.pushViewController(viewController, animated: true)
+           self.navigationController?.pushViewController(viewController, animated: true)
             
         }
         
@@ -191,7 +193,21 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         appDelegate.checkLogin()
         
     }
-    
+    @IBAction func activarSideBar(_ sender: UIBarButtonItem) {
+        
+        let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "sideMenuNavigation") as! UISideMenuNavigationController
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
+        
+        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        
+        
+        present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)
+        
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
    
     
     

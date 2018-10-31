@@ -10,13 +10,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Inicio-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewControllerLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9sg-el-ySe"/>
-                        <viewControllerLayoutGuide type="bottom" id="x93-1M-6An"/>
+                        <viewControllerLayoutGuide type="top" id="guq-7g-ThF"/>
+                        <viewControllerLayoutGuide type="bottom" id="E5l-o6-bbX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -33,7 +33,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="lanzarSesion" destination="BYZ-38-t0r" eventType="touchUpInside" id="MYR-Ea-Dtl"/>
+                                    <action selector="lanzarSesion" destination="BYZ-38-t0r" eventType="touchUpInside" id="I8D-8f-aKA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knu-Ai-qLp">
@@ -53,16 +53,19 @@
                             <constraint firstAttribute="trailingMargin" secondItem="knu-Ai-qLp" secondAttribute="trailing" id="4X9-hP-o0P"/>
                             <constraint firstItem="knu-Ai-qLp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DFT-JW-xIN"/>
                             <constraint firstItem="9wV-2k-VOC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GFZ-9f-GW5"/>
-                            <constraint firstItem="x93-1M-6An" firstAttribute="top" secondItem="9wV-2k-VOC" secondAttribute="bottom" id="Hl0-LN-oGM"/>
+                            <constraint firstItem="E5l-o6-bbX" firstAttribute="top" secondItem="9wV-2k-VOC" secondAttribute="bottom" id="Hl0-LN-oGM"/>
                             <constraint firstAttribute="trailing" secondItem="9wV-2k-VOC" secondAttribute="trailing" id="Qdh-oi-TKa"/>
                             <constraint firstItem="9wV-2k-VOC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U3f-mw-oJn"/>
                             <constraint firstItem="knu-Ai-qLp" firstAttribute="top" secondItem="Bo2-iS-u1H" secondAttribute="bottom" constant="8" symbolic="YES" id="alT-qK-K77"/>
-                            <constraint firstItem="x93-1M-6An" firstAttribute="top" secondItem="knu-Ai-qLp" secondAttribute="bottom" constant="8" symbolic="YES" id="hMl-mv-dDu"/>
+                            <constraint firstItem="E5l-o6-bbX" firstAttribute="top" secondItem="knu-Ai-qLp" secondAttribute="bottom" constant="8" symbolic="YES" id="hMl-mv-dDu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bo2-iS-u1H" secondAttribute="trailing" id="jFJ-6a-Yhy"/>
                             <constraint firstItem="Bo2-iS-u1H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vPR-gA-8Ok"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3W4-iZ-Q4U"/>
+                    <navigationItem key="navigationItem" title="Inicio" id="3W4-iZ-Q4U"/>
+                    <connections>
+                        <segue destination="dgE-Bp-zgh" kind="show" id="DQH-Na-Han"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,15 +127,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBS-jq-YOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2590" y="1728"/>
+            <point key="canvasLocation" x="1737" y="2514"/>
         </scene>
-        <!--Principal Controller-->
+        <!--CEPCM-->
         <scene sceneID="bsJ-Rc-590">
             <objects>
                 <viewController storyboardIdentifier="PrincipalController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z7R-9w-j4u" customClass="PrincipalController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uGT-b6-3gK"/>
-                        <viewControllerLayoutGuide type="bottom" id="l0q-2v-W5T"/>
+                        <viewControllerLayoutGuide type="top" id="Bgs-VN-wsg"/>
+                        <viewControllerLayoutGuide type="bottom" id="pcq-FP-atr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rQl-Hv-mDv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -200,18 +203,22 @@
                             <constraint firstAttribute="trailing" secondItem="naz-c4-jut" secondAttribute="trailing" id="IPh-e5-gY5"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="leading" secondItem="rQl-Hv-mDv" secondAttribute="leading" id="Kca-lM-8Pk"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="top" secondItem="rQl-Hv-mDv" secondAttribute="top" id="Ovk-pr-Lt8"/>
-                            <constraint firstItem="Pni-za-mR2" firstAttribute="top" secondItem="uGT-b6-3gK" secondAttribute="bottom" constant="8" symbolic="YES" id="eMI-Fb-Rj1"/>
+                            <constraint firstItem="Pni-za-mR2" firstAttribute="top" secondItem="Bgs-VN-wsg" secondAttribute="bottom" symbolic="YES" id="eMI-Fb-Rj1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pni-za-mR2" secondAttribute="trailing" id="fmE-Sm-Zau"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="leading" secondItem="rQl-Hv-mDv" secondAttribute="leading" id="inw-6b-PFw"/>
                             <constraint firstAttribute="trailing" secondItem="naz-c4-jut" secondAttribute="trailing" id="lBZ-Us-UzM"/>
                             <constraint firstAttribute="bottom" secondItem="naz-c4-jut" secondAttribute="bottom" id="sHg-ae-daL"/>
                             <constraint firstItem="Pni-za-mR2" firstAttribute="leading" secondItem="rQl-Hv-mDv" secondAttribute="leadingMargin" id="u9y-EZ-FVT"/>
-                            <constraint firstItem="naz-c4-jut" firstAttribute="top" secondItem="uGT-b6-3gK" secondAttribute="bottom" constant="8" id="vUG-cF-QCJ"/>
+                            <constraint firstItem="naz-c4-jut" firstAttribute="top" secondItem="Bgs-VN-wsg" secondAttribute="bottom" id="vUG-cF-QCJ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="5xZ-3e-OXw">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu-filled" id="cF3-cX-a8i"/>
+                    <navigationItem key="navigationItem" title="CEPCM" id="5xZ-3e-OXw">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu-filled" id="cF3-cX-a8i">
+                            <connections>
+                                <action selector="activarSideBar:" destination="Z7R-9w-j4u" id="Lwo-23-u1T"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -230,8 +237,8 @@
             <objects>
                 <viewController storyboardIdentifier="TerminosController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vzx-e3-OnN" customClass="TerminosController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Dwy-Kh-9tP"/>
-                        <viewControllerLayoutGuide type="bottom" id="0Gr-zd-QSu"/>
+                        <viewControllerLayoutGuide type="top" id="RGO-Dg-Jtu"/>
+                        <viewControllerLayoutGuide type="bottom" id="lSC-Eq-ome"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="J7Z-lE-sc9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -264,8 +271,8 @@
             <objects>
                 <viewController storyboardIdentifier="NotificacionController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bAQ-ji-jf5" customClass="NotificacionController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Jck-5K-Nst"/>
-                        <viewControllerLayoutGuide type="bottom" id="1u3-XM-L3i"/>
+                        <viewControllerLayoutGuide type="top" id="cmx-3q-61G"/>
+                        <viewControllerLayoutGuide type="bottom" id="hWz-gd-mi0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XWq-qZ-ikb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -298,8 +305,8 @@
             <objects>
                 <viewController storyboardIdentifier="NovedadesController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C9H-bB-3cP" customClass="NovedadesController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1Ct-Eh-auT"/>
-                        <viewControllerLayoutGuide type="bottom" id="HcZ-W4-ndL"/>
+                        <viewControllerLayoutGuide type="top" id="WPL-yv-YHu"/>
+                        <viewControllerLayoutGuide type="bottom" id="8V9-9T-eMH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="f0g-hI-hRr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -325,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="533-6n-Ma9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="2149"/>
+            <point key="canvasLocation" x="1023" y="1539"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="4lv-BA-LCO">
@@ -344,23 +351,20 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzj-yd-cmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1738" y="1729"/>
+            <point key="canvasLocation" x="2164" y="1539"/>
         </scene>
-        <!--Sesion Controller-->
+        <!--Registro-->
         <scene sceneID="AM9-Jc-vdb">
             <objects>
-                <viewController storyboardIdentifier="SesionController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PhI-Ob-jT6" customClass="SesionController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SesionController" title="Registro" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PhI-Ob-jT6" customClass="SesionController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UgV-UF-sUl"/>
-                        <viewControllerLayoutGuide type="bottom" id="YHt-5J-TjC"/>
+                        <viewControllerLayoutGuide type="top" id="aEk-dt-yd7"/>
+                        <viewControllerLayoutGuide type="bottom" id="vCW-1F-gHP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d3i-IC-IO5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="kb7-sn-h5c" userLabel="bgLogin">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJq-JI-pg4" userLabel="ViewLogin">
                                 <rect key="frame" x="16" y="384" width="343" height="235"/>
                                 <subviews>
@@ -448,16 +452,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YHt-5J-TjC" firstAttribute="top" secondItem="kb7-sn-h5c" secondAttribute="bottom" id="4oz-iw-JFl"/>
-                            <constraint firstItem="YHt-5J-TjC" firstAttribute="top" secondItem="YXg-fL-Rgt" secondAttribute="bottom" constant="8" symbolic="YES" id="Bzm-2O-ulH"/>
+                            <constraint firstItem="vCW-1F-gHP" firstAttribute="top" secondItem="YXg-fL-Rgt" secondAttribute="bottom" constant="8" symbolic="YES" id="Bzm-2O-ulH"/>
                             <constraint firstItem="hJq-JI-pg4" firstAttribute="trailing" secondItem="d3i-IC-IO5" secondAttribute="trailingMargin" id="EaJ-gx-f0a"/>
-                            <constraint firstAttribute="trailing" secondItem="kb7-sn-h5c" secondAttribute="trailing" id="Isd-By-1GY"/>
                             <constraint firstItem="YXg-fL-Rgt" firstAttribute="leading" secondItem="d3i-IC-IO5" secondAttribute="leadingMargin" id="KFg-j9-MMX"/>
                             <constraint firstItem="hJq-JI-pg4" firstAttribute="leading" secondItem="d3i-IC-IO5" secondAttribute="leadingMargin" id="Lvz-fM-CV2"/>
                             <constraint firstItem="YXg-fL-Rgt" firstAttribute="trailing" secondItem="d3i-IC-IO5" secondAttribute="trailingMargin" id="XCp-zg-WTN"/>
                             <constraint firstItem="YXg-fL-Rgt" firstAttribute="top" secondItem="hJq-JI-pg4" secondAttribute="bottom" constant="8" id="fiH-Af-dfS"/>
-                            <constraint firstItem="kb7-sn-h5c" firstAttribute="leading" secondItem="d3i-IC-IO5" secondAttribute="leading" id="j5C-uA-azZ"/>
-                            <constraint firstItem="kb7-sn-h5c" firstAttribute="top" secondItem="d3i-IC-IO5" secondAttribute="top" id="jRU-dX-nEV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -474,8 +474,8 @@
             <objects>
                 <viewController storyboardIdentifier="RecuperarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gsb-OG-mAr" customClass="RecuperarController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NlA-LT-5Ez"/>
-                        <viewControllerLayoutGuide type="bottom" id="zub-qe-R97"/>
+                        <viewControllerLayoutGuide type="top" id="cSH-JW-v42"/>
+                        <viewControllerLayoutGuide type="bottom" id="pzN-pB-OxH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GVc-Og-cjg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -533,7 +533,7 @@
                             <constraint firstItem="Amg-W3-2WW" firstAttribute="top" secondItem="u37-p2-bXw" secondAttribute="top" id="d27-G7-zRH"/>
                             <constraint firstItem="u37-p2-bXw" firstAttribute="leading" secondItem="GVc-Og-cjg" secondAttribute="leadingMargin" id="h8N-f2-iT2"/>
                             <constraint firstItem="wLh-Nb-c9D" firstAttribute="leading" secondItem="GVc-Og-cjg" secondAttribute="leadingMargin" id="hfT-g7-9vz"/>
-                            <constraint firstItem="1MU-Sm-ZOH" firstAttribute="top" secondItem="NlA-LT-5Ez" secondAttribute="bottom" constant="8" symbolic="YES" id="kEc-B2-uXj"/>
+                            <constraint firstItem="1MU-Sm-ZOH" firstAttribute="top" secondItem="cSH-JW-v42" secondAttribute="bottom" constant="8" symbolic="YES" id="kEc-B2-uXj"/>
                             <constraint firstItem="u37-p2-bXw" firstAttribute="top" secondItem="wLh-Nb-c9D" secondAttribute="bottom" constant="8" symbolic="YES" id="m3D-SQ-u1U"/>
                             <constraint firstItem="Amg-W3-2WW" firstAttribute="leading" secondItem="u37-p2-bXw" secondAttribute="trailing" constant="8" symbolic="YES" id="mng-4Q-Fgb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wLh-Nb-c9D" secondAttribute="trailing" id="xKc-J9-QdJ"/>
@@ -547,44 +547,44 @@
             </objects>
             <point key="canvasLocation" x="1597.5999999999999" y="-104.7976011994003"/>
         </scene>
-        <!--Validar Controller-->
+        <!--Registro-->
         <scene sceneID="GDO-Li-bDo">
             <objects>
-                <viewController storyboardIdentifier="ValidarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dgE-Bp-zgh" customClass="ValidarController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ValidarController" title="Registro" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dgE-Bp-zgh" customClass="ValidarController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="x5j-vv-j7G"/>
-                        <viewControllerLayoutGuide type="bottom" id="8hL-Zy-6dY"/>
+                        <viewControllerLayoutGuide type="top" id="I2y-z2-3m5"/>
+                        <viewControllerLayoutGuide type="bottom" id="rTe-qq-2OZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wml-Ja-DkA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matrícula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev8-Dw-7Zh">
-                                <rect key="frame" x="16" y="62.5" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="106.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.60923499719999996" green="0.1019850939" blue="0.46128920490000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Matrícula" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pWE-Qj-Nr4">
-                                <rect key="frame" x="16" y="91" width="343" height="30"/>
+                                <rect key="frame" x="16" y="135" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4E-iG-KkH">
-                                <rect key="frame" x="16" y="129" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="173" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.60923499719999996" green="0.1019850939" blue="0.46128920490000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Curp" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5sX-3m-msx">
-                                <rect key="frame" x="16" y="157.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="201.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dO8-ex-5x7">
-                                <rect key="frame" x="20" y="195.5" width="335" height="36"/>
+                                <rect key="frame" x="20" y="239.5" width="335" height="36"/>
                                 <color key="backgroundColor" red="0.60923499719999996" green="0.1019850939" blue="0.46128920490000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Aceptar">
@@ -595,7 +595,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keg-ez-MNd">
-                                <rect key="frame" x="16" y="28" width="343" height="26.5"/>
+                                <rect key="frame" x="16" y="72" width="343" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.60923499719999996" green="0.1019850939" blue="0.46128920490000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -612,7 +612,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="pWE-Qj-Nr4" secondAttribute="trailing" id="GAD-GW-Bvj"/>
                             <constraint firstItem="ev8-Dw-7Zh" firstAttribute="leading" secondItem="Wml-Ja-DkA" secondAttribute="leadingMargin" id="GZh-aG-izz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5sX-3m-msx" secondAttribute="trailing" id="OzH-sC-gL1"/>
-                            <constraint firstItem="keg-ez-MNd" firstAttribute="top" secondItem="x5j-vv-j7G" secondAttribute="bottom" constant="8" symbolic="YES" id="fgH-TH-vAE"/>
+                            <constraint firstItem="keg-ez-MNd" firstAttribute="top" secondItem="I2y-z2-3m5" secondAttribute="bottom" constant="8" symbolic="YES" id="fgH-TH-vAE"/>
                             <constraint firstItem="o4E-iG-KkH" firstAttribute="top" secondItem="pWE-Qj-Nr4" secondAttribute="bottom" constant="8" symbolic="YES" id="gmO-ch-dnN"/>
                             <constraint firstItem="5sX-3m-msx" firstAttribute="top" secondItem="o4E-iG-KkH" secondAttribute="bottom" constant="8" symbolic="YES" id="kIc-0L-zgb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o4E-iG-KkH" secondAttribute="trailing" id="lfO-Ku-LvU"/>
@@ -630,15 +630,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vc9-Ds-Vat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2590" y="34"/>
+            <point key="canvasLocation" x="-34" y="-970"/>
         </scene>
         <!--Registro Controller-->
         <scene sceneID="qXd-yw-66d">
             <objects>
                 <viewController storyboardIdentifier="RegistroController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ws3-Tr-Qa5" customClass="RegistroController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rBv-lN-Nze"/>
-                        <viewControllerLayoutGuide type="bottom" id="7ik-Kq-oG5"/>
+                        <viewControllerLayoutGuide type="top" id="PWO-cg-lM7"/>
+                        <viewControllerLayoutGuide type="bottom" id="jwN-4w-g5G"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MTx-pY-m6V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -743,7 +743,7 @@
                             <constraint firstItem="rEm-ua-uuR" firstAttribute="top" secondItem="3wR-tq-2zm" secondAttribute="bottom" constant="8" symbolic="YES" id="A18-ho-bC2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WyD-jB-exG" secondAttribute="trailing" id="E8j-26-nQW"/>
                             <constraint firstAttribute="trailing" secondItem="SWy-nj-ffV" secondAttribute="trailing" constant="20" symbolic="YES" id="FCq-mD-KUl"/>
-                            <constraint firstItem="XO1-3R-ISq" firstAttribute="top" secondItem="rBv-lN-Nze" secondAttribute="bottom" constant="8" symbolic="YES" id="Gq0-Vz-AcD"/>
+                            <constraint firstItem="XO1-3R-ISq" firstAttribute="top" secondItem="PWO-cg-lM7" secondAttribute="bottom" constant="8" symbolic="YES" id="Gq0-Vz-AcD"/>
                             <constraint firstItem="yoJ-Qk-Ppm" firstAttribute="leading" secondItem="MTx-pY-m6V" secondAttribute="leadingMargin" id="Gtj-0c-Hcg"/>
                             <constraint firstItem="8K5-yp-pVY" firstAttribute="leading" secondItem="MTx-pY-m6V" secondAttribute="leadingMargin" id="I1Y-cV-ZX6"/>
                             <constraint firstItem="rEm-ua-uuR" firstAttribute="leading" secondItem="MTx-pY-m6V" secondAttribute="leadingMargin" id="KGm-tt-tgG"/>
@@ -794,8 +794,8 @@
             <objects>
                 <viewController storyboardIdentifier="AdeudoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rjm-Rn-LpC" customClass="AdeudoController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HU9-mh-vVd"/>
-                        <viewControllerLayoutGuide type="bottom" id="ulP-Hh-cZh"/>
+                        <viewControllerLayoutGuide type="top" id="h0o-8F-7Gd"/>
+                        <viewControllerLayoutGuide type="bottom" id="oU5-8X-BRk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UXc-5P-3RE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -821,8 +821,8 @@
             <objects>
                 <viewController storyboardIdentifier="CalificacionController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nOX-ir-sdl" customClass="CalificacionController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eM7-r5-LOd"/>
-                        <viewControllerLayoutGuide type="bottom" id="TUA-Vn-J7v"/>
+                        <viewControllerLayoutGuide type="top" id="fv0-YA-GQM"/>
+                        <viewControllerLayoutGuide type="bottom" id="BMU-2i-sJc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="haX-e2-DdS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -900,8 +900,8 @@
             <objects>
                 <viewController storyboardIdentifier="DetalleCalificacionController" id="oAl-GG-cq6" customClass="DetalleCalificacionController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Eqr-H2-K32"/>
-                        <viewControllerLayoutGuide type="bottom" id="wdD-Ij-3Hl"/>
+                        <viewControllerLayoutGuide type="top" id="Zvf-Lh-trv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wyf-4g-jbb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="o8Q-58-Jgd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -918,15 +918,15 @@
             <objects>
                 <viewController storyboardIdentifier="MateriaController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JXA-6g-i8D" customClass="MateriaController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oNe-PT-igW"/>
-                        <viewControllerLayoutGuide type="bottom" id="93y-OR-BAl"/>
+                        <viewControllerLayoutGuide type="top" id="LsU-vf-D3c"/>
+                        <viewControllerLayoutGuide type="bottom" id="o3G-Vc-azj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6e0-S6-uM9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B49-oX-9yD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MateriasCell" rowHeight="117" id="G4u-mA-2Wm" customClass="MateriasCell" customModule="CepcmApp" customModuleProvider="target">
@@ -958,44 +958,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="B49-oX-9yD" firstAttribute="top" secondItem="6e0-S6-uM9" secondAttribute="top" id="bKZ-Hs-1ZX"/>
-                            <constraint firstItem="93y-OR-BAl" firstAttribute="top" secondItem="B49-oX-9yD" secondAttribute="bottom" id="bmU-eT-ZoV"/>
+                            <constraint firstItem="o3G-Vc-azj" firstAttribute="top" secondItem="B49-oX-9yD" secondAttribute="bottom" id="bmU-eT-ZoV"/>
                             <constraint firstAttribute="trailing" secondItem="B49-oX-9yD" secondAttribute="trailing" id="ngN-NK-UPp"/>
                             <constraint firstItem="B49-oX-9yD" firstAttribute="leading" secondItem="6e0-S6-uM9" secondAttribute="leading" id="qcX-li-Brf"/>
+                            <constraint firstItem="B49-oX-9yD" firstAttribute="top" secondItem="LsU-vf-D3c" secondAttribute="bottom" id="tZJ-5a-yDg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="R8C-kY-o3Q"/>
                     <connections>
                         <outlet property="tblMaterias" destination="B49-oX-9yD" id="VSp-3X-TYa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASa-SA-5FT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem id="R8C-kY-o3Q"/>
             </objects>
-            <point key="canvasLocation" x="5138" y="778"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wsx-4I-OeL">
-            <objects>
-                <navigationController id="5GI-a9-elm" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qPa-Hx-cOZ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="JXA-6g-i8D" kind="relationship" relationship="rootViewController" id="7k2-1W-TGQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rqf-OT-00M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4346" y="786"/>
+            <point key="canvasLocation" x="5380" y="690"/>
         </scene>
         <!--Pagos Controller-->
         <scene sceneID="ynl-cc-9u2">
             <objects>
                 <viewController storyboardIdentifier="PagosController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TMR-iV-Knk" customClass="PagosController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HVB-9G-v7H"/>
-                        <viewControllerLayoutGuide type="bottom" id="LUJ-n6-Rzc"/>
+                        <viewControllerLayoutGuide type="top" id="Mcw-GE-JCc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Khn-4K-tl0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b28-Pe-7Vn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1019,7 +1003,7 @@
         <!--Navigation Controller-->
         <scene sceneID="XYr-cO-auE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cxq-Tl-Mlf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ViewControllerLoginNav" id="cxq-Tl-Mlf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vvs-cR-Gb2">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1031,8 +1015,11 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="64Z-WN-dpE">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="L7G-f7-JlB"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="je8-6o-Fbr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8v4-GD-3f4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1042,7 +1029,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lZH-DE-R9y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lej-Ba-odw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PrincipalControllerNav" automaticallyAdjustsScrollViewInsets="NO" id="lej-Ba-odw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YRC-2J-dMF">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1063,8 +1050,8 @@
             <objects>
                 <viewController storyboardIdentifier="AcercaController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ovl-Zk-vP4" customClass="AcercaController" customModule="CepcmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="N6n-Tl-Lvy"/>
-                        <viewControllerLayoutGuide type="bottom" id="lRe-QZ-nII"/>
+                        <viewControllerLayoutGuide type="top" id="Trw-JK-9I2"/>
+                        <viewControllerLayoutGuide type="bottom" id="YIe-cA-fNm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OeQ-6L-vN4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>

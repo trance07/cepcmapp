@@ -60,12 +60,14 @@ class SesionController: UIViewController, UITextFieldDelegate {
     
     @IBAction func lanzarCancelacion() {
         
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewControllerLogin") as? ViewController {
+        self.navigationController?.popViewController(animated: true)
+        
+        /*if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewControllerLogin") as? ViewController {
             
              self.present(viewController, animated: true, completion: nil)
              //self.navigationController?.pushViewController(viewController, animated: true)
             
-        }
+        }*/
         
     }
     
@@ -154,13 +156,13 @@ class SesionController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         // Show the Navigation Bar
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        //self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         // Hide the Navigation Bar
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        //self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
     func presentarAlerta( mensaje : String) -> Void {

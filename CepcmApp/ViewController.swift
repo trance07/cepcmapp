@@ -17,17 +17,19 @@ class ViewController: UIViewController {
             
             //self.navigationController?.pushViewController(viewController, animated: true)
             
-              self.present(viewController, animated: true, completion: nil)
+              //self.present(viewController, animated: true, completion: nil)
+              self.navigationController?.pushViewController(viewController, animated: true)
             
         }
         
     }
     
-    @IBAction func lanzarSesion() {
+   @IBAction func lanzarSesion() {
         
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SesionController") as? SesionController {
             
-            self.present(viewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
+            //self.present(viewController, animated: true, completion: nil)
             
         }
         
@@ -37,6 +39,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.isTranslucent = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +52,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(true)
         // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+
         
       
         

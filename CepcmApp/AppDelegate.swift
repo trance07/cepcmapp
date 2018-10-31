@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
             
-        UINavigationBar.appearance().tintColor = Colors.brightOrange()
+        UINavigationBar.appearance().tintColor = Colors.brightCherry()
         
         let attributes: [NSAttributedStringKey: AnyObject] = [
             NSAttributedStringKey.font: Fonts.AvenirMedium(size: 18),
@@ -107,9 +107,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let data = NSKeyedArchiver.archivedData(withRootObject: session)
                     let keyChain = KeychainSwift()
                     keyChain.set(data, forKey: "CEPCM_SESSION")
+              
+                    let homeControllerNav = storyBoard.instantiateViewController(withIdentifier: "PrincipalControllerNav") as? UINavigationController
+                    self.window?.rootViewController = homeControllerNav
                     
-                    let adminController = storyBoard.instantiateViewController(withIdentifier: "PrincipalController")
-                    self.window?.rootViewController = adminController
                 }else{
                     
                     RUtil.removeObjectFor(key: "SESSION")
@@ -123,13 +124,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             }else{
                 //No hay sesion se manda al login
-                let loginController = storyBoard.instantiateViewController(withIdentifier: "ViewControllerLogin")
-                self.window?.rootViewController = loginController
+                let loginControllerNav = storyBoard.instantiateViewController(withIdentifier: "ViewControllerLoginNav") as? UINavigationController
+                self.window?.rootViewController = loginControllerNav
             }
         }else{
              //No hay sesion se manda al login
-            let loginController = storyBoard.instantiateViewController(withIdentifier: "ViewControllerLogin")
-            self.window?.rootViewController = loginController
+           
+            //Se instancia el Navigation Controller correspondiente para que respete la navegacion
+            let loginControllerNav = storyBoard.instantiateViewController(withIdentifier: "ViewControllerLoginNav") as? UINavigationController
+            self.window?.rootViewController = loginControllerNav
         }
         
         

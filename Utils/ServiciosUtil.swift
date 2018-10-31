@@ -486,7 +486,7 @@ class ServiciosUtil: NSObject {
             
             if((ahora - fechaGeneracion) > doubleExpire ){
                   //se regenera el token
-                self.generarToken { (exito, token) in
+                self.refreshToken { (exito, token) in
                     if(exito){
                         
                         callback(token as! String)
@@ -508,17 +508,9 @@ class ServiciosUtil: NSObject {
     class func generarToken( callback: @escaping (_ exito:Bool,  _ result: AnyObject?) -> Void ){
         print("---> generarToken")
         
-        
-        
-        
         let url = URLHandler.getUrl(urlName: URLHandler.OAUTH_TOKEN)
         
         do {
-            
-            /*var request = RequestGeneraTokenBean()
-            request.grant_type = "password"
-            request.username = Session.shared.user?.email
-            request.password = Session.shared.user?.uuid*/
             
             let headers = [
                 "Authorization": Constants.AUTHORIZATION_REST,
@@ -556,13 +548,10 @@ class ServiciosUtil: NSObject {
                         errorBean.codigo = Constants.ERRORCODE.internalError
                         errorBean.mensaje = Constants.ERROR.noServiceAvailable
                         callback(false, errorBean as AnyObject)
-                        
-                        //callback(false, Constants.ERROR.noServiceAvailable as AnyObject)
                     }
                     
                 }else{ //error al realizar la peticion
                     
-                    //let errorBean = response as! ErrorBean
                     callback(false,response as AnyObject)
                     
                 }
@@ -574,8 +563,62 @@ class ServiciosUtil: NSObject {
             errorBean.codigo = Constants.ERRORCODE.internalError
             errorBean.mensaje = Constants.ERROR.noServiceAvailable
             callback(false, errorBean as AnyObject)
-            //callback(false,Constants.ERROR.noServiceAvailable as AnyObject)
+        }
+        
+    }
+    
+    class func refreshToken( callback: @escaping (_ exito:Bool,  _ result: AnyObject?) -> Void ){
+        print("---> refreshToken")
+        
+        let url = URLHandler.getUrl(urlName: URLHandler.OAUTH_TOKEN)
+        
+        do {
             
+            let headers = [
+                "Authorization": Constants.AUTHORIZATION_REST,
+                "Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"
+            ]
+            
+            let parameters = [
+                "grant_type": "refresh_token",
+                "refresh_token": Session.shared.tokenOaut?.refresh_token
+            ]
+            
+            ServiciosUtil.postFormRequest(urlString: url, parameters: parameters as! [String : String], headers: headers) { (exito, response) in
+                
+                if exito {
+                    
+                    do {
+                        
+                        let json = try JSONDecoder().decode(ResponseBaseOauth.self, from: response as! Data)
+                        Session.shared.tokenOaut?.access_token = json.access_token
+                        Session.shared.tokenOaut?.expires_in = json.expires_in
+                        Session.shared.tokenOaut?.refresh_token = json.refresh_token
+                        Session.shared.tokenOaut?.fecha_generacion = String(Date().timeIntervalSince1970 * 1000)
+                        
+                        callback(true, json.access_token as AnyObject)
+                        
+                    } catch let errorJson {
+                        print(errorJson)
+                        var errorBean = ErrorBean()
+                        errorBean.codigo = Constants.ERRORCODE.internalError
+                        errorBean.mensaje = Constants.ERROR.noServiceAvailable
+                        callback(false, errorBean as AnyObject)
+                    }
+                    
+                }else{ //error al realizar la peticion
+                    
+                    callback(false,response as AnyObject)
+                    
+                }
+                
+            }// fin postRequest
+            
+        } catch {
+            var errorBean = ErrorBean()
+            errorBean.codigo = Constants.ERRORCODE.internalError
+            errorBean.mensaje = Constants.ERROR.noServiceAvailable
+            callback(false, errorBean as AnyObject)
         }
         
     }
