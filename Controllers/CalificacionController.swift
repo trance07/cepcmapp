@@ -23,9 +23,38 @@ class CalificacionController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.inicializaNavigationBar()
+        self.inicializaTableView()
+        
+        
+    }
+    
+    func inicializaNavigationBar(){
+        
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.title = "Calificaciones"
+        self.view.backgroundColor = Colors.backgroundGray()
+        self.view.frame = CGRect.init(x: 0, y: 0, width:self.view.frame.width , height: self.view.frame.height-(self.navigationController?.navigationBar.frame.height)!-20)
+        var frame = self.view.frame
+        frame.size.width = self.view.frame.size.width
+        frame.size.height = self.view.frame.height
+        let imgBack = UIImage(named: "backArrow")
+        let buttonBack = UIBarButtonItem(image: imgBack, style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))
+        buttonBack.tintColor = Colors.brightCherry()
+        self.navigationItem.leftBarButtonItem = buttonBack
+        
+    }
+    
+    func inicializaTableView(){
+        
+       
+        
+        
         self.califTable.dataSource = self
         self.califTable.delegate = self
+        self.califTable.rowHeight = 304
+        self.califTable.rowHeight = UITableViewAutomaticDimension
         
         self.calificacionService.obtenerCalificacionesFirebase() { (resultado, response) in
             
@@ -41,26 +70,12 @@ class CalificacionController: UIViewController, UITableViewDataSource, UITableVi
                 self.calificaciones =  response as! [CalificacionesBean]
                 
                 self.califTable.reloadData()
-
+                
                 
             }
             
         }
-        /*
-        self.calificacionService.obtenerCalificacionesBackend() { (resultado, response) in
-            
-            if resultado == true {
-                let promedioBean = response as! PromedioBean
-                
-                self.calificaciones = promedioBean.calificaciones!
-                
-                self.califTable.reloadData()
-                
-            } else {
-                print(".---> El resultado no es true")
-            }
-            
-        }*/
+        
         
     }
 
@@ -81,6 +96,7 @@ class CalificacionController: UIViewController, UITableViewDataSource, UITableVi
         cell.setClave(clave: (calificaciones[indexPath.item].materia?.clave)!)
         cell.setFecha(fecha: calificaciones[indexPath.item].fecha!)
         cell.setMateria(materia: (calificaciones[indexPath.item].materia?.descripcion)!)
+        cell.lblMateria?.numberOfLines = 0
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CalificacionController.lanzarDetalle))
         cell.addGestureRecognizer(tapGesture)
@@ -109,6 +125,12 @@ class CalificacionController: UIViewController, UITableViewDataSource, UITableVi
         alert.addAction(action)
         
         present(alert, animated: true)
+        
+    }
+
+    @objc func back(){
+        
+        self.navigationController?.popViewController(animated: true)
         
     }
     
