@@ -106,7 +106,7 @@ class CalificacionesService {
                 } else {/// fin lista calificaciones
                     
                     print("---> Cuando lista de calificaciones esta en sesion y bandera en false")
-                    if Session.shared.listaCalificaciones!.listaCalificaciones?.count == 0 {
+                    if  (Session.shared.listaCalificaciones!.listaCalificaciones == nil ||    Session.shared.listaCalificaciones!.listaCalificaciones?.count == 0) {
                         print("---> Se debe actualizar la lista de calificaciones de sesion porque esta vacia")
                         
                         self.procesarCalificacionesEnSesion() { (bandera, respuesta) in
@@ -117,7 +117,7 @@ class CalificacionesService {
                         
                     } else {
                         print("--> La lista de la sesion no esta vacia, se toma de lo guardado \(Session.shared.listaCalificaciones!.listaCalificaciones?.count)")
-                        callback(true, Session.shared.listaCalificaciones! as AnyObject)
+                        callback(true, Session.shared.listaCalificaciones!.listaCalificaciones as AnyObject)
                     }
                     
                 }
