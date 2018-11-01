@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCellMaterias" rowHeight="200" id="L8C-rJ-byt" customClass="CustomTblViewCellMaterias" customModule="CepcmApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L8C-rJ-byt" id="Saw-1z-grP">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzO-7e-l3g" userLabel="LblMateria">
+                        <rect key="frame" x="16" y="11" width="343" height="178"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="XzO-7e-l3g" secondAttribute="trailing" id="5gV-Hg-gHs"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="XzO-7e-l3g" secondAttribute="bottom" id="SZ4-eZ-aHd"/>
+                    <constraint firstItem="XzO-7e-l3g" firstAttribute="leading" secondItem="Saw-1z-grP" secondAttribute="leadingMargin" id="faa-gY-nUC"/>
+                    <constraint firstItem="XzO-7e-l3g" firstAttribute="top" secondItem="Saw-1z-grP" secondAttribute="topMargin" id="nef-he-GDg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblMateria" destination="XzO-7e-l3g" id="fvp-aq-rRn"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="83.5"/>
+        </tableViewCell>
+    </objects>
+</document>

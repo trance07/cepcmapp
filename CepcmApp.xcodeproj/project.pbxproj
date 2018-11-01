@@ -28,6 +28,8 @@
 		416EE5D72174DE1E0007E5E9 /* RequestRegistraDispositivoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EE5D62174DE1E0007E5E9 /* RequestRegistraDispositivoBean.swift */; };
 		416EE5D92174DFB10007E5E9 /* ResponseRegistroDispositivoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EE5D82174DFB10007E5E9 /* ResponseRegistroDispositivoBean.swift */; };
 		416EE5DB2174E0230007E5E9 /* RespuestaRegistroDispositivoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EE5DA2174E0230007E5E9 /* RespuestaRegistroDispositivoBean.swift */; };
+		419B7A64218B75060090282C /* viewTblCellMaterias.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419B7A63218B75060090282C /* viewTblCellMaterias.xib */; };
+		419B7A67218B76CD0090282C /* CustomTblViewCellMaterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B7A66218B76CD0090282C /* CustomTblViewCellMaterias.swift */; };
 		41A1A0A5216CEBCF001C302A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41A1A0A4216CEBCF001C302A /* Config.plist */; };
 		41E5683C2178E5BC00D9F014 /* Grupo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E5683B2178E5BC00D9F014 /* Grupo.swift */; };
 		9C0005C7216AB6C800F428D4 /* MateriasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0005C6216AB6C800F428D4 /* MateriasService.swift */; };
@@ -144,6 +146,8 @@
 		416EE5D62174DE1E0007E5E9 /* RequestRegistraDispositivoBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRegistraDispositivoBean.swift; sourceTree = "<group>"; };
 		416EE5D82174DFB10007E5E9 /* ResponseRegistroDispositivoBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseRegistroDispositivoBean.swift; sourceTree = "<group>"; };
 		416EE5DA2174E0230007E5E9 /* RespuestaRegistroDispositivoBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RespuestaRegistroDispositivoBean.swift; sourceTree = "<group>"; };
+		419B7A63218B75060090282C /* viewTblCellMaterias.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = viewTblCellMaterias.xib; sourceTree = "<group>"; };
+		419B7A66218B76CD0090282C /* CustomTblViewCellMaterias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTblViewCellMaterias.swift; sourceTree = "<group>"; };
 		41A1A0A4216CEBCF001C302A /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Config.plist; path = Config_plist/Config.plist; sourceTree = "<group>"; };
 		41E5683B2178E5BC00D9F014 /* Grupo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grupo.swift; sourceTree = "<group>"; };
 		9C0005C6216AB6C800F428D4 /* MateriasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriasService.swift; sourceTree = "<group>"; };
@@ -279,6 +283,14 @@
 			path = CEPCM_Framework;
 			sourceTree = "<group>";
 		};
+		419B7A65218B76A20090282C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				419B7A66218B76CD0090282C /* CustomTblViewCellMaterias.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		41E5683A2178E59600D9F014 /* Session */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +336,7 @@
 				9C71D4C52102D51800CF131A /* ViewController.swift */,
 				9C81DEE1212A06BB00203F89 /* SWRevealViewController.h */,
 				9C81DEE0212A06BB00203F89 /* SWRevealViewController.m */,
+				419B7A63218B75060090282C /* viewTblCellMaterias.xib */,
 				9C71D4C72102D51800CF131A /* Main.storyboard */,
 				9C81DEC62117B3F700203F89 /* ValidarController.swift */,
 				9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */,
@@ -436,6 +449,7 @@
 		9C81DED42129259500203F89 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				419B7A65218B76A20090282C /* Cells */,
 				9C1BA18D212A21CB004A4118 /* SideMenuController.swift */,
 				9C1BA18F212A2274004A4118 /* PrincipalController.swift */,
 				9C8F568521324EB000AC38ED /* InicioController.swift */,
@@ -530,6 +544,7 @@
 				9C71D4CB2102D51800CF131A /* Assets.xcassets in Resources */,
 				41A1A0A5216CEBCF001C302A /* Config.plist in Resources */,
 				9C71D4C92102D51800CF131A /* Main.storyboard in Resources */,
+				419B7A64218B75060090282C /* viewTblCellMaterias.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +684,7 @@
 				9C81DECF2128C6CF00203F89 /* ConnectionService.swift in Sources */,
 				9C81DEAF2117573400203F89 /* ResponseUsuarioBean.swift in Sources */,
 				410E8985216FDC6D00565D4B /* DeviceToken.swift in Sources */,
+				419B7A67218B76CD0090282C /* CustomTblViewCellMaterias.swift in Sources */,
 				9C81DE992116A4E000203F89 /* ResponseChildRespuestaBean.swift in Sources */,
 				410E8981216FDC3900565D4B /* Session.swift in Sources */,
 				9C81DE712116846300203F89 /* ConfiguracionVersionBean.swift in Sources */,
