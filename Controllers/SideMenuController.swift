@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import KeychainSwift
 
 class SideMenuController: UITableViewController {
     
     let menuItems = ["Inicio","Notificaciones","Términos y Condiciones","Acerca de","Novedades","Salir"]
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
@@ -170,11 +175,35 @@ class SideMenuController: UITableViewController {
         
         let aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: {(action) -> Void in
             
-            if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewControllerLogin") as? ViewController {
-                
-                self.navigationController?.pushViewController(viewController, animated: true)
+            do {
+                try Auth.auth().signOut()
+            } catch {
                 
             }
+            
+            self.ref.removeAllObservers()
+            
+            URLCache.shared.removeAllCachedResponses()
+            URLCache.shared.diskCapacity = 0
+            URLCache.shared.memoryCapacity = 0
+            
+            //TODO: Mandar a llamar el logout de backend
+            UIApplication.shared.applicationIconBadgeNumber = 0
+            
+            //Manteniendo en memoria el email del ultimo usuario
+            if let uMail = Session.shared.user?.email {
+                RUtil.persistValue(value: uMail as AnyObject, key: "lastUser")
+            }
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            //Removiendo la sesion
+            RUtil.removeObjectFor(key: "SESSION")
+            RUtil.removeObjectFor(key: "GRUPO")
+            let keychain = KeychainSwift()
+            keychain.delete("CEPCM_SESSION")
+            Session.add(session: User())
+            Session.add(tokenOaut: TokenOaut())
+            appDelegate.checkLogin()
             
         })
         
@@ -196,5 +225,7 @@ class SideMenuController: UITableViewController {
         self.present(salirMessage, animated: true, completion: nil)
         
     }
+    
+   
     
 }

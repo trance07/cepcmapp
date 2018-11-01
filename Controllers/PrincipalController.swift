@@ -14,7 +14,7 @@ import FirebaseAuth
 
 class PrincipalController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var ref: DatabaseReference!
+    //var ref: DatabaseReference!
     
     var imageArray = [UIImage(named: "ic_adeudos"), UIImage(named: "ic_calendario"), UIImage(named: "ic_calificaciones"), UIImage(named: "ic_materias"), UIImage(named: "ic_pagos")]
     
@@ -63,14 +63,7 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
-        
-        
-      
-        /*let menuHamburguesa = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(activarSideBar))
-        //let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(activarSideBar))
-        self.navigationItem.leftBarButtonItem = menuHamburguesa
-       */
+      //  ref = Database.database().reference()
         
     }
     
@@ -82,8 +75,6 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
-        //  navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -140,59 +131,8 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         }
         
     }
-    
-    @IBAction func lanzarLogout() {
-        
-        print("---> Evento iniciar logout")
-        
-        /*let alert = AlertMainController()
-        alert.alertMainBox.alertMessage.text = "Estás seguro que deseas cerrar sesión"
-        alert.alertMainBox.alertTitle.text = "Cerrar sesión"
-        alert.alertMainBox.buttonAceptar.addTarget(self.navigationController, action: #selector(close), for: .touchUpInside)
-        alert.modalPresentationStyle = .overFullScreen*/
-        close()
-        
-        
-    }
-    
-    @objc func close(){
-        
-      
-        do {
-            try Auth.auth().signOut()
-        } catch {
-           
-        }
-        
-      
-        ref.removeAllObservers()
-        
-        URLCache.shared.removeAllCachedResponses()
-        URLCache.shared.diskCapacity = 0
-        URLCache.shared.memoryCapacity = 0
-      
-        //TODO: Mandar a llamar el logout de backend
-        
-        UIApplication.shared.applicationIconBadgeNumber = 0
-        
-        //Manteniendo en memoria el email del ultimo usuario
-        if let uMail = Session.shared.user?.email {
-            RUtil.persistValue(value: uMail as AnyObject, key: "lastUser")
-        }
-        
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        //Removiendo la sesion
-        RUtil.removeObjectFor(key: "SESSION")
-        RUtil.removeObjectFor(key: "GRUPO")
-        let keychain = KeychainSwift()
-        keychain.delete("CEPCM_SESSION")
-        Session.add(session: User())
-        Session.add(tokenOaut: TokenOaut())
-        
-        appDelegate.checkLogin()
-        
-    }
+ 
+  
     @IBAction func activarSideBar(_ sender: UIBarButtonItem) {
         
         let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "sideMenuNavigation") as! UISideMenuNavigationController
@@ -204,8 +144,6 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         
         present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)
         
-        
-        dismiss(animated: true, completion: nil)
         
     }
    

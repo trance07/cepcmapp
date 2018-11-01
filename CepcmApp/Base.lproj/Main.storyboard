@@ -185,17 +185,6 @@
                                     </collectionView>
                                 </subviews>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pni-za-mR2" userLabel="btnLogout">
-                                <rect key="frame" x="16" y="72" width="343" height="33"/>
-                                <color key="backgroundColor" red="0.60923499719999996" green="0.1019850939" blue="0.46128920490000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="lanzarLogout" destination="Z7R-9w-j4u" eventType="touchUpInside" id="h4L-dT-0Z8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -203,18 +192,15 @@
                             <constraint firstAttribute="trailing" secondItem="naz-c4-jut" secondAttribute="trailing" id="IPh-e5-gY5"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="leading" secondItem="rQl-Hv-mDv" secondAttribute="leading" id="Kca-lM-8Pk"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="top" secondItem="rQl-Hv-mDv" secondAttribute="top" id="Ovk-pr-Lt8"/>
-                            <constraint firstItem="Pni-za-mR2" firstAttribute="top" secondItem="Bgs-VN-wsg" secondAttribute="bottom" symbolic="YES" id="eMI-Fb-Rj1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Pni-za-mR2" secondAttribute="trailing" id="fmE-Sm-Zau"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="leading" secondItem="rQl-Hv-mDv" secondAttribute="leading" id="inw-6b-PFw"/>
                             <constraint firstAttribute="trailing" secondItem="naz-c4-jut" secondAttribute="trailing" id="lBZ-Us-UzM"/>
                             <constraint firstAttribute="bottom" secondItem="naz-c4-jut" secondAttribute="bottom" id="sHg-ae-daL"/>
-                            <constraint firstItem="Pni-za-mR2" firstAttribute="leading" secondItem="rQl-Hv-mDv" secondAttribute="leadingMargin" id="u9y-EZ-FVT"/>
                             <constraint firstItem="naz-c4-jut" firstAttribute="top" secondItem="Bgs-VN-wsg" secondAttribute="bottom" id="vUG-cF-QCJ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="CEPCM" id="5xZ-3e-OXw">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu-filled" id="cF3-cX-a8i">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="menuList" id="cF3-cX-a8i">
                             <connections>
                                 <action selector="activarSideBar:" destination="Z7R-9w-j4u" id="Lwo-23-u1T"/>
                             </connections>
@@ -255,7 +241,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Términos y Condiciones" id="vkP-05-yBY">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu-filled" id="2lQ-Zo-7we">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="backArrow" id="2lQ-Zo-7we">
                             <connections>
                                 <segue destination="P66-PV-7gZ" kind="presentation" id="7Vq-og-huG"/>
                             </connections>
@@ -289,7 +275,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Notificaciones" id="BAJ-iM-61Z">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu-filled" id="JJU-KQ-fw4">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="backArrow" id="JJU-KQ-fw4">
                             <connections>
                                 <segue destination="P66-PV-7gZ" kind="presentation" id="b7k-hF-ds3"/>
                             </connections>
@@ -323,7 +309,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Novedades" id="rFs-N9-DK9">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu-filled" id="cgR-U2-EMq">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="backArrow" id="cgR-U2-EMq">
                             <connections>
                                 <segue destination="P66-PV-7gZ" kind="presentation" id="Xxb-xm-12h"/>
                             </connections>
@@ -1068,7 +1054,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Acerca de" id="bKf-yj-IKO">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu-filled" id="p6v-lb-FWh">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="backArrow" id="p6v-lb-FWh">
                             <connections>
                                 <segue destination="P66-PV-7gZ" kind="presentation" id="6g8-ZX-LoL"/>
                             </connections>
@@ -1081,12 +1067,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backArrow" width="14" height="10"/>
         <image name="bg_calification_aprovado" width="71" height="56"/>
         <image name="bg_login" width="720" height="1280"/>
         <image name="ic_launcher" width="768" height="768"/>
-        <image name="menu-filled" width="100" height="100"/>
+        <image name="menuList" width="19" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xxb-xm-12h"/>
+        <segue reference="7Vq-og-huG"/>
     </inferredMetricsTieBreakers>
 </document>
