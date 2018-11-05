@@ -86,15 +86,29 @@ class DetalleCalificacionController: UIViewController {
                 
                 print("---> El detalle es: \(detalle)")
                 
-                let numSesionesString = detalle.conceptos_asistencias![0].numero
-                self.numSesiones.text = String(numSesionesString)
+                if detalle.conceptos_asistencias == nil {
+                    self.numSesiones.text = ""
+                } else {
+                    let numSesionesString = detalle.conceptos_asistencias![0].numero
+                    self.numSesiones.text = String(numSesionesString)
+                }
                 
-                self.diasClase.text = detalle.sesiones
-                self.inicioMateria.text = detalle.fecha_inicio
-                self.terminoMateria.text = detalle.fecha_termino
-                self.inicio.text = detalle.hora_inicio
-                self.termino.text = detalle.hora_termino
-                self.profesor.text = "\(detalle.docente!.nombres) \(detalle.docente!.apaterno) \(detalle.docente!.amaterno)"
+                self.diasClase.text = (detalle.sesiones != nil) ? detalle.sesiones : ""
+                self.inicioMateria.text = (detalle.fecha_inicio != nil) ? detalle.fecha_inicio : ""
+                self.terminoMateria.text = (detalle.fecha_termino != nil) ? detalle.fecha_termino : ""
+                self.inicio.text = (detalle.hora_inicio != nil) ? detalle.hora_inicio : ""
+                self.termino.text = (detalle.hora_termino != nil) ? detalle.hora_termino : ""
+                
+                if detalle.docente == nil {
+                    
+                    self.profesor.text = "Sin Datos"
+                    
+                } else {
+                    
+                    self.profesor.text = "\(detalle.docente!.nombres) \(detalle.docente!.apaterno) \(detalle.docente!.amaterno)"
+                    
+                }
+                
                 
             } else {
                 

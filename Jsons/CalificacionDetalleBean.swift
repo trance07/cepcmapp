@@ -7,11 +7,11 @@
 //
 
 struct CalificacionDetalleBean : Codable {
-    var sesiones : String
-    var fecha_inicio : String
-    var fecha_termino : String
-    var hora_inicio : String
-    var hora_termino : String
+    var sesiones : String?
+    var fecha_inicio : String?
+    var fecha_termino : String?
+    var hora_inicio : String?
+    var hora_termino : String?
     var no_sesiones : Int = 0
     var conceptos_asistencias : [ConceptoAsistenciaBean]? = nil
     var docente  : DocenteBean?
