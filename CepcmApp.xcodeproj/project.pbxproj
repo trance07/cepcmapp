@@ -117,6 +117,7 @@
 		9C81DEE2212A06BB00203F89 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C81DEE0212A06BB00203F89 /* SWRevealViewController.m */; };
 		9C8F568621324EB000AC38ED /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F568521324EB000AC38ED /* InicioController.swift */; };
 		9C9758FD217C13F7005E44C7 /* CalificacionesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9758FC217C13F7005E44C7 /* CalificacionesService.swift */; };
+		9CB7D5F4218FBB430040E5F2 /* DetalleCalificacionesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB7D5F3218FBB430040E5F2 /* DetalleCalificacionesService.swift */; };
 		9CE9576F21336DA100C1CE2D /* IniciarSesionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9576E21336DA100C1CE2D /* IniciarSesionService.swift */; };
 		9CFDDFBD210509D200EFFDF8 /* RegistroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */; };
 		BCAD3B13C1EF8DA68F4D1736 /* Pods_CepcmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */; };
@@ -239,6 +240,7 @@
 		9C81DEE6212A0BB300203F89 /* CepcmApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CepcmApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		9C8F568521324EB000AC38ED /* InicioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
 		9C9758FC217C13F7005E44C7 /* CalificacionesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalificacionesService.swift; sourceTree = "<group>"; };
+		9CB7D5F3218FBB430040E5F2 /* DetalleCalificacionesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleCalificacionesService.swift; sourceTree = "<group>"; };
 		9CE9576E21336DA100C1CE2D /* IniciarSesionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniciarSesionService.swift; sourceTree = "<group>"; };
 		9CFDDFBC210509D200EFFDF8 /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
 		C9DB57D5F63E8EF1E3AF2A40 /* Pods_CepcmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CepcmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -442,6 +444,7 @@
 				9C0005C6216AB6C800F428D4 /* MateriasService.swift */,
 				416EE5D42174DDCE0007E5E9 /* RegistroService.swift */,
 				9C9758FC217C13F7005E44C7 /* CalificacionesService.swift */,
+				9CB7D5F3218FBB430040E5F2 /* DetalleCalificacionesService.swift */,
 			);
 			path = Services;
 			sourceTree = SOURCE_ROOT;
@@ -583,6 +586,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -597,6 +601,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -691,6 +696,7 @@
 				9C8F568621324EB000AC38ED /* InicioController.swift in Sources */,
 				410E8987216FDC8100565D4B /* User.swift in Sources */,
 				412BBCA42174EA6300F16F50 /* TokenOaut.swift in Sources */,
+				9CB7D5F4218FBB430040E5F2 /* DetalleCalificacionesService.swift in Sources */,
 				9C81DE6121167FB000203F89 /* CalificacionMateriaBean.swift in Sources */,
 				9C81DE852116945300203F89 /* PagosBean.swift in Sources */,
 				410E8976216FDAAC00565D4B /* RUtil.swift in Sources */,

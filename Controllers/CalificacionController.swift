@@ -85,7 +85,6 @@ class CalificacionController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("********* tamanio de calificaciones: \(calificaciones.count)")
         return calificaciones.count
     }
     
@@ -106,10 +105,22 @@ class CalificacionController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-    @objc func lanzarDetalle() -> Void {
-        
+    @objc func lanzarDetalle(sender: UITapGestureRecognizer) -> Void {
         
         print("----> Lanzando detalle")
+        
+        let tapLocation = sender.location(in: self.califTable)
+        let indexPath = self.califTable.indexPathForRow(at: tapLocation)
+        
+        print("indexPath ---> \(indexPath)")
+        
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetalleCalificacionController") as? DetalleCalificacionController {
+            
+            viewController.indice = indexPath?.last
+            print("---> El ultimo es: \(indexPath?.last)")
+            self.navigationController?.pushViewController(viewController, animated: true)
+            
+         }
         
         
     }

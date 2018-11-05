@@ -8,6 +8,8 @@
 	<dict>
 		<key>Produccion</key>
 		<dict>
+			<key>DETALLE_CALIFICACIONES</key>
+			<string>http://187.190.149.140:8083/CEPCM_MOVIL/api/materiaCarreraController/obtenerDetalleMateria</string>
 			<key>CALIFICACIONES_POR_ALUMNO</key>
 			<string>http://187.190.149.140:8083/CEPCM_MOVIL/api/calificacionAlumnoCarreraController/calificacionesPorAlumno</string>
 			<key>OAUTH_TOKEN</key>
@@ -25,6 +27,8 @@
 		</dict>
 		<key>Desarrollo</key>
 		<dict>
+			<key>DETALLE_CALIFICACIONES</key>
+			<string>http://187.190.149.140:8083/CEPCM_MOVIL/api/materiaCarreraController/obtenerDetalleMateria</string>
 			<key>CALIFICACIONES_POR_ALUMNO</key>
 			<string>http://187.190.149.140:8083/CEPCM_MOVIL/api/calificacionAlumnoCarreraController/calificacionesPorAlumno</string>
 			<key>OAUTH_TOKEN</key>

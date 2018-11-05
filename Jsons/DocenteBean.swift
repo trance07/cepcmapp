@@ -11,5 +11,5 @@ struct DocenteBean : Codable {
     var nombres : String = ""
     var apaterno : String = ""
     var amaterno : String = ""
-    var no_empleado : String = ""
+    var no_empleado : String?
 }

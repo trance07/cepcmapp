@@ -18,4 +18,5 @@ target 'CepcmApp' do
   pod 'ImageSlideshow', '~> 1.6'
   pod 'CalendarKit'
   pod 'KeychainSwift'
+  pod 'MaterialComponents/Cards'
 end

@@ -36,7 +36,7 @@ class URLHandler: NSObject {
     static let OAUTH_TOKEN = "OAUTH_TOKEN"
     static let MATERIAS_POR_ALUMNO = "MATERIAS_POR_ALUMNO"
     static let CALIFICACIONES_POR_ALUMNO = "CALIFICACIONES_POR_ALUMNO"
-    
+    static let DETALLE_CALIFICACIONES = "DETALLE_CALIFICACIONES"
     
     class func getUrl(urlName:String) -> String {
         let filePath = Bundle.main.path(forResource: "Config", ofType: "plist")
