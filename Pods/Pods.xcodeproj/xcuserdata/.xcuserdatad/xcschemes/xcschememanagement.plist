@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Auk.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CalendarKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -49,22 +54,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ImageSlideshow.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>KeychainSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MaterialComponents-MaterialIcons_ic_check_circle.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MaterialComponents.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -85,6 +75,11 @@
 			<false/>
 		</dict>
 		<key>leveldb-library.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>moa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

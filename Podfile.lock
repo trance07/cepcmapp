@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
+  - Auk (9.0.0):
+    - moa
   - CalendarKit (0.4.0):
     - DateToolsSwift
     - Neon
@@ -42,29 +44,9 @@ PODS:
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - GTMSessionFetcher/Core (1.1.15)
-  - ImageSlideshow (1.6.1):
-    - ImageSlideshow/Core (= 1.6.1)
-  - ImageSlideshow/Core (1.6.1)
   - KeychainSwift (11.0.0)
   - leveldb-library (1.20)
-  - MaterialComponents/Cards (58.0.0):
-    - MaterialComponents/Ink
-    - MaterialComponents/private/Icons/ic_check_circle
-    - MaterialComponents/private/Math
-    - MaterialComponents/private/Shapes
-    - MaterialComponents/ShadowLayer
-  - MaterialComponents/Ink (58.0.0):
-    - MaterialComponents/private/Math
-  - MaterialComponents/private/Icons/Base (58.0.0)
-  - MaterialComponents/private/Icons/ic_check_circle (58.0.0):
-    - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Math (58.0.0)
-  - MaterialComponents/private/Shapes (58.0.0):
-    - MaterialComponents/private/Math
-    - MaterialComponents/ShadowLayer
-  - MaterialComponents/ShadowElevations (58.0.0)
-  - MaterialComponents/ShadowLayer (58.0.0):
-    - MaterialComponents/ShadowElevations
+  - moa (10.0.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -75,20 +57,21 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - Auk (~> 9.0)
   - CalendarKit
   - Firebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
-  - ImageSlideshow (~> 1.6)
   - KeychainSwift
-  - MaterialComponents/Cards
+  - moa (~> 10.0)
   - SideMenu
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Auk
     - CalendarKit
     - DateToolsSwift
     - Firebase
@@ -100,16 +83,16 @@ SPEC REPOS:
     - FirebaseStorage
     - GoogleToolboxForMac
     - GTMSessionFetcher
-    - ImageSlideshow
     - KeychainSwift
     - leveldb-library
-    - MaterialComponents
+    - moa
     - nanopb
     - Neon
     - SideMenu
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Auk: 13f9bbb5a2f554b4e5b2502982188a4982bc9398
   CalendarKit: 49ac35ac4827c036a9aadbd6a7b42ae6b00258cd
   DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
   Firebase: 355bd535bfdacaa82a7fe8d9784115edefd6fc03
@@ -121,14 +104,13 @@ SPEC CHECKSUMS:
   FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
-  ImageSlideshow: f0f33e1a20668e83d77f5fb7729e4ae4437c0759
   KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
-  MaterialComponents: 0520466595b729ebd106e84b96626803aca4a8d2
+  moa: 95c863fd1059e6b5c7f6be30627823bb07ebca25
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
   SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
 
-PODFILE CHECKSUM: 7029c53260751d808b9fd451cc70133908dc547b
+PODFILE CHECKSUM: 53da72cec0a85d952ac04b8cd68756937fa42bad
 
 COCOAPODS: 1.5.2

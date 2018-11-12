@@ -15,8 +15,8 @@ target 'CepcmApp' do
   pod 'Firebase/Auth'
   pod 'SideMenu'
   pod 'Alamofire', '~> 4.7'
-  pod 'ImageSlideshow', '~> 1.6'
   pod 'CalendarKit'
   pod 'KeychainSwift'
-  pod 'MaterialComponents/Cards'
+  pod 'moa', '~> 10.0'
+  pod 'Auk', '~> 9.0'
 end
