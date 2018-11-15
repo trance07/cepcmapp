@@ -199,6 +199,8 @@ class SideMenuController: UITableViewController {
             //Removiendo la sesion
             RUtil.removeObjectFor(key: "SESSION")
             RUtil.removeObjectFor(key: "GRUPO")
+            RUtil.removeObjectFor(key: "TOKEN_OAUT_")
+            
             let keychain = KeychainSwift()
             keychain.delete("CEPCM_SESSION")
             Session.add(session: User())

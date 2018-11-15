@@ -10,6 +10,7 @@ target 'CepcmApp' do
   # Pods for CepcmApp
   pod 'Firebase'
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'

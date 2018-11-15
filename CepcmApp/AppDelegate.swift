@@ -11,6 +11,7 @@ import Firebase
 import KeychainSwift
 import FirebaseAuth
 import FirebaseDatabase
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -126,6 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 //No hay sesion se manda al login
                 let loginControllerNav = storyBoard.instantiateViewController(withIdentifier: "ViewControllerLoginNav") as? UINavigationController
                 self.window?.rootViewController = loginControllerNav
+                
             }
         }else{
              //No hay sesion se manda al login
@@ -138,6 +140,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
+    }
+    
+    
+    func registerForRemoteNotifications() {
+        let notificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+        UIApplication.shared.registerUserNotificationSettings(notificationSettings)
+        UIApplication.shared.registerForRemoteNotifications()
+    }
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        //handle(userInfo: response.notification.request.content.userInfo, applicationState: .background)
+    }
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+    }
+    
+    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+        
+        application.registerForRemoteNotifications()
+    }
+    
+    //DeviceToken
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        var token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        token = token.replacingOccurrences(of: "<", with: "")
+        token = token.replacingOccurrences(of: ">", with: "")
+        token = token.replacingOccurrences(of: " ", with: "")
+        Session.shared.token?.deviceToken = token
+       
     }
 
 }

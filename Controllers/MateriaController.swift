@@ -14,9 +14,11 @@ class MateriaController: UIViewController,  UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tblMaterias: UITableView!
    
-    var materias = [String]()
+    var materias = [MateriaCarreraBean]()
     
-    var holder: UIView?
+    var userDefaults = UserDefaults.standard
+    
+    //var holder: UIView?
 
     let materiasService : MateriasService = MateriasService()
     
@@ -49,22 +51,18 @@ class MateriaController: UIViewController,  UITableViewDataSource, UITableViewDe
         
         self.tblMaterias.dataSource = self;
         self.tblMaterias.delegate = self;
-        self.tblMaterias.estimatedRowHeight = 44
+        self.tblMaterias.estimatedRowHeight = 144
         self.tblMaterias.rowHeight = UITableViewAutomaticDimension
         
-        let nib = UINib(nibName: "viewTblCellMaterias", bundle: nil)
-        self.tblMaterias.register(nib, forCellReuseIdentifier: "customCellMaterias")
+        //let nib = UINib(nibName: "viewTblCellMaterias", bundle: nil)
+       // self.tblMaterias.register(nib, forCellReuseIdentifier: "customCellMaterias")
         
         //Cargando las materias
         self.materiasService.obtenerMaterias() { (resultado, response) in
             
             if resultado == true {
                 
-                let materiasCarrera = response as! [MateriaCarreraBean]
-                
-                materiasCarrera.forEach({ (materiaCarrera) in
-                    self.materias.append( "\(materiaCarrera.clave!) : \(materiaCarrera.descripcion!)")
-                })
+                self.materias = response as! [MateriaCarreraBean]
                 
                 self.tblMaterias.reloadData()
                 
@@ -87,13 +85,25 @@ class MateriaController: UIViewController,  UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: CustomTblViewCellMaterias = (self.tblMaterias.dequeueReusableCell(withIdentifier: "customCellMaterias") as? CustomTblViewCellMaterias)!
+        /*let cell: CustomTblViewCellMaterias = (self.tblMaterias.dequeueReusableCell(withIdentifier: "customCellMaterias") as? CustomTblViewCellMaterias)!
         
        
         let recipe = materias[indexPath.item]
         
         cell.lblMateria?.text = recipe
         cell.lblMateria?.numberOfLines = 0
+        
+        return cell;*/
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MateriaCell") as! MateriaCell
+        //cell.setCalificacion(calificacion: calificaciones[indexPath.item].str_calificacion!)
+        cell.setClave(clave: (materias[indexPath.item].clave)!)
+        //cell.setFecha(fecha: calificaciones[indexPath.item].fecha!)
+        cell.setMateria(materia: (materias[indexPath.item].descripcion)!)
+        cell.lblMateria?.numberOfLines = 0
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CalificacionController.lanzarDetalle))
+        cell.addGestureRecognizer(tapGesture)
         
         return cell;
        

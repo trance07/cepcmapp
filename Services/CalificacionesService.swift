@@ -47,7 +47,7 @@ class CalificacionesService {
     
     func obtenerCalificacionesFirebase(callback: @escaping (Bool,AnyObject) -> ()) -> Void {
         
-        print("---> Obteniendo Calificaciones desde firebase")
+        print("---> Obteniendo Calificaciones")
         
         let userUid = Auth.auth().currentUser?.uid
         

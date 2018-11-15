@@ -140,6 +140,12 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         
         SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
         SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+
+        SideMenuManager.default.menuWidth = 260
+        SideMenuManager.default.menuFadeStatusBar = false
+        SideMenuManager.default.menuPresentMode = .menuSlideIn
+        SideMenuManager.default.menuAnimationFadeStrength = 0.5
+        SideMenuManager.default.menuShadowOpacity = 0.8
         
         
         present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)

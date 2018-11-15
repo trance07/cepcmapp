@@ -86,7 +86,8 @@ class SesionController: UIViewController, UITextFieldDelegate {
                 
                 //TODO: obtener el id del dispositivo correcto
                 var request = RequestRegistroDispositivoBean()
-                request.id_dispositivo = "123"
+                
+                request.id_dispositivo = self.random(8)
                
                 self.registroService.registrarDispositivo(request: request) { (resultado, response) in
                 
@@ -179,6 +180,21 @@ class SesionController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func random(_ n: Int) -> String
+    {
+        let a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+        
+        var s = ""
+        
+        for _ in 0..<n
+        {
+            let r = Int(arc4random_uniform(UInt32(a.characters.count)))
+            
+            s += String(a[a.index(a.startIndex, offsetBy: r)])
+        }
+        
+        return s
+    }
 
     
     

@@ -21,7 +21,7 @@
 		412BBCA62174EDBC00F16F50 /* RequestGeneraTokenBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BBCA52174EDBC00F16F50 /* RequestGeneraTokenBean.swift */; };
 		412BBCA821761C6700F16F50 /* ResponseBaseOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BBCA721761C6700F16F50 /* ResponseBaseOAuth.swift */; };
 		412BBCAA21762A1700F16F50 /* ResponseErrorOauthBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BBCA921762A1700F16F50 /* ResponseErrorOauthBean.swift */; };
-		415DE8862178F74F00C3D229 /* MateriasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415DE8852178F74F00C3D229 /* MateriasCell.swift */; };
+		415DE8862178F74F00C3D229 /* MateriaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415DE8852178F74F00C3D229 /* MateriaCell.swift */; };
 		4161D066216FD9ED004D6304 /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161D065216FD9ED004D6304 /* URLHandler.swift */; };
 		4161D068216FDA36004D6304 /* ServiciosUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161D067216FDA36004D6304 /* ServiciosUtil.swift */; };
 		416EE5D52174DDCE0007E5E9 /* RegistroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EE5D42174DDCE0007E5E9 /* RegistroService.swift */; };
@@ -140,7 +140,7 @@
 		412BBCA52174EDBC00F16F50 /* RequestGeneraTokenBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGeneraTokenBean.swift; sourceTree = "<group>"; };
 		412BBCA721761C6700F16F50 /* ResponseBaseOAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBaseOAuth.swift; sourceTree = "<group>"; };
 		412BBCA921762A1700F16F50 /* ResponseErrorOauthBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseErrorOauthBean.swift; sourceTree = "<group>"; };
-		415DE8852178F74F00C3D229 /* MateriasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriasCell.swift; sourceTree = "<group>"; };
+		415DE8852178F74F00C3D229 /* MateriaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriaCell.swift; sourceTree = "<group>"; };
 		4161D065216FD9ED004D6304 /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
 		4161D067216FDA36004D6304 /* ServiciosUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiciosUtil.swift; sourceTree = "<group>"; };
 		416EE5D42174DDCE0007E5E9 /* RegistroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroService.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 			children = (
 				41E5683A2178E59600D9F014 /* Session */,
 				410E8982216FDC5000565D4B /* PushNotification.swift */,
-				415DE8852178F74F00C3D229 /* MateriasCell.swift */,
+				415DE8852178F74F00C3D229 /* MateriaCell.swift */,
 				9C338D6E217D3599006DDF51 /* CalificacionCell.swift */,
 			);
 			path = Model;
@@ -588,6 +588,7 @@
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -603,6 +604,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -659,7 +661,7 @@
 				9C042F9E213C656A00292A1E /* MateriaController.swift in Sources */,
 				9C81DEB5211765F000203F89 /* SessionBean.swift in Sources */,
 				9C81DE5D21167D9800203F89 /* CalificacionDetalleBean.swift in Sources */,
-				415DE8862178F74F00C3D229 /* MateriasCell.swift in Sources */,
+				415DE8862178F74F00C3D229 /* MateriaCell.swift in Sources */,
 				9C81DE6D2116834E00203F89 /* ConfiguracionFirebase.swift in Sources */,
 				9C81DE67211681D100203F89 /* ConceptoPagoBean.swift in Sources */,
 				9C338D71217E02BB006DDF51 /* DetalleCalificacionController.swift in Sources */,
