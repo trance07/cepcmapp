@@ -7,6 +7,7 @@
 //
 
 struct ImagenBannerBean : Codable {
+    var name: String? = nil
     var url: String? = nil
     var redirect : String? = nil
 }

@@ -14,6 +14,7 @@ class Session: NSObject {
     var user: User?
     var grupo: Grupo?
     var listaCalificaciones: ListaCalificaciones?
+    var listaImagenes : ListaImagenes?
     var token: DeviceToken?
     var tokenOaut: TokenOaut?
     
@@ -52,6 +53,18 @@ class Session: NSObject {
             let grupoData = RUtil.valueForKey_(key: "GRUPO") as! Data
             if let grupo = NSKeyedUnarchiver.unarchiveObject(with: grupoData) as? Grupo{
                 Session.shared.grupo = grupo
+            }
+        }
+        
+    }
+    
+    class func add(listaImagenes: ListaImagenes) {
+        Session.shared.listaImagenes = listaImagenes
+        
+        if RUtil.valueForKey_(key: "IMAGENES") != nil {
+            let imagenesData = RUtil.valueForKey_(key: "IMAGENES") as! Data
+            if let listaImagenes = NSKeyedUnarchiver.unarchiveObject(with: imagenesData) as? ListaImagenes {
+                Session.shared.listaImagenes = listaImagenes
             }
         }
         

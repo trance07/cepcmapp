@@ -62,6 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Session.add(session: User())
         Session.add(tokenOaut: TokenOaut())
         Session.add(listaCalificaciones: ListaCalificaciones())
+        Session.add(listaImagenes: ListaImagenes())
         
         checkLogin()
         

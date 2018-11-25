@@ -72,11 +72,13 @@ struct Constants {
     
     struct FIREBASE_FIELD {
         static let ALUMNOS = "alumnos"
+        static let CONFIGURACION = "configuracion"
     }
     
     struct FIREBASE_CONFIGURACION {
         static let MODULOS = "configuracion/modulos"
         static let CALIFICACIONES = "/calificaciones"
+        static let APP_ALUMNOS = "configuracion/aplicacionAlumnos"
     }
     
 }
