@@ -83,6 +83,9 @@ PODS:
   - Neon (0.4.0)
   - Protobuf (3.6.1)
   - SideMenu (4.0.0)
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.2):
+    - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -98,6 +101,7 @@ DEPENDENCIES:
   - MaterialComponents/Cards
   - moa (~> 10.0)
   - SideMenu
+  - TwitterKit (~> 3.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -123,6 +127,8 @@ SPEC REPOS:
     - Neon
     - Protobuf
     - SideMenu
+    - TwitterCore
+    - TwitterKit
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -147,7 +153,9 @@ SPEC CHECKSUMS:
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: d0ad0484bf9e2436a1f362cd2fc30ef25019fd47
+PODFILE CHECKSUM: bc1809ea5280efebba320289c666b6154bb957e3
 
 COCOAPODS: 1.5.2

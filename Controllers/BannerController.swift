@@ -50,6 +50,9 @@ class BannerController: UIViewController, UIScrollViewDelegate, SFSafariViewCont
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Moa.settings.cache.requestCachePolicy = .returnCacheDataElseLoad
+        Moa.settings.cache.memoryCapacityBytes = 20 * 1024 * 1024
+        
         self.bannerService.obtenerImagenesFirebase() { (codigo, respuesta) in
             
             if(codigo == true) {

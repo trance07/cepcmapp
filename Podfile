@@ -21,4 +21,5 @@ target 'CepcmApp' do
   pod 'MaterialComponents/Cards'
   pod 'moa', '~> 10.0'
   pod 'Auk', '~> 9.0'
+  pod 'TwitterKit', '~> 3.4'
 end

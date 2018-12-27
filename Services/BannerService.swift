@@ -21,12 +21,16 @@ class BannerService {
         database.observe(DataEventType.value, with: { (snapshot) in
             
             let value = snapshot.value as? NSDictionary
-            print("---> value de banner \(value)")
+            //print("---> value de banner \(value)")
             let bannerTop = value?["bannerTop"] as? NSDictionary
             
             print("---> configuracion de banner \(bannerTop)")
             let banners = bannerTop?["banners"] as? NSDictionary
-            print("---> array de banner \(banners)")
+            //print("---> array de banner \(banners)")
+            let fechaActualizacion = bannerTop?["fechaActualizacion"] as Any?
+            
+            print("===> la fecha de actualizacion es \(fechaActualizacion)")
+            
             
             var imagenes = [ImagenBannerBean]()
             
